@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -247,79 +247,377 @@
           </div>
         </section>
 
-        <section class="positioning-map-section">
-          <div class="positioning-map-inner">
-            <div class="homepage-section-header">
-              <p class="mono text-accent">Positioning Map</p>
-              <h2>What each approach makes visible</h2>
+        <section class="use-cases-why-section homepage-text-column">
+          <div class="homepage-section-header">
+            <h2>What each approach makes visible</h2>
+          </div>
+          <div class="homepage-section-body">
+            <p>This is a positioning map, not a benchmark. It compares what each approach is primarily designed to make visible.</p>
+          </div>
+
+            <div class="use-cases-matrix-meta">
+              <p>Green indicates strong fit, amber indicates partial fit, red indicates limited fit, and gray indicates not a primary focus.</p>
             </div>
-            <p class="positioning-map-caption">This is a positioning map, not a benchmark. It compares what each approach is primarily designed to make visible.</p>
-            <div class="positioning-map-wrapper" role="region" aria-label="Positioning map comparing CPS with adjacent approaches" tabindex="0">
-              <table class="positioning-map">
+
+            <div class="cps-matrix-wrapper">
+              <table class="cps-matrix">
                 <thead>
                   <tr>
-                    <th scope="col">What needs to be visible</th>
-                    <th scope="col">CPS</th>
-                    <th scope="col">Authored branching</th>
-                    <th scope="col">LLM chat memory</th>
-                    <th scope="col">Generic multi-agent simulation</th>
-                    <th scope="col">Knowledge graph</th>
+                    <th>Category</th>
+                    <th>CPS</th>
+                    <th>Concordia</th>
+                    <th>Generative Agents</th>
+                    <th>Inworld</th>
+                    <th>Convai</th>
+                    <th>LangGraph / Agent OS</th>
+                    <th>NVIDIA ACE</th>
+                    <th>Google Agent Stack</th>
+                    <th>OpenAI / Anthropic</th>
                   </tr>
                 </thead>
+
                 <tbody>
                   <tr>
-                    <th scope="row">Who knows what, separately</th>
-                    <td><span class="fit-label fit-strong">Strong fit</span></td>
-                    <td><span class="fit-label fit-partial">Partial fit</span></td>
-                    <td><span class="fit-label fit-partial">Partial fit</span></td>
-                    <td><span class="fit-label fit-partial">Partial fit</span></td>
-                    <td><span class="fit-label fit-limited">Limited fit</span></td>
+                    <td>Conversational AI</td>
+                    <td class="good" data-tooltip="Strong fit"></td>
+                    <td class="partial" data-tooltip="Partial fit"></td>
+                    <td class="partial" data-tooltip="Partial fit"></td>
+                    <td class="good" data-tooltip="Strong fit"></td>
+                    <td class="good" data-tooltip="Strong fit"></td>
+                    <td class="partial" data-tooltip="Partial fit"></td>
+                    <td class="good" data-tooltip="Strong fit"></td>
+                    <td class="good" data-tooltip="Strong fit"></td>
+                    <td class="good" data-tooltip="Strong fit"></td>
                   </tr>
                   <tr>
-                    <th scope="row">How information moves between actors</th>
-                    <td><span class="fit-label fit-strong">Strong fit</span></td>
-                    <td><span class="fit-label fit-limited">Limited fit</span></td>
-                    <td><span class="fit-label fit-limited">Limited fit</span></td>
-                    <td><span class="fit-label fit-partial">Partial fit</span></td>
-                    <td><span class="fit-label fit-partial">Partial fit</span></td>
+                    <td>Persistent Memory</td>
+                    <td class="good" data-tooltip="Strong fit"></td>
+                    <td class="good" data-tooltip="Strong fit"></td>
+                    <td class="good" data-tooltip="Strong fit"></td>
+                    <td class="good" data-tooltip="Strong fit"></td>
+                    <td class="partial" data-tooltip="Partial fit"></td>
+                    <td class="good" data-tooltip="Strong fit"></td>
+                    <td class="partial" data-tooltip="Partial fit"></td>
+                    <td class="good" data-tooltip="Strong fit"></td>
+                    <td class="good" data-tooltip="Strong fit"></td>
                   </tr>
                   <tr>
-                    <th scope="row">Privacy, containment, and blocked information</th>
-                    <td><span class="fit-label fit-strong">Strong fit</span></td>
-                    <td><span class="fit-label fit-partial">Partial fit</span></td>
-                    <td><span class="fit-label fit-limited">Limited fit</span></td>
-                    <td><span class="fit-label fit-partial">Partial fit</span></td>
-                    <td><span class="fit-label fit-partial">Partial fit</span></td>
+                    <td>Shared Persistent Memory</td>
+                    <td class="good" data-tooltip="Strong fit"></td>
+                    <td class="partial" data-tooltip="Partial fit"></td>
+                    <td class="partial" data-tooltip="Partial fit"></td>
+                    <td class="bad" data-tooltip="Limited fit"></td>
+                    <td class="bad" data-tooltip="Limited fit"></td>
+                    <td class="partial" data-tooltip="Partial fit"></td>
+                    <td class="bad" data-tooltip="Limited fit"></td>
+                    <td class="good" data-tooltip="Strong fit"></td>
+                    <td class="good" data-tooltip="Strong fit"></td>
                   </tr>
                   <tr>
-                    <th scope="row">Lineage and provenance of memory</th>
-                    <td><span class="fit-label fit-strong">Strong fit</span></td>
-                    <td><span class="fit-label fit-limited">Limited fit</span></td>
-                    <td><span class="fit-label fit-limited">Limited fit</span></td>
-                    <td><span class="fit-label fit-partial">Partial fit</span></td>
-                    <td><span class="fit-label fit-strong">Strong fit</span></td>
+                    <td>Multi-Agent Continuity</td>
+                    <td class="good" data-tooltip="Strong fit"></td>
+                    <td class="good" data-tooltip="Strong fit"></td>
+                    <td class="partial" data-tooltip="Partial fit"></td>
+                    <td class="bad" data-tooltip="Limited fit"></td>
+                    <td class="bad" data-tooltip="Limited fit"></td>
+                    <td class="partial" data-tooltip="Partial fit"></td>
+                    <td class="bad" data-tooltip="Limited fit"></td>
+                    <td class="good" data-tooltip="Strong fit"></td>
+                    <td class="good" data-tooltip="Strong fit"></td>
                   </tr>
                   <tr>
-                    <th scope="row">Inspectable social consequence</th>
-                    <td><span class="fit-label fit-strong">Strong fit</span></td>
-                    <td><span class="fit-label fit-partial">Partial fit</span></td>
-                    <td><span class="fit-label fit-limited">Limited fit</span></td>
-                    <td><span class="fit-label fit-partial">Partial fit</span></td>
-                    <td><span class="fit-label fit-limited">Limited fit</span></td>
+                    <td>Agent Societies</td>
+                    <td class="good" data-tooltip="Strong fit"></td>
+                    <td class="good" data-tooltip="Strong fit"></td>
+                    <td class="good" data-tooltip="Strong fit"></td>
+                    <td class="bad" data-tooltip="Limited fit"></td>
+                    <td class="bad" data-tooltip="Limited fit"></td>
+                    <td class="bad" data-tooltip="Limited fit"></td>
+                    <td class="bad" data-tooltip="Limited fit"></td>
+                    <td class="bad" data-tooltip="Limited fit"></td>
+                    <td class="bad" data-tooltip="Limited fit"></td>
                   </tr>
                   <tr>
-                    <th scope="row">Natural-language interpretation</th>
-                    <td><span class="fit-label fit-partial">Partial fit</span></td>
-                    <td><span class="fit-label fit-limited">Limited fit</span></td>
-                    <td><span class="fit-label fit-strong">Strong fit</span></td>
-                    <td><span class="fit-label fit-partial">Partial fit</span></td>
-                    <td><span class="fit-label fit-not-primary">Not primary focus</span></td>
+                    <td>Long-Term State Graphs</td>
+                    <td class="good" data-tooltip="Strong fit"></td>
+                    <td class="partial" data-tooltip="Partial fit"></td>
+                    <td class="bad" data-tooltip="Limited fit"></td>
+                    <td class="bad" data-tooltip="Limited fit"></td>
+                    <td class="bad" data-tooltip="Limited fit"></td>
+                    <td class="good" data-tooltip="Strong fit"></td>
+                    <td class="partial" data-tooltip="Partial fit"></td>
+                    <td class="good" data-tooltip="Strong fit"></td>
+                    <td class="partial" data-tooltip="Partial fit"></td>
+                  </tr>
+                  <tr>
+                    <td>Social Coordination Primitives</td>
+                    <td class="good" data-tooltip="Strong fit"></td>
+                    <td class="good" data-tooltip="Strong fit"></td>
+                    <td class="partial" data-tooltip="Partial fit"></td>
+                    <td class="bad" data-tooltip="Limited fit"></td>
+                    <td class="bad" data-tooltip="Limited fit"></td>
+                    <td class="partial" data-tooltip="Partial fit"></td>
+                    <td class="bad" data-tooltip="Limited fit"></td>
+                    <td class="good" data-tooltip="Strong fit"></td>
+                    <td class="partial" data-tooltip="Partial fit"></td>
+                  </tr>
+                  <tr>
+                    <td>Rumor / Information Propagation</td>
+                    <td class="good" data-tooltip="Strong fit"></td>
+                    <td class="good" data-tooltip="Strong fit"></td>
+                    <td class="partial" data-tooltip="Partial fit"></td>
+                    <td class="bad" data-tooltip="Limited fit"></td>
+                    <td class="bad" data-tooltip="Limited fit"></td>
+                    <td class="bad" data-tooltip="Limited fit"></td>
+                    <td class="bad" data-tooltip="Limited fit"></td>
+                    <td class="bad" data-tooltip="Limited fit"></td>
+                    <td class="bad" data-tooltip="Limited fit"></td>
+                  </tr>
+                  <tr>
+                    <td>Memory Lineage / Traceability</td>
+                    <td class="good" data-tooltip="Strong fit"></td>
+                    <td class="partial" data-tooltip="Partial fit"></td>
+                    <td class="bad" data-tooltip="Limited fit"></td>
+                    <td class="bad" data-tooltip="Limited fit"></td>
+                    <td class="bad" data-tooltip="Limited fit"></td>
+                    <td class="partial" data-tooltip="Partial fit"></td>
+                    <td class="bad" data-tooltip="Limited fit"></td>
+                    <td class="partial" data-tooltip="Partial fit"></td>
+                    <td class="partial" data-tooltip="Partial fit"></td>
+                  </tr>
+                  <tr>
+                    <td>Emergent Social Behavior</td>
+                    <td class="good" data-tooltip="Strong fit"></td>
+                    <td class="good" data-tooltip="Strong fit"></td>
+                    <td class="good" data-tooltip="Strong fit"></td>
+                    <td class="bad" data-tooltip="Limited fit"></td>
+                    <td class="bad" data-tooltip="Limited fit"></td>
+                    <td class="partial" data-tooltip="Partial fit"></td>
+                    <td class="bad" data-tooltip="Limited fit"></td>
+                    <td class="bad" data-tooltip="Limited fit"></td>
+                    <td class="bad" data-tooltip="Limited fit"></td>
+                  </tr>
+                  <tr>
+                    <td>Large Population Simulation</td>
+                    <td class="good" data-tooltip="Strong fit"></td>
+                    <td class="good" data-tooltip="Strong fit"></td>
+                    <td class="bad" data-tooltip="Limited fit"></td>
+                    <td class="bad" data-tooltip="Limited fit"></td>
+                    <td class="bad" data-tooltip="Limited fit"></td>
+                    <td class="partial" data-tooltip="Partial fit"></td>
+                    <td class="partial" data-tooltip="Partial fit"></td>
+                    <td class="good" data-tooltip="Strong fit"></td>
+                    <td class="good" data-tooltip="Strong fit"></td>
+                  </tr>
+                  <tr>
+                    <td>Reproducibility</td>
+                    <td class="good" data-tooltip="Strong fit"></td>
+                    <td class="good" data-tooltip="Strong fit"></td>
+                    <td class="partial" data-tooltip="Partial fit"></td>
+                    <td class="bad" data-tooltip="Limited fit"></td>
+                    <td class="bad" data-tooltip="Limited fit"></td>
+                    <td class="good" data-tooltip="Strong fit"></td>
+                    <td class="partial" data-tooltip="Partial fit"></td>
+                    <td class="good" data-tooltip="Strong fit"></td>
+                    <td class="good" data-tooltip="Strong fit"></td>
+                  </tr>
+                  <tr>
+                    <td>Scalability</td>
+                    <td class="good" data-tooltip="Strong fit"></td>
+                    <td class="partial" data-tooltip="Partial fit"></td>
+                    <td class="bad" data-tooltip="Limited fit"></td>
+                    <td class="good" data-tooltip="Strong fit"></td>
+                    <td class="good" data-tooltip="Strong fit"></td>
+                    <td class="good" data-tooltip="Strong fit"></td>
+                    <td class="good" data-tooltip="Strong fit"></td>
+                    <td class="good" data-tooltip="Strong fit"></td>
+                    <td class="good" data-tooltip="Strong fit"></td>
+                  </tr>
+                  <tr>
+                    <td>Visual Inspectability</td>
+                    <td class="good" data-tooltip="Strong fit"></td>
+                    <td class="partial" data-tooltip="Partial fit"></td>
+                    <td class="bad" data-tooltip="Limited fit"></td>
+                    <td class="partial" data-tooltip="Partial fit"></td>
+                    <td class="partial" data-tooltip="Partial fit"></td>
+                    <td class="partial" data-tooltip="Partial fit"></td>
+                    <td class="partial" data-tooltip="Partial fit"></td>
+                    <td class="bad" data-tooltip="Limited fit"></td>
+                    <td class="bad" data-tooltip="Limited fit"></td>
+                  </tr>
+                  <tr>
+                    <td>Propagation Visualization</td>
+                    <td class="good" data-tooltip="Strong fit"></td>
+                    <td class="bad" data-tooltip="Limited fit"></td>
+                    <td class="bad" data-tooltip="Limited fit"></td>
+                    <td class="bad" data-tooltip="Limited fit"></td>
+                    <td class="bad" data-tooltip="Limited fit"></td>
+                    <td class="bad" data-tooltip="Limited fit"></td>
+                    <td class="bad" data-tooltip="Limited fit"></td>
+                    <td class="bad" data-tooltip="Limited fit"></td>
+                    <td class="bad" data-tooltip="Limited fit"></td>
+                  </tr>
+                  <tr>
+                    <td>Narrative Authorability</td>
+                    <td class="good" data-tooltip="Strong fit"></td>
+                    <td class="partial" data-tooltip="Partial fit"></td>
+                    <td class="bad" data-tooltip="Limited fit"></td>
+                    <td class="partial" data-tooltip="Partial fit"></td>
+                    <td class="partial" data-tooltip="Partial fit"></td>
+                    <td class="bad" data-tooltip="Limited fit"></td>
+                    <td class="partial" data-tooltip="Partial fit"></td>
+                    <td class="bad" data-tooltip="Limited fit"></td>
+                    <td class="bad" data-tooltip="Limited fit"></td>
+                  </tr>
+                  <tr>
+                    <td>Atmosphere / Emotional Texture</td>
+                    <td class="good" data-tooltip="Strong fit"></td>
+                    <td class="bad" data-tooltip="Limited fit"></td>
+                    <td class="bad" data-tooltip="Limited fit"></td>
+                    <td class="partial" data-tooltip="Partial fit"></td>
+                    <td class="partial" data-tooltip="Partial fit"></td>
+                    <td class="bad" data-tooltip="Limited fit"></td>
+                    <td class="partial" data-tooltip="Partial fit"></td>
+                    <td class="bad" data-tooltip="Limited fit"></td>
+                    <td class="bad" data-tooltip="Limited fit"></td>
+                  </tr>
+                  <tr>
+                    <td>Unreal Integration</td>
+                    <td class="good" data-tooltip="Strong fit"></td>
+                    <td class="bad" data-tooltip="Limited fit"></td>
+                    <td class="bad" data-tooltip="Limited fit"></td>
+                    <td class="good" data-tooltip="Strong fit"></td>
+                    <td class="good" data-tooltip="Strong fit"></td>
+                    <td class="bad" data-tooltip="Limited fit"></td>
+                    <td class="good" data-tooltip="Strong fit"></td>
+                    <td class="bad" data-tooltip="Limited fit"></td>
+                    <td class="bad" data-tooltip="Limited fit"></td>
+                  </tr>
+                  <tr>
+                    <td>Creator Accessibility</td>
+                    <td class="good" data-tooltip="Strong fit"></td>
+                    <td class="bad" data-tooltip="Limited fit"></td>
+                    <td class="bad" data-tooltip="Limited fit"></td>
+                    <td class="good" data-tooltip="Strong fit"></td>
+                    <td class="good" data-tooltip="Strong fit"></td>
+                    <td class="partial" data-tooltip="Partial fit"></td>
+                    <td class="partial" data-tooltip="Partial fit"></td>
+                    <td class="partial" data-tooltip="Partial fit"></td>
+                    <td class="partial" data-tooltip="Partial fit"></td>
+                  </tr>
+                  <tr>
+                    <td>Research Accessibility</td>
+                    <td class="partial" data-tooltip="Partial fit"></td>
+                    <td class="good" data-tooltip="Strong fit"></td>
+                    <td class="good" data-tooltip="Strong fit"></td>
+                    <td class="bad" data-tooltip="Limited fit"></td>
+                    <td class="bad" data-tooltip="Limited fit"></td>
+                    <td class="partial" data-tooltip="Partial fit"></td>
+                    <td class="partial" data-tooltip="Partial fit"></td>
+                    <td class="partial" data-tooltip="Partial fit"></td>
+                    <td class="partial" data-tooltip="Partial fit"></td>
+                  </tr>
+                  <tr>
+                    <td>Installation Simplicity</td>
+                    <td class="partial" data-tooltip="Partial fit"></td>
+                    <td class="partial" data-tooltip="Partial fit"></td>
+                    <td class="bad" data-tooltip="Limited fit"></td>
+                    <td class="good" data-tooltip="Strong fit"></td>
+                    <td class="good" data-tooltip="Strong fit"></td>
+                    <td class="good" data-tooltip="Strong fit"></td>
+                    <td class="partial" data-tooltip="Partial fit"></td>
+                    <td class="good" data-tooltip="Strong fit"></td>
+                    <td class="good" data-tooltip="Strong fit"></td>
+                  </tr>
+                  <tr>
+                    <td>Production Readiness</td>
+                    <td class="partial" data-tooltip="Partial fit"></td>
+                    <td class="partial" data-tooltip="Partial fit"></td>
+                    <td class="bad" data-tooltip="Limited fit"></td>
+                    <td class="good" data-tooltip="Strong fit"></td>
+                    <td class="good" data-tooltip="Strong fit"></td>
+                    <td class="good" data-tooltip="Strong fit"></td>
+                    <td class="good" data-tooltip="Strong fit"></td>
+                    <td class="good" data-tooltip="Strong fit"></td>
+                    <td class="good" data-tooltip="Strong fit"></td>
+                  </tr>
+                  <tr>
+                    <td>Bounded Authored World Support</td>
+                    <td class="good" data-tooltip="Strong fit"></td>
+                    <td class="partial" data-tooltip="Partial fit"></td>
+                    <td class="bad" data-tooltip="Limited fit"></td>
+                    <td class="partial" data-tooltip="Partial fit"></td>
+                    <td class="partial" data-tooltip="Partial fit"></td>
+                    <td class="bad" data-tooltip="Limited fit"></td>
+                    <td class="partial" data-tooltip="Partial fit"></td>
+                    <td class="bad" data-tooltip="Limited fit"></td>
+                    <td class="bad" data-tooltip="Limited fit"></td>
+                  </tr>
+                  <tr>
+                    <td>Museum / Installation Potential</td>
+                    <td class="good" data-tooltip="Strong fit"></td>
+                    <td class="bad" data-tooltip="Limited fit"></td>
+                    <td class="bad" data-tooltip="Limited fit"></td>
+                    <td class="partial" data-tooltip="Partial fit"></td>
+                    <td class="partial" data-tooltip="Partial fit"></td>
+                    <td class="bad" data-tooltip="Limited fit"></td>
+                    <td class="partial" data-tooltip="Partial fit"></td>
+                    <td class="bad" data-tooltip="Limited fit"></td>
+                    <td class="bad" data-tooltip="Limited fit"></td>
+                  </tr>
+                  <tr>
+                    <td>Interactive Cinema Potential</td>
+                    <td class="good" data-tooltip="Strong fit"></td>
+                    <td class="bad" data-tooltip="Limited fit"></td>
+                    <td class="bad" data-tooltip="Limited fit"></td>
+                    <td class="partial" data-tooltip="Partial fit"></td>
+                    <td class="partial" data-tooltip="Partial fit"></td>
+                    <td class="bad" data-tooltip="Limited fit"></td>
+                    <td class="partial" data-tooltip="Partial fit"></td>
+                    <td class="bad" data-tooltip="Limited fit"></td>
+                    <td class="bad" data-tooltip="Limited fit"></td>
+                  </tr>
+                  <tr>
+                    <td>Enterprise Workflow Automation</td>
+                    <td class="neutral" data-tooltip="Not primary focus"></td>
+                    <td class="bad" data-tooltip="Limited fit"></td>
+                    <td class="bad" data-tooltip="Limited fit"></td>
+                    <td class="partial" data-tooltip="Partial fit"></td>
+                    <td class="partial" data-tooltip="Partial fit"></td>
+                    <td class="good" data-tooltip="Strong fit"></td>
+                    <td class="partial" data-tooltip="Partial fit"></td>
+                    <td class="good" data-tooltip="Strong fit"></td>
+                    <td class="good" data-tooltip="Strong fit"></td>
+                  </tr>
+                  <tr>
+                    <td>Ecosystem Lock-In Potential</td>
+                    <td class="good" data-tooltip="Strong fit"></td>
+                    <td class="partial" data-tooltip="Partial fit"></td>
+                    <td class="neutral" data-tooltip="Not primary focus"></td>
+                    <td class="bad" data-tooltip="Limited fit"></td>
+                    <td class="bad" data-tooltip="Limited fit"></td>
+                    <td class="partial" data-tooltip="Partial fit"></td>
+                    <td class="bad" data-tooltip="Limited fit"></td>
+                    <td class="bad" data-tooltip="Limited fit"></td>
+                    <td class="bad" data-tooltip="Limited fit"></td>
+                  </tr>
+                  <tr>
+                    <td>Infrastructure Commodity Risk</td>
+                    <td class="partial" data-tooltip="Partial fit"></td>
+                    <td class="partial" data-tooltip="Partial fit"></td>
+                    <td class="partial" data-tooltip="Partial fit"></td>
+                    <td class="partial" data-tooltip="Partial fit"></td>
+                    <td class="partial" data-tooltip="Partial fit"></td>
+                    <td class="partial" data-tooltip="Partial fit"></td>
+                    <td class="partial" data-tooltip="Partial fit"></td>
+                    <td class="bad" data-tooltip="Limited fit"></td>
+                    <td class="bad" data-tooltip="Limited fit"></td>
                   </tr>
                 </tbody>
               </table>
             </div>
-          </div>
         </section>
+
 
         <section class="use-cases-closing-section">
           <div class="use-cases-closing-panel">
@@ -373,3 +671,5 @@
     <script type="module" src="src/main.js"></script>
   </body>
 </html>
+
+

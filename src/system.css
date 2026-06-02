@@ -1164,6 +1164,73 @@
   }
 }
 
+/* ===== DRAFT REFINEMENT PASS ===== */
+.how-work-hero {
+  min-height: 0;
+  padding-top: 112px;
+  padding-bottom: 64px;
+}
+
+.how-work-hero h1 {
+  max-width: 14ch;
+  letter-spacing: 0;
+  line-height: 1.03;
+}
+
+.how-work-hero-line {
+  white-space: normal;
+}
+
+.how-work-premise-section,
+.how-work-rhythm-section,
+.how-work-layers-section {
+  padding-top: 68px;
+  padding-bottom: 68px;
+}
+
+.how-work-premise-lead,
+.how-work-section-intro h2,
+.how-work-question-card h3,
+.how-work-layer-card h3 {
+  letter-spacing: 0;
+  line-height: 1.05;
+}
+
+.how-work-premise-lead,
+.how-work-section-intro h2 {
+  font-size: 2.45rem;
+}
+
+.how-work-question-card,
+.how-work-layer-card {
+  min-height: 190px;
+  padding: 32px 28px;
+}
+
+.system-diagram-section {
+  padding-bottom: 56px;
+}
+
+@media (max-width: 640px) {
+  .how-work-hero {
+    padding-top: 88px;
+    padding-bottom: 48px;
+  }
+
+  .how-work-premise-section,
+  .how-work-rhythm-section,
+  .how-work-layers-section {
+    padding-top: 52px;
+    padding-bottom: 52px;
+  }
+
+  .how-work-premise-lead,
+  .how-work-section-intro h2 {
+    font-size: 1.9rem;
+    max-width: none;
+  }
+}
+
 /* ===========================
    ENGINE INFOGRAPHIC
 =========================== */

@@ -23,6 +23,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'index.html'),
+        foundations: resolve(__dirname, 'foundations.html'),
         howDoesItWork: resolve(__dirname, 'how-does-it-work.html'),
         useCases: resolve(__dirname, 'use-cases.html'),
         blog: resolve(__dirname, 'blog.html'),

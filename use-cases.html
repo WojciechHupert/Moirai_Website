@@ -45,7 +45,6 @@
             <a href="how-does-it-work.html" class="nav-link">How It Works</a>
             <a href="index.html#studio" class="nav-link">Studio</a>
             <a href="use-cases.html" class="nav-link active">Use Cases</a>
-            <a href="foundations.html" class="nav-link">Foundations</a>
             <a href="blog.html" class="nav-link">Journal</a>
             <a href="contact.html" class="nav-link">Contact</a>
           </nav>
@@ -71,81 +70,180 @@
         </section>
 
         <section class="use-cases-stack-section">
-          <div class="use-case-stack">
+          <div class="use-case-stack" data-use-cases>
             <article class="use-case-card">
-              <p class="use-case-label">Use case 01</p>
-              <h3>Controlled research simulation</h3>
-              <p class="use-case-subtitle">A bounded simulation for studying how belief, trust, evidence, authority, ambiguity, and social pressure alter what agents know or believe over time.</p>
-              <p>CPS makes source, confidence, relationship path, mutation, containment, and later recall available for inspection.</p>
+              <div class="use-case-card-top">
+                <div>
+                  <p class="use-case-label">Use case 01</p>
+                  <h3>Controlled research simulation</h3>
+                </div>
+                <span class="use-case-maturity">Strong research fit</span>
+              </div>
+              <p class="use-case-subtitle">Studying how information changes what agents know or believe.</p>
+              <button class="use-case-toggle" type="button" aria-expanded="false">
+                <span class="use-case-toggle-label">Read more</span>
+                <span class="use-case-toggle-icon" aria-hidden="true">+</span>
+              </button>
+              <div class="use-case-collapsible">
+                <div class="use-case-collapsible-inner">
+                  <p>A bounded simulation for studying how belief, trust, evidence, authority, ambiguity, and social pressure alter what agents know or believe over time.</p>
+                  <p>CPS makes visible where information came from, who received it, whether confidence changed, whether it mutated, and which relationship path made transmission possible.</p>
+                  <p class="use-case-best"><strong>Why it matters:</strong> this is one of the strongest current CPS use cases because it fits the system's core strengths: bounded actors, partial knowledge, propagation, lineage, containment, and inspection.</p>
+                </div>
+              </div>
             </article>
 
             <article class="use-case-card">
-              <p class="use-case-label">Use case 02</p>
-              <h3>Organizational communication and training</h3>
-              <p class="use-case-subtitle">A scenario system for showing how messages, assumptions, private concerns, and misunderstandings move through a team or institution.</p>
-              <p>CPS does not teach empathy directly. It makes social consequences visible for reflection.</p>
+              <div class="use-case-card-top">
+                <div>
+                  <p class="use-case-label">Use case 02</p>
+                  <h3>Organizational communication and training</h3>
+                </div>
+                <span class="use-case-maturity">Strong applied fit</span>
+              </div>
+              <p class="use-case-subtitle">Showing how messages move through teams and institutions.</p>
+              <button class="use-case-toggle" type="button" aria-expanded="false">
+                <span class="use-case-toggle-label">Read more</span>
+                <span class="use-case-toggle-icon" aria-hidden="true">+</span>
+              </button>
+              <div class="use-case-collapsible">
+                <div class="use-case-collapsible-inner">
+                  <p>CPS can support scenarios where messages, assumptions, private concerns, and misunderstandings move through a team or institution.</p>
+                  <p>The purpose is not to claim that CPS teaches empathy directly. The stronger claim is that CPS can make social consequences visible for reflection: who heard what, what changed, who was excluded, what stayed private, and where ambiguity created misunderstanding.</p>
+                  <p class="use-case-best"><strong>Why it matters:</strong> this could support communication training, institutional foresight, leadership scenarios, and policy rehearsal.</p>
+                </div>
+              </div>
             </article>
 
             <article class="use-case-card">
-              <p class="use-case-label">Use case 03</p>
-              <h3>Interactive worlds and games</h3>
-              <p class="use-case-subtitle">A way to give authored worlds social consequence without hardcoding every outcome.</p>
-              <p>Characters can remember, share, withhold, misunderstand, and react based on what reached them.</p>
+              <div class="use-case-card-top">
+                <div>
+                  <p class="use-case-label">Use case 03</p>
+                  <h3>Interactive worlds and games</h3>
+                </div>
+                <span class="use-case-maturity">Strong downstream-client fit</span>
+              </div>
+              <p class="use-case-subtitle">Social consequence without scripting every outcome.</p>
+              <button class="use-case-toggle" type="button" aria-expanded="false">
+                <span class="use-case-toggle-label">Read more</span>
+                <span class="use-case-toggle-icon" aria-hidden="true">+</span>
+              </button>
+              <div class="use-case-collapsible">
+                <div class="use-case-collapsible-inner">
+                  <p>CPS can give authored worlds social consequence without hardcoding every outcome. Characters can remember, share, withhold, misunderstand, and react based on what reached them.</p>
+                  <p>A downstream client such as Lelit Distrikt can provide embodiment, atmosphere, animation, and spatial staging, while CPS provides memory, propagation, privacy, lineage, and relationship logic.</p>
+                  <p class="use-case-best"><strong>Why it matters:</strong> the best use is not an uncontrolled autonomous society. The best use is a bounded authored world where information has traceable consequences.</p>
+                </div>
+              </div>
             </article>
 
             <article class="use-case-card">
-              <p class="use-case-label">Use case 04</p>
-              <h3>Personal multi-agent assistant / AI council</h3>
-              <p class="use-case-subtitle">A future-facing application where several specialized agents hold partial context and discuss a user situation from different perspectives.</p>
-              <p>The goal would be one recommendation with an inspectable decision trail. This is exploratory, not a current production claim.</p>
+              <div class="use-case-card-top">
+                <div>
+                  <p class="use-case-label">Use case 04</p>
+                  <h3>Personal multi-agent assistant / AI council</h3>
+                </div>
+                <span class="use-case-maturity">Future-facing</span>
+              </div>
+              <p class="use-case-subtitle">A future-facing model for inspectable multi-agent advice.</p>
+              <button class="use-case-toggle" type="button" aria-expanded="false">
+                <span class="use-case-toggle-label">Read more</span>
+                <span class="use-case-toggle-icon" aria-hidden="true">+</span>
+              </button>
+              <div class="use-case-collapsible">
+                <div class="use-case-collapsible-inner">
+                  <p>A future-facing application where several specialized agents hold partial context, discuss a user situation from different perspectives, and produce one recommendation with an inspectable decision trail.</p>
+                  <p>CPS could help show what each agent knew, what context shaped its view, what was shared between agents, and how the final recommendation emerged.</p>
+                  <p class="use-case-best"><strong>Status:</strong> this is not current product functionality. It should be presented as an exploratory future direction.</p>
+                </div>
+              </div>
             </article>
 
             <article class="use-case-card">
-              <p class="use-case-label">Use case 05</p>
-              <h3>AI safety, privacy, and memory boundaries</h3>
-              <p class="use-case-subtitle">A testbed for inspecting what information is retained, what is blocked, what becomes hearsay, and what remains private.</p>
-              <p>The value is clear provenance: direct knowledge should not collapse into repeated rumor.</p>
+              <div class="use-case-card-top">
+                <div>
+                  <p class="use-case-label">Use case 05</p>
+                  <h3>AI safety, privacy, and memory boundaries</h3>
+                </div>
+                <span class="use-case-maturity">Current fit</span>
+              </div>
+              <p class="use-case-subtitle">Inspecting retention, containment, hearsay, and blocked information.</p>
+              <button class="use-case-toggle" type="button" aria-expanded="false">
+                <span class="use-case-toggle-label">Read more</span>
+                <span class="use-case-toggle-icon" aria-hidden="true">+</span>
+              </button>
+              <div class="use-case-collapsible">
+                <div class="use-case-collapsible-inner">
+                  <p>CPS can act as a testbed for inspecting what information is retained, what is blocked, what becomes hearsay, and what remains private.</p>
+                  <p>This is especially relevant for systems where agents should not all share one global memory. CPS can show bounded access, privacy gates, tainting, lineage, and containment behavior.</p>
+                  <p class="use-case-best"><strong>Why it matters:</strong> the value is not that CPS solves AI safety. The value is that it makes some memory and propagation boundaries easier to inspect.</p>
+                </div>
+              </div>
             </article>
 
             <article class="use-case-card">
-              <p class="use-case-label">Use case 06</p>
-              <h3>Museums, galleries, and cultural installations</h3>
-              <p class="use-case-subtitle">An infrastructure layer for artificial communities where visitor interactions leave traces that later visitors may encounter indirectly.</p>
-              <p>CPS can help an installation preserve continuity without turning every encounter into a fixed branch.</p>
+              <div class="use-case-card-top">
+                <div>
+                  <p class="use-case-label">Use case 06</p>
+                  <h3>Museums, galleries, and cultural installations</h3>
+                </div>
+                <span class="use-case-maturity">Exploratory applied fit</span>
+              </div>
+              <p class="use-case-subtitle">Artificial communities that remember visitors indirectly.</p>
+              <button class="use-case-toggle" type="button" aria-expanded="false">
+                <span class="use-case-toggle-label">Read more</span>
+                <span class="use-case-toggle-icon" aria-hidden="true">+</span>
+              </button>
+              <div class="use-case-collapsible">
+                <div class="use-case-collapsible-inner">
+                  <p>CPS can support installations where visitor interactions leave traces that later visitors may encounter indirectly.</p>
+                  <p>Instead of resetting after each interaction, the artificial community can retain selected information, transform it, contain it, or let it reappear later through another actor.</p>
+                  <p class="use-case-best"><strong>Why it matters:</strong> this fits museums and cultural institutions because it creates continuity without requiring a fully open-ended autonomous world.</p>
+                </div>
+              </div>
             </article>
 
             <article class="use-case-card">
-              <p class="use-case-label">Use case 07</p>
-              <h3>Human-agent and robotics interaction</h3>
-              <p class="use-case-subtitle">A way to reason about partial knowledge, memory handoff, and context boundaries across multiple agents or embodied systems.</p>
-              <p>The focus is the social layer around machine interaction, not robotics control.</p>
+              <div class="use-case-card-top">
+                <div>
+                  <p class="use-case-label">Use case 07</p>
+                  <h3>Human-agent and robotics interaction</h3>
+                </div>
+                <span class="use-case-maturity">Exploratory</span>
+              </div>
+              <p class="use-case-subtitle">Reasoning about partial knowledge across multiple actors.</p>
+              <button class="use-case-toggle" type="button" aria-expanded="false">
+                <span class="use-case-toggle-label">Read more</span>
+                <span class="use-case-toggle-icon" aria-hidden="true">+</span>
+              </button>
+              <div class="use-case-collapsible">
+                <div class="use-case-collapsible-inner">
+                  <p>CPS can help reason about partial knowledge, memory handoff, and context boundaries across multiple agents or embodied systems.</p>
+                  <p>This is not robotics control. CPS is concerned with the social and informational layer: what an actor knows, what it can share, what remains private, and how memory moves across a group.</p>
+                </div>
+              </div>
             </article>
 
             <article class="use-case-card">
-              <p class="use-case-label">Use case 08</p>
-              <h3>Writers and worldbuilders</h3>
-              <p class="use-case-subtitle">A design tool for tracking who knows what, how rumors spread, and how social consequences emerge across a fictional group.</p>
-              <p>CPS helps authors test continuity and consequence without replacing authorship.</p>
+              <div class="use-case-card-top">
+                <div>
+                  <p class="use-case-label">Use case 08</p>
+                  <h3>Writers and worldbuilders</h3>
+                </div>
+                <span class="use-case-maturity">Creative support use</span>
+              </div>
+              <p class="use-case-subtitle">Tracking who knows what inside a fictional group.</p>
+              <button class="use-case-toggle" type="button" aria-expanded="false">
+                <span class="use-case-toggle-label">Read more</span>
+                <span class="use-case-toggle-icon" aria-hidden="true">+</span>
+              </button>
+              <div class="use-case-collapsible">
+                <div class="use-case-collapsible-inner">
+                  <p>CPS can be used as a design tool for tracking who knows what, how rumors spread, and how social consequences emerge across a fictional group.</p>
+                  <p>This is useful for writers, narrative designers, and worldbuilders who need continuity without flattening every character into the same shared knowledge state.</p>
+                </div>
+              </div>
             </article>
-          </div>
-        </section>
-
-        <section class="use-cases-why-section homepage-text-column">
-          <div class="homepage-section-header">
-            <h2>What CPS combines</h2>
-          </div>
-          <div class="homepage-section-body">
-            <p>CPS is useful because it brings several normally separate concerns into one inspectable prototype.</p>
-            <ul class="cps-combines-list">
-              <li>durable memory records</li>
-              <li>bounded access</li>
-              <li>relationship-aware propagation</li>
-              <li>privacy and sensitivity gates</li>
-              <li>lineage and provenance</li>
-              <li>opportunity scoring</li>
-              <li>CPS Studio operator inspection</li>
-              <li>deterministic demo validation</li>
-            </ul>
           </div>
         </section>
 
@@ -177,7 +275,6 @@
               <a href="how-does-it-work.html" class="footer-link">How It Works</a>
               <a href="index.html#studio" class="footer-link">Studio</a>
               <a href="use-cases.html" class="footer-link">Use Cases</a>
-              <a href="foundations.html" class="footer-link">Foundations</a>
               <a href="blog.html" class="footer-link">Journal</a>
               <a href="contact.html" class="footer-link">Contact</a>
             </nav>

@@ -111,11 +111,36 @@ function initFaqAccordion() {
   });
 }
 
+function initUseCaseCards() {
+  const groups = document.querySelectorAll('[data-use-cases]');
+  if (!groups.length) return;
+
+  groups.forEach((group) => {
+    const cards = group.querySelectorAll('.use-case-card');
+
+    cards.forEach((card) => {
+      const trigger = card.querySelector('.use-case-toggle');
+      const label = trigger?.querySelector('.use-case-toggle-label');
+      const icon = trigger?.querySelector('.use-case-toggle-icon');
+      if (!trigger) return;
+
+      trigger.addEventListener('click', () => {
+        const nextOpen = !card.classList.contains('is-expanded');
+        card.classList.toggle('is-expanded', nextOpen);
+        trigger.setAttribute('aria-expanded', String(nextOpen));
+        if (label) label.textContent = nextOpen ? 'Close' : 'Read more';
+        if (icon) icon.textContent = nextOpen ? '-' : '+';
+      });
+    });
+  });
+}
+
 // Initialize the system
 document.addEventListener('DOMContentLoaded', () => {
   initLightbox();
   initCarousel();
   initFaqAccordion();
+  initUseCaseCards();
 
   // Auto-initialize visualization
   setTimeout(() => {

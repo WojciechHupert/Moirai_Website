@@ -219,7 +219,7 @@
               <div class="use-case-collapsible">
                 <div class="use-case-collapsible-inner">
                   <p>CPS can help reason about partial knowledge, memory handoff, and context boundaries across multiple agents or embodied systems.</p>
-                  <p>This is not robotics control. CPS is concerned with the social and informational layer: what an actor knows, what it can share, what remains private, and how memory moves across a group.</p>
+                  <p>CPS is concerned with the social and informational layer: what an actor knows, what it can share, what remains private, and how memory moves across a group.</p>
                 </div>
               </div>
             </article>
@@ -268,7 +268,7 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <th scope="row">Who knows what, separately</th>
+                    <th scope="row">Persistent memory</th>
                     <td><span class="fit-label fit-strong">Strong fit</span></td>
                     <td><span class="fit-label fit-partial">Partial fit</span></td>
                     <td><span class="fit-label fit-partial">Partial fit</span></td>
@@ -276,15 +276,7 @@
                     <td><span class="fit-label fit-limited">Limited fit</span></td>
                   </tr>
                   <tr>
-                    <th scope="row">How information moves between actors</th>
-                    <td><span class="fit-label fit-strong">Strong fit</span></td>
-                    <td><span class="fit-label fit-limited">Limited fit</span></td>
-                    <td><span class="fit-label fit-limited">Limited fit</span></td>
-                    <td><span class="fit-label fit-partial">Partial fit</span></td>
-                    <td><span class="fit-label fit-partial">Partial fit</span></td>
-                  </tr>
-                  <tr>
-                    <th scope="row">Privacy, containment, and blocked information</th>
+                    <th scope="row">Bounded access</th>
                     <td><span class="fit-label fit-strong">Strong fit</span></td>
                     <td><span class="fit-label fit-partial">Partial fit</span></td>
                     <td><span class="fit-label fit-limited">Limited fit</span></td>
@@ -292,28 +284,68 @@
                     <td><span class="fit-label fit-partial">Partial fit</span></td>
                   </tr>
                   <tr>
-                    <th scope="row">Lineage and provenance of memory</th>
+                    <th scope="row">Relationship-aware propagation</th>
                     <td><span class="fit-label fit-strong">Strong fit</span></td>
                     <td><span class="fit-label fit-limited">Limited fit</span></td>
                     <td><span class="fit-label fit-limited">Limited fit</span></td>
-                    <td><span class="fit-label fit-partial">Partial fit</span></td>
-                    <td><span class="fit-label fit-strong">Strong fit</span></td>
-                  </tr>
-                  <tr>
-                    <th scope="row">Inspectable social consequence</th>
-                    <td><span class="fit-label fit-strong">Strong fit</span></td>
-                    <td><span class="fit-label fit-partial">Partial fit</span></td>
-                    <td><span class="fit-label fit-limited">Limited fit</span></td>
-                    <td><span class="fit-label fit-partial">Partial fit</span></td>
-                    <td><span class="fit-label fit-limited">Limited fit</span></td>
-                  </tr>
-                  <tr>
-                    <th scope="row">Natural-language interpretation</th>
-                    <td><span class="fit-label fit-partial">Partial fit</span></td>
-                    <td><span class="fit-label fit-limited">Limited fit</span></td>
-                    <td><span class="fit-label fit-strong">Strong fit</span></td>
                     <td><span class="fit-label fit-partial">Partial fit</span></td>
                     <td><span class="fit-label fit-not-primary">Not primary focus</span></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Lineage and provenance</th>
+                    <td><span class="fit-label fit-strong">Strong fit</span></td>
+                    <td><span class="fit-label fit-limited">Limited fit</span></td>
+                    <td><span class="fit-label fit-partial">Partial fit</span></td>
+                    <td><span class="fit-label fit-partial">Partial fit</span></td>
+                    <td><span class="fit-label fit-strong">Strong fit</span></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Privacy containment</th>
+                    <td><span class="fit-label fit-strong">Strong fit</span></td>
+                    <td><span class="fit-label fit-partial">Partial fit</span></td>
+                    <td><span class="fit-label fit-partial">Partial fit</span></td>
+                    <td><span class="fit-label fit-partial">Partial fit</span></td>
+                    <td><span class="fit-label fit-limited">Limited fit</span></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Partial knowledge</th>
+                    <td><span class="fit-label fit-strong">Strong fit</span></td>
+                    <td><span class="fit-label fit-partial">Partial fit</span></td>
+                    <td><span class="fit-label fit-partial">Partial fit</span></td>
+                    <td><span class="fit-label fit-partial">Partial fit</span></td>
+                    <td><span class="fit-label fit-limited">Limited fit</span></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Operator inspection</th>
+                    <td><span class="fit-label fit-strong">Strong fit</span></td>
+                    <td><span class="fit-label fit-partial">Partial fit</span></td>
+                    <td><span class="fit-label fit-limited">Limited fit</span></td>
+                    <td><span class="fit-label fit-strong">Strong fit</span></td>
+                    <td><span class="fit-label fit-partial">Partial fit</span></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Social consequence over time</th>
+                    <td><span class="fit-label fit-strong">Strong fit</span></td>
+                    <td><span class="fit-label fit-partial">Partial fit</span></td>
+                    <td><span class="fit-label fit-limited">Limited fit</span></td>
+                    <td><span class="fit-label fit-partial">Partial fit</span></td>
+                    <td><span class="fit-label fit-limited">Limited fit</span></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Narrative/world integration</th>
+                    <td><span class="fit-label fit-partial">Partial fit</span></td>
+                    <td><span class="fit-label fit-strong">Strong fit</span></td>
+                    <td><span class="fit-label fit-limited">Limited fit</span></td>
+                    <td><span class="fit-label fit-partial">Partial fit</span></td>
+                    <td><span class="fit-label fit-not-primary">Not primary focus</span></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Research observability</th>
+                    <td><span class="fit-label fit-strong">Strong fit</span></td>
+                    <td><span class="fit-label fit-limited">Limited fit</span></td>
+                    <td><span class="fit-label fit-limited">Limited fit</span></td>
+                    <td><span class="fit-label fit-strong">Strong fit</span></td>
+                    <td><span class="fit-label fit-partial">Partial fit</span></td>
                   </tr>
                 </tbody>
               </table>

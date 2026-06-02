@@ -62,7 +62,6 @@
           <nav class="site-nav">
             <a href="./" class="nav-link">Home</a>
             <a href="how-does-it-work.html" class="nav-link active">How It Works</a>
-            <a href="index.html#studio" class="nav-link">Studio</a>
             <a href="use-cases.html" class="nav-link">Use Cases</a>
             <a href="blog.html" class="nav-link">Journal</a>
             <a href="contact.html" class="nav-link">Contact</a>
@@ -79,6 +78,11 @@
 
       <main>
         <section class="use-cases-hero how-work-hero">
+          <div class="soundwave-container">
+            <div class="soundwave"></div>
+            <div class="soundwave"></div>
+            <div class="soundwave"></div>
+          </div>
           <div class="use-cases-hero-inner how-work-hero-inner">
             <h1 class="animate-slide-up" style="animation-delay: 0.1s;">From moment to social memory</h1>
             <p class="how-work-hero-line animate-slide-up" style="animation-delay: 0.2s;">CPS tracks what that memory does next.</p>
@@ -87,10 +91,12 @@
 
         <section class="homepage-text-section how-work-premise-section">
           <div class="homepage-text-column how-work-premise">
-            <p class="how-work-premise-lead">Information does not automatically spread.</p>
-            <div class="how-work-premise-copy">
-              <p>A conversation, event, or observation enters the system and becomes a structured memory with source, privacy, confidence, and ownership.</p>
-              <p>For that memory to move, it must become relevant, find a relationship path, pass gates, and produce a traceable memory in another actor.</p>
+            <div class="homepage-section-header">
+              <h2>Information does not automatically spread.</h2>
+            </div>
+            <div class="homepage-section-body">
+              <p>CPS provides the logic gates that control the afterlife of a memory.</p>
+              <p>In most AI systems, a conversation is an isolated event. In CPS, every event is a potential signal that must be scored for social relevance, checked against relationship topology, and filtered through privacy boundaries before it can move.</p>
             </div>
           </div>
         </section>
@@ -102,24 +108,20 @@
             </div>
             <div class="how-work-question-grid">
               <article class="how-work-question-card">
-                <span class="mono text-accent">Question 01</span>
                 <h3>Who knows?</h3>
-                <p>Memory is attached to agents, roles, privacy boundaries, and sources instead of being treated as a single global fact.</p>
+                <p>Memory is not a global broadcast. It is attached to specific agents, defined roles, and strict privacy boundaries. CPS preserves the source of every fact, allowing the system to distinguish between primary observations and secondary hearsay rather than treating everything as a single global truth.</p>
               </article>
               <article class="how-work-question-card">
-                <span class="mono text-accent">Question 02</span>
                 <h3>Can it move?</h3>
-                <p>A secret may stay private. A rumor may travel. A warning may spread unevenly through trust, fear, or status.</p>
+                <p>Information propagation is gated by relationship topology and sensitivity thresholds. A secret may stay locked within a trusted pair, while a public signal might travel rapidly. Propagation is a calculated choice made by the system's Opportunity Engine based on social relevance and trust paths.</p>
               </article>
               <article class="how-work-question-card">
-                <span class="mono text-accent">Question 03</span>
                 <h3>How does it change?</h3>
-                <p>Information can lose certainty, gain emotional charge, become distorted, or return later with a different tone.</p>
+                <p>As information moves between subjects, it is not just copied; it is transformed. It can lose precision, gain emotional urgency, or become distorted by the recipient's own context. CPS tracks these mutations through a traceable lineage, ensuring every propagation hop is recorded and inspectable.</p>
               </article>
               <article class="how-work-question-card">
-                <span class="mono text-accent">Question 04</span>
                 <h3>What does it cause?</h3>
-                <p>The important output is continuity: later reactions that make sense because the world remembers what happened.</p>
+                <p>The ultimate goal is social continuity. When the world remembers what happened, characters can act on past events, recall previous promises, and react to shared rumors. This turns isolated AI exchanges into a persistent narrative where information has an afterlife and actions have lasting consequences.</p>
               </article>
             </div>          </div>
         </section>
@@ -135,20 +137,20 @@
             </div>
             <div class="how-work-layer-grid">
               <article class="how-work-layer-card">
-                <h3>Memory / Event</h3>
-                <p>A conversation, action, or observation becomes a candidate for durable memory.</p>
+                <h3>Memory&nbsp;/&nbsp;Event</h3>
+                <p>A conversation, action, or observation enters the system as a structured record. CPS preserves structure.</p>
               </article>
               <article class="how-work-layer-card">
-                <h3>Signal &#8594; Intention</h3>
-                <p>A remembered event may create social pressure and become an intention before propagation can happen.</p>
+                <h3>Signal&nbsp;&#8594;&nbsp;Intention</h3>
+                <p>A remembered event creates social pressure, turning a passive record into an active signal. If the information is deemed socially relevant, the system generates an internal intention to propagate, preparing the context for a potential exchange between subjects.</p>
               </article>
               <article class="how-work-layer-card">
-                <h3>Opportunity &#8594; Exchange</h3>
-                <p>A viable relationship path must exist. Privacy, sensitivity, trust, cooldowns, and loop checks may allow or block the exchange.</p>
+                <h3>Opportunity&nbsp;&#8594;&nbsp;Exchange</h3>
+                <p>The Social Opportunity Engine identifies viable relationship paths and trust topologies. Before any information moves, it must pass strict privacy gates, sensitivity checks, and cooldown timers to prevent redundant gossip loops or unauthorized leaks.</p>
               </article>
               <article class="how-work-layer-card">
-                <h3>Propagated Memory with Lineage</h3>
-                <p>The recipient does not receive a raw copy. CPS writes a new memory with source and provenance intact.</p>
+                <h3>Propagated&nbsp;Record</h3>
+                <p>Upon successful exchange, the recipient receives a new, structured memory. CPS ensures that the source and full propagation history (lineage) remain intact, allowing the new owner to distinguish between direct experience, trusted reporting, and distant hearsay.</p>
               </article>
             </div>
           </div>
@@ -184,17 +186,6 @@
             <p class="footer-summary">
               Exploratory infrastructure for social memory in artificial worlds. Making propagation, containment, lineage, and consequence visible.
             </p>
-          </div>
-          <div class="footer-column">
-            <span class="footer-label">Navigation</span>
-            <nav class="footer-nav">
-              <a href="./" class="footer-link">Home</a>
-              <a href="how-does-it-work.html" class="footer-link">How It Works</a>
-              <a href="index.html#studio" class="footer-link">Studio</a>
-              <a href="use-cases.html" class="footer-link">Use Cases</a>
-              <a href="blog.html" class="footer-link">Journal</a>
-              <a href="contact.html" class="footer-link">Contact</a>
-            </nav>
           </div>
           <div class="footer-column">
             <span class="footer-label">Legal & Contact</span>

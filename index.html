@@ -58,7 +58,6 @@
           <nav class="site-nav">
             <a href="./" class="nav-link active">Home</a>
             <a href="how-does-it-work.html" class="nav-link">How It Works</a>
-            <a href="#studio" class="nav-link">Studio</a>
             <a href="use-cases.html" class="nav-link">Use Cases</a>
             <a href="blog.html" class="nav-link">Journal</a>
             <a href="contact.html" class="nav-link">Contact</a>
@@ -88,6 +87,45 @@
           <div class="homepage-text-column">
             <div class="homepage-section-header homepage-section-header--statement">
               <h2 class="section-phrase">CPS supports environments where conversation has an afterlife. Information can be remembered, retold, withheld, distorted, and traced across a group instead of disappearing after one exchange.</h2>
+            </div>
+          </div>
+        </section>
+
+        <section id="origin" class="homepage-text-section">
+          <div class="homepage-text-column">
+            <div class="homepage-section-header">
+              <h2>The Social Life of Information</h2>
+            </div>
+            <div class="homepage-section-body">
+              <p>Most AI systems treat conversation as an isolated exchange. CPS treats information as something that can enter a bounded group state: it may be remembered, shared, blocked, distorted, or return later as consequence.</p>
+              <p>CPS does not move knowledge just because it exists. A remembered event must become socially relevant, pass relationship and privacy checks, and then create a new traceable memory in another actor.</p>
+              
+              <div class="cps-flow-diagram animated">
+                <div class="flow-step">
+                  <span class="step-label">Memory / Event</span>
+                </div>
+                <div class="flow-arrow">&#8594;</div>
+                <div class="flow-step">
+                  <span class="step-label">Signal</span>
+                </div>
+                <div class="flow-arrow">&#8594;</div>
+                <div class="flow-step">
+                  <span class="step-label">Intention</span>
+                </div>
+                <div class="flow-arrow">&#8594;</div>
+                <div class="flow-step">
+                  <span class="step-label">Opportunity</span>
+                </div>
+                <div class="flow-arrow">&#8594;</div>
+                <div class="flow-step">
+                  <span class="step-label">Exchange</span>
+                </div>
+                <div class="flow-arrow">&#8594;</div>
+                <a href="how-does-it-work.html" class="flow-step highlight interactive">
+                  <span class="step-label">Propagated Memory</span>
+                  <span class="step-sublabel">See mechanism</span>
+                </a>
+              </div>
             </div>
           </div>
         </section>
@@ -189,34 +227,6 @@
           </div>
         </section>
 
-        <section id="origin" class="homepage-text-section">
-          <div class="homepage-text-column">
-            <div class="homepage-section-header">
-              <h2>The Social Life of Information</h2>
-            </div>
-            <div class="homepage-section-body">
-              <p>Most AI systems treat conversation as an isolated exchange. CPS treats information as something that can enter a bounded group state: it may be remembered, shared, blocked, distorted, or return later as consequence.</p>
-              <div class="cps-social-flow-container" data-full="src/assets/social-flow.webp">
-                <img src="src/assets/social-flow.webp" alt="CPS Social Information Flow Visualization" loading="lazy">
-              </div>
-              <p class="media-caption mono">Studio visualizations are used to inspect relationships, opportunity routes, and propagation state.</p>
-            </div>
-          </div>
-        </section>
-
-        <section class="homepage-text-section">
-          <div class="homepage-text-column">
-            <div class="homepage-section-header">
-              <h2>How information moves</h2>
-            </div>
-            <div class="homepage-section-body">
-              <p class="mono text-accent">Memory / Event &#8594; Signal &#8594; Intention &#8594; Opportunity &#8594; Exchange &#8594; Propagated Memory with Lineage</p>
-              <p>CPS does not move knowledge just because it exists. A remembered event must become socially relevant, pass relationship and privacy checks, and then create a new traceable memory in another actor.</p>
-              <p><a href="how-does-it-work.html" class="cta-button secondary">See the mechanism</a></p>
-            </div>
-          </div>
-        </section>
-
         <section id="studio" class="homepage-text-section">
           <div class="homepage-text-column">
             <div class="homepage-section-header">
@@ -225,52 +235,48 @@
             <div class="homepage-section-body">
               <p>CPS Studio shows how CPS becomes inspectable: who knows what, where it came from, which relationship could carry it, why an opportunity was accepted or blocked, and what lineage was written after propagation.</p>
               <div class="cps-interface-carousel" aria-label="CPS interface previews" data-carousel>
-                <div class="cps-interface-carousel-header">
-                  <div class="cps-interface-carousel-controls">
-                    <button class="carousel-control" type="button" data-carousel-prev aria-label="Previous CPS Studio image">
-                      <span aria-hidden="true">&#8592;</span>
-                    </button>
-                    <button class="carousel-control" type="button" data-carousel-next aria-label="Next CPS Studio image">
-                      <span aria-hidden="true">&#8594;</span>
-                    </button>
+                <div class="cps-interface-carousel-main">
+                  <button class="carousel-control side prev" type="button" data-carousel-prev aria-label="Previous CPS Studio image">
+                    <span aria-hidden="true">&#8592;</span>
+                  </button>
+                  
+                  <div class="cps-interface-carousel-track" data-carousel-track>
+                    <a href="#" class="cps-interface-slide" data-full="src/assets/studio/system-settings.png">
+                      <img src="src/assets/studio/system-settings.webp" alt="CPS Environment Parameters & Settings" loading="lazy" decoding="async">
+                    </a>
+                    <a href="#" class="cps-interface-slide" data-full="src/assets/studio/activity-graph.png">
+                      <img src="src/assets/studio/activity-graph.webp" alt="Activity Route Social Graph" loading="lazy" decoding="async">
+                    </a>
+                    <a href="#" class="cps-interface-slide" data-full="src/assets/studio/latency-throughput.png">
+                      <img src="src/assets/studio/latency-throughput.webp" alt="System Latency & Throughput Monitoring" loading="lazy" decoding="async">
+                    </a>
+                    <a href="#" class="cps-interface-slide" data-full="src/assets/studio/subjects-registry.png">
+                      <img src="src/assets/studio/subjects-registry.webp" alt="Subjects Identity Registry" loading="lazy" decoding="async">
+                    </a>
+                    <a href="#" class="cps-interface-slide" data-full="src/assets/studio/archives-summaries.png">
+                      <img src="src/assets/studio/archives-summaries.webp" alt="Archives: Narrative Summaries View" loading="lazy" decoding="async">
+                    </a>
                   </div>
-                </div>
-                <div class="cps-interface-carousel-track" data-carousel-track>
-                  <a href="#" class="cps-interface-slide" data-full="src/assets/studio/system-settings.png">
-                    <img src="src/assets/studio/system-settings.webp" alt="CPS Environment Parameters & Settings" loading="lazy" decoding="async">
-                  </a>
-                  <a href="#" class="cps-interface-slide" data-full="src/assets/studio/activity-graph.png">
-                    <img src="src/assets/studio/activity-graph.webp" alt="Activity Route Social Graph" loading="lazy" decoding="async">
-                  </a>
-                  <a href="#" class="cps-interface-slide" data-full="src/assets/studio/latency-throughput.png">
-                    <img src="src/assets/studio/latency-throughput.webp" alt="System Latency & Throughput Monitoring" loading="lazy" decoding="async">
-                  </a>
-                  <a href="#" class="cps-interface-slide" data-full="src/assets/studio/subjects-registry.png">
-                    <img src="src/assets/studio/subjects-registry.webp" alt="Subjects Identity Registry" loading="lazy" decoding="async">
-                  </a>
-                  <a href="#" class="cps-interface-slide" data-full="src/assets/studio/archives-summaries.png">
-                    <img src="src/assets/studio/archives-summaries.webp" alt="Archives: Narrative Summaries View" loading="lazy" decoding="async">
-                  </a>
+
+                  <button class="carousel-control side next" type="button" data-carousel-next aria-label="Next CPS Studio image">
+                    <span aria-hidden="true">&#8594;</span>
+                  </button>
                 </div>
               </div>
               <div class="journal-card-list studio-card-grid">
                 <article class="journal-card">
-                  <div class="journal-card-meta mono"><span>Studio</span><span>01</span></div>
                   <h4>Subjects and relationships</h4>
                   <p>Inspect actors, identities, memory counts, relationship topology, trust links, one-way bonds, and mutual connections.</p>
                 </article>
                 <article class="journal-card">
-                  <div class="journal-card-meta mono"><span>Studio</span><span>02</span></div>
                   <h4>Opportunities and blockers</h4>
                   <p>See signals, intentions, candidate propagation routes, activation scores, privacy gates, sensitivity thresholds, cooldowns, and loop prevention.</p>
                 </article>
                 <article class="journal-card">
-                  <div class="journal-card-meta mono"><span>Studio</span><span>03</span></div>
                   <h4>Lineage and provenance</h4>
                   <p>Trace a memory back to its source and distinguish direct knowledge, hearsay, repeated rumor, and blocked private information.</p>
                 </article>
                 <article class="journal-card">
-                  <div class="journal-card-meta mono"><span>Studio</span><span>04</span></div>
                   <h4>Demo validation</h4>
                   <p>Run bounded demo profiles that show public propagation, private containment, observer isolation, and deterministic repeatability.</p>
                 </article>
@@ -279,7 +285,8 @@
           </div>
         </section>
 
-        <section class="homepage-text-section">
+        <section class="homepage-text-section use-cases-preview-section">
+          <div class="fractal-bg"></div>
           <div class="homepage-text-column">
             <div class="homepage-section-header">
               <h2>Where CPS can be used</h2>
@@ -306,7 +313,7 @@
               </div>
                 <div class="experience-content-side">
                   <div class="section-header">
-                    <h2 class="experience-title">One possible embodied client: Lelit Distrikt</h2>
+                    <h2 class="experience-title">Lelit Distrikt</h2>
                   </div>
                   <div class="origin-text">
                     <p class="section-intro section-intro--lead">
@@ -376,17 +383,6 @@
             <p class="footer-summary">
               Exploratory infrastructure for social memory in artificial worlds. Making propagation, containment, lineage, and consequence visible.
             </p>
-          </div>
-          <div class="footer-column">
-            <span class="footer-label">Navigation</span>
-            <nav class="footer-nav">
-              <a href="./" class="footer-link">Home</a>
-              <a href="how-does-it-work.html" class="footer-link">How It Works</a>
-              <a href="#studio" class="footer-link">Studio</a>
-              <a href="use-cases.html" class="footer-link">Use Cases</a>
-              <a href="blog.html" class="footer-link">Journal</a>
-              <a href="contact.html" class="footer-link">Contact</a>
-            </nav>
           </div>
           <div class="footer-column">
             <span class="footer-label">Legal & Contact</span>

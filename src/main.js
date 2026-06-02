@@ -18,7 +18,7 @@ function initLightbox() {
   const lightboxImg = document.getElementById('lightbox-img');
   const captionText = document.getElementById('caption');
   const closeBtn = document.querySelector('.close-modal');
-  const lightboxTriggers = document.querySelectorAll('.cps-interface-slide, .cps-social-flow-container');
+  const lightboxTriggers = document.querySelectorAll('.cps-interface-slide');
 
   if (!lightbox || !lightboxImg || !lightboxTriggers.length) return;
 
@@ -72,6 +72,14 @@ function initCarousel() {
       return firstSlide.getBoundingClientRect().width + gap;
     };
 
+    const updateButtons = () => {
+      const { scrollLeft, scrollWidth, clientWidth } = track;
+      prev.style.opacity = scrollLeft <= 10 ? '0' : '1';
+      prev.style.pointerEvents = scrollLeft <= 10 ? 'none' : 'auto';
+      next.style.opacity = scrollLeft + clientWidth >= scrollWidth - 10 ? '0' : '1';
+      next.style.pointerEvents = scrollLeft + clientWidth >= scrollWidth - 10 ? 'none' : 'auto';
+    };
+
     prev.addEventListener('click', () => {
       track.scrollBy({ left: -getScrollAmount(), behavior: 'smooth' });
     });
@@ -79,6 +87,11 @@ function initCarousel() {
     next.addEventListener('click', () => {
       track.scrollBy({ left: getScrollAmount(), behavior: 'smooth' });
     });
+
+    track.addEventListener('scroll', updateButtons);
+    // Use a small timeout to ensure track is rendered for initial check
+    setTimeout(updateButtons, 100);
+    window.addEventListener('resize', updateButtons);
   });
 }
 

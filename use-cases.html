@@ -43,7 +43,6 @@
           <nav class="site-nav">
             <a href="./" class="nav-link">Home</a>
             <a href="how-does-it-work.html" class="nav-link">How It Works</a>
-            <a href="index.html#studio" class="nav-link">Studio</a>
             <a href="use-cases.html" class="nav-link active">Use Cases</a>
             <a href="blog.html" class="nav-link">Journal</a>
             <a href="contact.html" class="nav-link">Contact</a>
@@ -59,13 +58,15 @@
       </header>
 
       <main class="use-cases-page">
-        <section class="use-cases-hero">
-          <div class="use-cases-hero-inner">
-            <p class="mono text-accent animate-slide-up use-cases-kicker" style="animation-delay: 0.04s;">Potential Uses</p>
-            <h1>Where CPS can be used</h1>
-            <div class="use-cases-hero-body">
-              <p>CPS is most useful where information should persist, move unevenly, remain private when needed, and return later with a traceable path.</p>
-            </div>
+        <section class="use-cases-hero how-work-hero">
+          <div class="soundwave-container">
+            <div class="soundwave"></div>
+            <div class="soundwave"></div>
+            <div class="soundwave"></div>
+          </div>
+          <div class="use-cases-hero-inner how-work-hero-inner">
+            <h1 class="animate-slide-up" style="animation-delay: 0.1s;">Where CPS can be used</h1>
+            <p class="how-work-hero-line animate-slide-up" style="animation-delay: 0.2s;">Persistence, privacy, and propagation in practice.</p>
           </div>
         </section>
 
@@ -256,14 +257,27 @@
           </div>
 
             <div class="use-cases-matrix-meta">
-              <p>Green indicates strong fit, amber indicates partial fit, red indicates limited fit, and gray indicates not a primary focus.</p>
+              <div class="matrix-legend">
+                <div class="legend-item">
+                  <span class="dot good"></span>
+                </div>
+                <div class="legend-item">
+                  <span class="dot partial"></span>
+                </div>
+                <div class="legend-item">
+                  <span class="dot bad"></span>
+                </div>
+                <div class="legend-item">
+                  <span class="dot neutral"></span>
+                </div>
+              </div>
             </div>
 
             <div class="cps-matrix-wrapper">
               <table class="cps-matrix">
                 <thead>
                   <tr>
-                    <th>Category</th>
+                    <th>Feature</th>
                     <th>CPS</th>
                     <th>Concordia</th>
                     <th>Generative Agents</th>
@@ -278,340 +292,148 @@
 
                 <tbody>
                   <tr>
-                    <td>Conversational AI</td>
-                    <td class="good" data-tooltip="Strong fit"></td>
-                    <td class="partial" data-tooltip="Partial fit"></td>
-                    <td class="partial" data-tooltip="Partial fit"></td>
-                    <td class="good" data-tooltip="Strong fit"></td>
-                    <td class="good" data-tooltip="Strong fit"></td>
-                    <td class="partial" data-tooltip="Partial fit"></td>
-                    <td class="good" data-tooltip="Strong fit"></td>
-                    <td class="good" data-tooltip="Strong fit"></td>
-                    <td class="good" data-tooltip="Strong fit"></td>
+                    <td>Inspectable social memory</td>
+                    <td class="good" data-tooltip="Strong fit / first-class purpose: memory as a first-class propagation object"></td>
+                    <td class="partial" data-tooltip="Partial fit / adjacent support / possible through configuration: memory used in simulation but less inspectable as propagation"></td>
+                    <td class="partial" data-tooltip="Partial fit / adjacent support / possible through configuration: simulation-based memory architecture"></td>
+                    <td class="bad" data-tooltip="Limited fit / weak match despite being related: runtime-focused NPC memory"></td>
+                    <td class="bad" data-tooltip="Limited fit / weak match despite being related: runtime-focused NPC memory"></td>
+                    <td class="partial" data-tooltip="Partial fit / adjacent support / possible through configuration: stateful persistence and tracing"></td>
+                    <td class="bad" data-tooltip="Limited fit / weak match despite being related: runtime-focused character memory"></td>
+                    <td class="partial" data-tooltip="Partial fit / adjacent support / possible through configuration: managed memory and observability"></td>
+                    <td class="bad" data-tooltip="Limited fit / weak match despite being related: generic agent memory/context"></td>
                   </tr>
                   <tr>
-                    <td>Persistent Memory</td>
-                    <td class="good" data-tooltip="Strong fit"></td>
-                    <td class="good" data-tooltip="Strong fit"></td>
-                    <td class="good" data-tooltip="Strong fit"></td>
-                    <td class="good" data-tooltip="Strong fit"></td>
-                    <td class="partial" data-tooltip="Partial fit"></td>
-                    <td class="good" data-tooltip="Strong fit"></td>
-                    <td class="partial" data-tooltip="Partial fit"></td>
-                    <td class="good" data-tooltip="Strong fit"></td>
-                    <td class="good" data-tooltip="Strong fit"></td>
+                    <td>Information propagation between subjects</td>
+                    <td class="good" data-tooltip="Strong fit / first-class purpose: native propagation logic and lineage"></td>
+                    <td class="partial" data-tooltip="Partial fit / adjacent support / possible through configuration: simulated exchange within research environment"></td>
+                    <td class="partial" data-tooltip="Partial fit / adjacent support / possible through configuration: simulated social exchange"></td>
+                    <td class="bad" data-tooltip="Limited fit / weak match despite being related: focused on one-to-one character interaction"></td>
+                    <td class="bad" data-tooltip="Limited fit / weak match despite being related: focused on one-to-one character interaction"></td>
+                    <td class="partial" data-tooltip="Partial fit / adjacent support / possible through configuration: can be implemented via custom workflows"></td>
+                    <td class="bad" data-tooltip="Limited fit / weak match despite being related: focused on avatar/voice runtime"></td>
+                    <td class="neutral" data-tooltip="Not a primary focus / not a meaningful comparison dimension: general agent coordination"></td>
+                    <td class="neutral" data-tooltip="Not a primary focus / not a meaningful comparison dimension: general model APIs"></td>
                   </tr>
                   <tr>
-                    <td>Shared Persistent Memory</td>
-                    <td class="good" data-tooltip="Strong fit"></td>
-                    <td class="partial" data-tooltip="Partial fit"></td>
-                    <td class="partial" data-tooltip="Partial fit"></td>
-                    <td class="bad" data-tooltip="Limited fit"></td>
-                    <td class="bad" data-tooltip="Limited fit"></td>
-                    <td class="partial" data-tooltip="Partial fit"></td>
-                    <td class="bad" data-tooltip="Limited fit"></td>
-                    <td class="good" data-tooltip="Strong fit"></td>
-                    <td class="good" data-tooltip="Strong fit"></td>
+                    <td>Lineage / provenance / chain of custody</td>
+                    <td class="good" data-tooltip="Strong fit / first-class purpose: preserves source, hop, and mutation state"></td>
+                    <td class="bad" data-tooltip="Limited fit / weak match despite being related: simulation logs but not structural lineage"></td>
+                    <td class="bad" data-tooltip="Limited fit / weak match despite being related: no explicit provenance-preserving propagation"></td>
+                    <td class="neutral" data-tooltip="Not a primary focus / not a meaningful comparison dimension"></td>
+                    <td class="neutral" data-tooltip="Not a primary focus / not a meaningful comparison dimension"></td>
+                    <td class="bad" data-tooltip="Limited fit / weak match despite being related: tracing is available but not social lineage"></td>
+                    <td class="neutral" data-tooltip="Not a primary focus / not a meaningful comparison dimension"></td>
+                    <td class="bad" data-tooltip="Limited fit / weak match despite being related: observability logs != social provenance"></td>
+                    <td class="neutral" data-tooltip="Not a primary focus / not a meaningful comparison dimension"></td>
                   </tr>
                   <tr>
-                    <td>Multi-Agent Continuity</td>
-                    <td class="good" data-tooltip="Strong fit"></td>
-                    <td class="good" data-tooltip="Strong fit"></td>
-                    <td class="partial" data-tooltip="Partial fit"></td>
-                    <td class="bad" data-tooltip="Limited fit"></td>
-                    <td class="bad" data-tooltip="Limited fit"></td>
-                    <td class="partial" data-tooltip="Partial fit"></td>
-                    <td class="bad" data-tooltip="Limited fit"></td>
-                    <td class="good" data-tooltip="Strong fit"></td>
-                    <td class="good" data-tooltip="Strong fit"></td>
+                    <td>Privacy-bounded propagation</td>
+                    <td class="good" data-tooltip="Strong fit / first-class purpose: first-class privacy gates and trust topology"></td>
+                    <td class="bad" data-tooltip="Limited fit / weak match despite being related: simulated social boundaries"></td>
+                    <td class="bad" data-tooltip="Limited fit / weak match despite being related: no explicit privacy containment logic"></td>
+                    <td class="neutral" data-tooltip="Not a primary focus / not a meaningful comparison dimension"></td>
+                    <td class="neutral" data-tooltip="Not a primary focus / not a meaningful comparison dimension"></td>
+                    <td class="partial" data-tooltip="Partial fit / adjacent support / possible through configuration: supports custom guardrails and policies"></td>
+                    <td class="neutral" data-tooltip="Not a primary focus / not a meaningful comparison dimension"></td>
+                    <td class="partial" data-tooltip="Partial fit / adjacent support / possible through configuration: managed permissions and data boundaries"></td>
+                    <td class="partial" data-tooltip="Partial fit / adjacent support / possible through configuration: platform-level guardrails and policies"></td>
                   </tr>
                   <tr>
-                    <td>Agent Societies</td>
-                    <td class="good" data-tooltip="Strong fit"></td>
-                    <td class="good" data-tooltip="Strong fit"></td>
-                    <td class="good" data-tooltip="Strong fit"></td>
-                    <td class="bad" data-tooltip="Limited fit"></td>
-                    <td class="bad" data-tooltip="Limited fit"></td>
-                    <td class="bad" data-tooltip="Limited fit"></td>
-                    <td class="bad" data-tooltip="Limited fit"></td>
-                    <td class="bad" data-tooltip="Limited fit"></td>
-                    <td class="bad" data-tooltip="Limited fit"></td>
+                    <td>Relationship / trust topology</td>
+                    <td class="good" data-tooltip="Strong fit / first-class purpose: topology as explicit propagation gates"></td>
+                    <td class="partial" data-tooltip="Partial fit / adjacent support / possible through configuration: relationships influence simulated behavior"></td>
+                    <td class="partial" data-tooltip="Partial fit / adjacent support / possible through configuration: relationships influence simulated behavior"></td>
+                    <td class="neutral" data-tooltip="Not a primary focus / not a meaningful comparison dimension"></td>
+                    <td class="neutral" data-tooltip="Not a primary focus / not a meaningful comparison dimension"></td>
+                    <td class="partial" data-tooltip="Partial fit / adjacent support / possible through configuration: can be custom-built but not native thesis"></td>
+                    <td class="neutral" data-tooltip="Not a primary focus / not a meaningful comparison dimension"></td>
+                    <td class="neutral" data-tooltip="Not a primary focus / not a meaningful comparison dimension"></td>
+                    <td class="neutral" data-tooltip="Not a primary focus / not a meaningful comparison dimension"></td>
                   </tr>
                   <tr>
-                    <td>Long-Term State Graphs</td>
-                    <td class="good" data-tooltip="Strong fit"></td>
-                    <td class="partial" data-tooltip="Partial fit"></td>
-                    <td class="bad" data-tooltip="Limited fit"></td>
-                    <td class="bad" data-tooltip="Limited fit"></td>
-                    <td class="bad" data-tooltip="Limited fit"></td>
-                    <td class="good" data-tooltip="Strong fit"></td>
-                    <td class="partial" data-tooltip="Partial fit"></td>
-                    <td class="good" data-tooltip="Strong fit"></td>
-                    <td class="partial" data-tooltip="Partial fit"></td>
+                    <td>Signal → Intention → Opportunity pipeline</td>
+                    <td class="good" data-tooltip="Strong fit / first-class purpose: first-class Social Opportunity Engine"></td>
+                    <td class="neutral" data-tooltip="Not a primary focus / not a meaningful comparison dimension"></td>
+                    <td class="neutral" data-tooltip="Not a primary focus / not a meaningful comparison dimension"></td>
+                    <td class="neutral" data-tooltip="Not a primary focus / not a meaningful comparison dimension"></td>
+                    <td class="neutral" data-tooltip="Not a primary focus / not a meaningful comparison dimension"></td>
+                    <td class="neutral" data-tooltip="Not a primary focus / not a meaningful comparison dimension"></td>
+                    <td class="neutral" data-tooltip="Not a primary focus / not a meaningful comparison dimension"></td>
+                    <td class="neutral" data-tooltip="Not a primary focus / not a meaningful comparison dimension"></td>
+                    <td class="neutral" data-tooltip="Not a primary focus / not a meaningful comparison dimension"></td>
                   </tr>
                   <tr>
-                    <td>Social Coordination Primitives</td>
-                    <td class="good" data-tooltip="Strong fit"></td>
-                    <td class="good" data-tooltip="Strong fit"></td>
-                    <td class="partial" data-tooltip="Partial fit"></td>
-                    <td class="bad" data-tooltip="Limited fit"></td>
-                    <td class="bad" data-tooltip="Limited fit"></td>
-                    <td class="partial" data-tooltip="Partial fit"></td>
-                    <td class="bad" data-tooltip="Limited fit"></td>
-                    <td class="good" data-tooltip="Strong fit"></td>
-                    <td class="partial" data-tooltip="Partial fit"></td>
+                    <td>CPS Studio / proof observability</td>
+                    <td class="good" data-tooltip="Strong fit / first-class purpose: specialized inspection for social memory"></td>
+                    <td class="partial" data-tooltip="Partial fit / adjacent support / possible through configuration: research observability tools"></td>
+                    <td class="bad" data-tooltip="Limited fit / weak match despite being related: simulation tracing"></td>
+                    <td class="bad" data-tooltip="Limited fit / weak match despite being related: character behavior debugging"></td>
+                    <td class="bad" data-tooltip="Limited fit / weak match despite being related: character behavior debugging"></td>
+                    <td class="partial" data-tooltip="Partial fit / adjacent support / possible through configuration: robust workflow tracing and LangSmith"></td>
+                    <td class="bad" data-tooltip="Limited fit / weak match despite being related: runtime performance monitoring"></td>
+                    <td class="partial" data-tooltip="Partial fit / adjacent support / possible through configuration: enterprise-grade agent observability"></td>
+                    <td class="partial" data-tooltip="Partial fit / adjacent support / possible through configuration: developer-focused tracing and logging"></td>
                   </tr>
                   <tr>
-                    <td>Rumor / Information Propagation</td>
-                    <td class="good" data-tooltip="Strong fit"></td>
-                    <td class="good" data-tooltip="Strong fit"></td>
-                    <td class="partial" data-tooltip="Partial fit"></td>
-                    <td class="bad" data-tooltip="Limited fit"></td>
-                    <td class="bad" data-tooltip="Limited fit"></td>
-                    <td class="bad" data-tooltip="Limited fit"></td>
-                    <td class="bad" data-tooltip="Limited fit"></td>
-                    <td class="bad" data-tooltip="Limited fit"></td>
-                    <td class="bad" data-tooltip="Limited fit"></td>
+                    <td>Controlled belief / rumor experiments</td>
+                    <td class="good" data-tooltip="Strong fit / first-class purpose: designed for hearsay and belief-change studies"></td>
+                    <td class="good" data-tooltip="Strong fit / first-class purpose: broad social simulation research environment"></td>
+                    <td class="partial" data-tooltip="Partial fit / adjacent support / possible through configuration: agent society research focus"></td>
+                    <td class="bad" data-tooltip="Limited fit / weak match despite being related: runtime NPC focus"></td>
+                    <td class="bad" data-tooltip="Limited fit / weak match despite being related: runtime NPC focus"></td>
+                    <td class="neutral" data-tooltip="Not a primary focus / not a meaningful comparison dimension"></td>
+                    <td class="neutral" data-tooltip="Not a primary focus / not a meaningful comparison dimension"></td>
+                    <td class="neutral" data-tooltip="Not a primary focus / not a meaningful comparison dimension"></td>
+                    <td class="neutral" data-tooltip="Not a primary focus / not a meaningful comparison dimension"></td>
                   </tr>
                   <tr>
-                    <td>Memory Lineage / Traceability</td>
-                    <td class="good" data-tooltip="Strong fit"></td>
-                    <td class="partial" data-tooltip="Partial fit"></td>
-                    <td class="bad" data-tooltip="Limited fit"></td>
-                    <td class="bad" data-tooltip="Limited fit"></td>
-                    <td class="bad" data-tooltip="Limited fit"></td>
-                    <td class="partial" data-tooltip="Partial fit"></td>
-                    <td class="bad" data-tooltip="Limited fit"></td>
-                    <td class="partial" data-tooltip="Partial fit"></td>
-                    <td class="partial" data-tooltip="Partial fit"></td>
+                    <td>Game-engine integration</td>
+                    <td class="partial" data-tooltip="Partial fit / adjacent support / possible through configuration: adapter target, not core product"></td>
+                    <td class="neutral" data-tooltip="Not a primary focus / not a meaningful comparison dimension"></td>
+                    <td class="neutral" data-tooltip="Not a primary focus / not a meaningful comparison dimension"></td>
+                    <td class="partial" data-tooltip="Partial fit / adjacent support / possible through configuration: supports NPC deployment in games"></td>
+                    <td class="good" data-tooltip="Strong fit / first-class purpose: native Unreal/Unity engine tooling"></td>
+                    <td class="neutral" data-tooltip="Not a primary focus / not a meaningful comparison dimension"></td>
+                    <td class="good" data-tooltip="Strong fit / first-class purpose: first-class engine and avatar integration"></td>
+                    <td class="neutral" data-tooltip="Not a primary focus / not a meaningful comparison dimension"></td>
+                    <td class="neutral" data-tooltip="Not a primary focus / not a meaningful comparison dimension"></td>
                   </tr>
                   <tr>
-                    <td>Emergent Social Behavior</td>
-                    <td class="good" data-tooltip="Strong fit"></td>
-                    <td class="good" data-tooltip="Strong fit"></td>
-                    <td class="good" data-tooltip="Strong fit"></td>
-                    <td class="bad" data-tooltip="Limited fit"></td>
-                    <td class="bad" data-tooltip="Limited fit"></td>
-                    <td class="partial" data-tooltip="Partial fit"></td>
-                    <td class="bad" data-tooltip="Limited fit"></td>
-                    <td class="bad" data-tooltip="Limited fit"></td>
-                    <td class="bad" data-tooltip="Limited fit"></td>
+                    <td>Realtime voice / avatar / embodied NPCs</td>
+                    <td class="bad" data-tooltip="Limited fit / weak match despite being related: upstream of presentation logic"></td>
+                    <td class="neutral" data-tooltip="Not a primary focus / not a meaningful comparison dimension"></td>
+                    <td class="neutral" data-tooltip="Not a primary focus / not a meaningful comparison dimension"></td>
+                    <td class="good" data-tooltip="Strong fit / first-class purpose: focused on conversational avatar runtime"></td>
+                    <td class="good" data-tooltip="Strong fit / first-class purpose: focused on voice and embodied characters"></td>
+                    <td class="neutral" data-tooltip="Not a primary focus / not a meaningful comparison dimension"></td>
+                    <td class="good" data-tooltip="Strong fit / first-class purpose: high-end digital human and voice stack"></td>
+                    <td class="neutral" data-tooltip="Not a primary focus / not a meaningful comparison dimension"></td>
+                    <td class="partial" data-tooltip="Partial fit / adjacent support / possible through configuration: general voice and multimodal APIs"></td>
                   </tr>
                   <tr>
-                    <td>Large Population Simulation</td>
-                    <td class="good" data-tooltip="Strong fit"></td>
-                    <td class="good" data-tooltip="Strong fit"></td>
-                    <td class="bad" data-tooltip="Limited fit"></td>
-                    <td class="bad" data-tooltip="Limited fit"></td>
-                    <td class="bad" data-tooltip="Limited fit"></td>
-                    <td class="partial" data-tooltip="Partial fit"></td>
-                    <td class="partial" data-tooltip="Partial fit"></td>
-                    <td class="good" data-tooltip="Strong fit"></td>
-                    <td class="good" data-tooltip="Strong fit"></td>
+                    <td>General agent orchestration / tool use</td>
+                    <td class="partial" data-tooltip="Partial fit / adjacent support / possible through configuration: narrow focus on social memory logic"></td>
+                    <td class="partial" data-tooltip="Partial fit / adjacent support / possible through configuration: simulation-specific orchestration"></td>
+                    <td class="neutral" data-tooltip="Not a primary focus / not a meaningful comparison dimension"></td>
+                    <td class="neutral" data-tooltip="Not a primary focus / not a meaningful comparison dimension"></td>
+                    <td class="neutral" data-tooltip="Not a primary focus / not a meaningful comparison dimension"></td>
+                    <td class="good" data-tooltip="Strong fit / first-class purpose: stateful agent workflows and tool calling"></td>
+                    <td class="neutral" data-tooltip="Not a primary focus / not a meaningful comparison dimension"></td>
+                    <td class="good" data-tooltip="Strong fit / first-class purpose: production-scale multi-agent orchestration"></td>
+                    <td class="good" data-tooltip="Strong fit / first-class purpose: general-purpose agent and tool frameworks"></td>
                   </tr>
                   <tr>
-                    <td>Reproducibility</td>
-                    <td class="good" data-tooltip="Strong fit"></td>
-                    <td class="good" data-tooltip="Strong fit"></td>
-                    <td class="partial" data-tooltip="Partial fit"></td>
-                    <td class="bad" data-tooltip="Limited fit"></td>
-                    <td class="bad" data-tooltip="Limited fit"></td>
-                    <td class="good" data-tooltip="Strong fit"></td>
-                    <td class="partial" data-tooltip="Partial fit"></td>
-                    <td class="good" data-tooltip="Strong fit"></td>
-                    <td class="good" data-tooltip="Strong fit"></td>
-                  </tr>
-                  <tr>
-                    <td>Scalability</td>
-                    <td class="good" data-tooltip="Strong fit"></td>
-                    <td class="partial" data-tooltip="Partial fit"></td>
-                    <td class="bad" data-tooltip="Limited fit"></td>
-                    <td class="good" data-tooltip="Strong fit"></td>
-                    <td class="good" data-tooltip="Strong fit"></td>
-                    <td class="good" data-tooltip="Strong fit"></td>
-                    <td class="good" data-tooltip="Strong fit"></td>
-                    <td class="good" data-tooltip="Strong fit"></td>
-                    <td class="good" data-tooltip="Strong fit"></td>
-                  </tr>
-                  <tr>
-                    <td>Visual Inspectability</td>
-                    <td class="good" data-tooltip="Strong fit"></td>
-                    <td class="partial" data-tooltip="Partial fit"></td>
-                    <td class="bad" data-tooltip="Limited fit"></td>
-                    <td class="partial" data-tooltip="Partial fit"></td>
-                    <td class="partial" data-tooltip="Partial fit"></td>
-                    <td class="partial" data-tooltip="Partial fit"></td>
-                    <td class="partial" data-tooltip="Partial fit"></td>
-                    <td class="bad" data-tooltip="Limited fit"></td>
-                    <td class="bad" data-tooltip="Limited fit"></td>
-                  </tr>
-                  <tr>
-                    <td>Propagation Visualization</td>
-                    <td class="good" data-tooltip="Strong fit"></td>
-                    <td class="bad" data-tooltip="Limited fit"></td>
-                    <td class="bad" data-tooltip="Limited fit"></td>
-                    <td class="bad" data-tooltip="Limited fit"></td>
-                    <td class="bad" data-tooltip="Limited fit"></td>
-                    <td class="bad" data-tooltip="Limited fit"></td>
-                    <td class="bad" data-tooltip="Limited fit"></td>
-                    <td class="bad" data-tooltip="Limited fit"></td>
-                    <td class="bad" data-tooltip="Limited fit"></td>
-                  </tr>
-                  <tr>
-                    <td>Narrative Authorability</td>
-                    <td class="good" data-tooltip="Strong fit"></td>
-                    <td class="partial" data-tooltip="Partial fit"></td>
-                    <td class="bad" data-tooltip="Limited fit"></td>
-                    <td class="partial" data-tooltip="Partial fit"></td>
-                    <td class="partial" data-tooltip="Partial fit"></td>
-                    <td class="bad" data-tooltip="Limited fit"></td>
-                    <td class="partial" data-tooltip="Partial fit"></td>
-                    <td class="bad" data-tooltip="Limited fit"></td>
-                    <td class="bad" data-tooltip="Limited fit"></td>
-                  </tr>
-                  <tr>
-                    <td>Atmosphere / Emotional Texture</td>
-                    <td class="good" data-tooltip="Strong fit"></td>
-                    <td class="bad" data-tooltip="Limited fit"></td>
-                    <td class="bad" data-tooltip="Limited fit"></td>
-                    <td class="partial" data-tooltip="Partial fit"></td>
-                    <td class="partial" data-tooltip="Partial fit"></td>
-                    <td class="bad" data-tooltip="Limited fit"></td>
-                    <td class="partial" data-tooltip="Partial fit"></td>
-                    <td class="bad" data-tooltip="Limited fit"></td>
-                    <td class="bad" data-tooltip="Limited fit"></td>
-                  </tr>
-                  <tr>
-                    <td>Unreal Integration</td>
-                    <td class="good" data-tooltip="Strong fit"></td>
-                    <td class="bad" data-tooltip="Limited fit"></td>
-                    <td class="bad" data-tooltip="Limited fit"></td>
-                    <td class="good" data-tooltip="Strong fit"></td>
-                    <td class="good" data-tooltip="Strong fit"></td>
-                    <td class="bad" data-tooltip="Limited fit"></td>
-                    <td class="good" data-tooltip="Strong fit"></td>
-                    <td class="bad" data-tooltip="Limited fit"></td>
-                    <td class="bad" data-tooltip="Limited fit"></td>
-                  </tr>
-                  <tr>
-                    <td>Creator Accessibility</td>
-                    <td class="good" data-tooltip="Strong fit"></td>
-                    <td class="bad" data-tooltip="Limited fit"></td>
-                    <td class="bad" data-tooltip="Limited fit"></td>
-                    <td class="good" data-tooltip="Strong fit"></td>
-                    <td class="good" data-tooltip="Strong fit"></td>
-                    <td class="partial" data-tooltip="Partial fit"></td>
-                    <td class="partial" data-tooltip="Partial fit"></td>
-                    <td class="partial" data-tooltip="Partial fit"></td>
-                    <td class="partial" data-tooltip="Partial fit"></td>
-                  </tr>
-                  <tr>
-                    <td>Research Accessibility</td>
-                    <td class="partial" data-tooltip="Partial fit"></td>
-                    <td class="good" data-tooltip="Strong fit"></td>
-                    <td class="good" data-tooltip="Strong fit"></td>
-                    <td class="bad" data-tooltip="Limited fit"></td>
-                    <td class="bad" data-tooltip="Limited fit"></td>
-                    <td class="partial" data-tooltip="Partial fit"></td>
-                    <td class="partial" data-tooltip="Partial fit"></td>
-                    <td class="partial" data-tooltip="Partial fit"></td>
-                    <td class="partial" data-tooltip="Partial fit"></td>
-                  </tr>
-                  <tr>
-                    <td>Installation Simplicity</td>
-                    <td class="partial" data-tooltip="Partial fit"></td>
-                    <td class="partial" data-tooltip="Partial fit"></td>
-                    <td class="bad" data-tooltip="Limited fit"></td>
-                    <td class="good" data-tooltip="Strong fit"></td>
-                    <td class="good" data-tooltip="Strong fit"></td>
-                    <td class="good" data-tooltip="Strong fit"></td>
-                    <td class="partial" data-tooltip="Partial fit"></td>
-                    <td class="good" data-tooltip="Strong fit"></td>
-                    <td class="good" data-tooltip="Strong fit"></td>
-                  </tr>
-                  <tr>
-                    <td>Production Readiness</td>
-                    <td class="partial" data-tooltip="Partial fit"></td>
-                    <td class="partial" data-tooltip="Partial fit"></td>
-                    <td class="bad" data-tooltip="Limited fit"></td>
-                    <td class="good" data-tooltip="Strong fit"></td>
-                    <td class="good" data-tooltip="Strong fit"></td>
-                    <td class="good" data-tooltip="Strong fit"></td>
-                    <td class="good" data-tooltip="Strong fit"></td>
-                    <td class="good" data-tooltip="Strong fit"></td>
-                    <td class="good" data-tooltip="Strong fit"></td>
-                  </tr>
-                  <tr>
-                    <td>Bounded Authored World Support</td>
-                    <td class="good" data-tooltip="Strong fit"></td>
-                    <td class="partial" data-tooltip="Partial fit"></td>
-                    <td class="bad" data-tooltip="Limited fit"></td>
-                    <td class="partial" data-tooltip="Partial fit"></td>
-                    <td class="partial" data-tooltip="Partial fit"></td>
-                    <td class="bad" data-tooltip="Limited fit"></td>
-                    <td class="partial" data-tooltip="Partial fit"></td>
-                    <td class="bad" data-tooltip="Limited fit"></td>
-                    <td class="bad" data-tooltip="Limited fit"></td>
-                  </tr>
-                  <tr>
-                    <td>Museum / Installation Potential</td>
-                    <td class="good" data-tooltip="Strong fit"></td>
-                    <td class="bad" data-tooltip="Limited fit"></td>
-                    <td class="bad" data-tooltip="Limited fit"></td>
-                    <td class="partial" data-tooltip="Partial fit"></td>
-                    <td class="partial" data-tooltip="Partial fit"></td>
-                    <td class="bad" data-tooltip="Limited fit"></td>
-                    <td class="partial" data-tooltip="Partial fit"></td>
-                    <td class="bad" data-tooltip="Limited fit"></td>
-                    <td class="bad" data-tooltip="Limited fit"></td>
-                  </tr>
-                  <tr>
-                    <td>Interactive Cinema Potential</td>
-                    <td class="good" data-tooltip="Strong fit"></td>
-                    <td class="bad" data-tooltip="Limited fit"></td>
-                    <td class="bad" data-tooltip="Limited fit"></td>
-                    <td class="partial" data-tooltip="Partial fit"></td>
-                    <td class="partial" data-tooltip="Partial fit"></td>
-                    <td class="bad" data-tooltip="Limited fit"></td>
-                    <td class="partial" data-tooltip="Partial fit"></td>
-                    <td class="bad" data-tooltip="Limited fit"></td>
-                    <td class="bad" data-tooltip="Limited fit"></td>
-                  </tr>
-                  <tr>
-                    <td>Enterprise Workflow Automation</td>
-                    <td class="neutral" data-tooltip="Not primary focus"></td>
-                    <td class="bad" data-tooltip="Limited fit"></td>
-                    <td class="bad" data-tooltip="Limited fit"></td>
-                    <td class="partial" data-tooltip="Partial fit"></td>
-                    <td class="partial" data-tooltip="Partial fit"></td>
-                    <td class="good" data-tooltip="Strong fit"></td>
-                    <td class="partial" data-tooltip="Partial fit"></td>
-                    <td class="good" data-tooltip="Strong fit"></td>
-                    <td class="good" data-tooltip="Strong fit"></td>
-                  </tr>
-                  <tr>
-                    <td>Ecosystem Lock-In Potential</td>
-                    <td class="good" data-tooltip="Strong fit"></td>
-                    <td class="partial" data-tooltip="Partial fit"></td>
-                    <td class="neutral" data-tooltip="Not primary focus"></td>
-                    <td class="bad" data-tooltip="Limited fit"></td>
-                    <td class="bad" data-tooltip="Limited fit"></td>
-                    <td class="partial" data-tooltip="Partial fit"></td>
-                    <td class="bad" data-tooltip="Limited fit"></td>
-                    <td class="bad" data-tooltip="Limited fit"></td>
-                    <td class="bad" data-tooltip="Limited fit"></td>
-                  </tr>
-                  <tr>
-                    <td>Infrastructure Commodity Risk</td>
-                    <td class="partial" data-tooltip="Partial fit"></td>
-                    <td class="partial" data-tooltip="Partial fit"></td>
-                    <td class="partial" data-tooltip="Partial fit"></td>
-                    <td class="partial" data-tooltip="Partial fit"></td>
-                    <td class="partial" data-tooltip="Partial fit"></td>
-                    <td class="partial" data-tooltip="Partial fit"></td>
-                    <td class="partial" data-tooltip="Partial fit"></td>
-                    <td class="bad" data-tooltip="Limited fit"></td>
-                    <td class="bad" data-tooltip="Limited fit"></td>
+                    <td>Production deployment ecosystem</td>
+                    <td class="bad" data-tooltip="Limited fit / weak match despite being related: currently research-stage infrastructure"></td>
+                    <td class="partial" data-tooltip="Partial fit / adjacent support / possible through configuration: academic research maturity"></td>
+                    <td class="bad" data-tooltip="Limited fit / weak match despite being related: research prototype stage"></td>
+                    <td class="good" data-tooltip="Strong fit / first-class purpose: mature character deployment platform"></td>
+                    <td class="good" data-tooltip="Strong fit / first-class purpose: enterprise voice/NPC deployment stack"></td>
+                    <td class="good" data-tooltip="Strong fit / first-class purpose: broad developer adoption and cloud tooling"></td>
+                    <td class="good" data-tooltip="Strong fit / first-class purpose: high-end deployment and scaling infra"></td>
+                    <td class="good" data-tooltip="Strong fit / first-class purpose: global-scale agent deployment and hosting"></td>
+                    <td class="good" data-tooltip="Strong fit / first-class purpose: market-leading model and API infrastructure"></td>
                   </tr>
                 </tbody>
               </table>
@@ -639,17 +461,6 @@
             <p class="footer-summary">
               Exploratory infrastructure for social memory in artificial worlds. Making propagation, containment, lineage, and consequence visible.
             </p>
-          </div>
-          <div class="footer-column">
-            <span class="footer-label">Navigation</span>
-            <nav class="footer-nav">
-              <a href="./" class="footer-link">Home</a>
-              <a href="how-does-it-work.html" class="footer-link">How It Works</a>
-              <a href="index.html#studio" class="footer-link">Studio</a>
-              <a href="use-cases.html" class="footer-link">Use Cases</a>
-              <a href="blog.html" class="footer-link">Journal</a>
-              <a href="contact.html" class="footer-link">Contact</a>
-            </nav>
           </div>
           <div class="footer-column">
             <span class="footer-label">Legal & Contact</span>

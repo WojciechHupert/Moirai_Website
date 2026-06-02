@@ -415,7 +415,6 @@
   color: var(--muted-color);
   font-size: 0.98rem;
   line-height: 1.6;
-  max-width: 32ch;
 }
 
 .how-work-layers-section {

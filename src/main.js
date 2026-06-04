@@ -3,6 +3,14 @@ import React from 'react';
 import { createRoot } from 'react-dom/client';
 import GraphApp from './GraphApp';
 
+const STUDIO_FULL_IMAGES = {
+  'src/assets/studio/system-settings.png': new URL('./assets/studio/system-settings.png', import.meta.url).href,
+  'src/assets/studio/activity-graph.png': new URL('./assets/studio/activity-graph.png', import.meta.url).href,
+  'src/assets/studio/latency-throughput.png': new URL('./assets/studio/latency-throughput.png', import.meta.url).href,
+  'src/assets/studio/subjects-registry.png': new URL('./assets/studio/subjects-registry.png', import.meta.url).href,
+  'src/assets/studio/archives-summaries.png': new URL('./assets/studio/archives-summaries.png', import.meta.url).href,
+};
+
 // Mount React force graph into the hero
 const graphMount = document.getElementById('force-graph-mount');
 if (graphMount) {
@@ -26,15 +34,17 @@ function initLightbox() {
     trigger.addEventListener('click', (e) => {
       e.preventDefault();
       const img = trigger.querySelector('img');
-      const fullSrc = img?.currentSrc || img?.getAttribute('src') || trigger.getAttribute('data-full');
+      const dataFull = trigger.getAttribute('data-full');
+      const fullSrc = (dataFull && STUDIO_FULL_IMAGES[dataFull]) || dataFull || img?.currentSrc || img?.getAttribute('src');
       const altText = img ? img.getAttribute('alt') : '';
 
       if (!fullSrc) return;
 
       lightbox.style.display = 'block';
       lightboxImg.src = fullSrc;
-      captionText.innerHTML = altText;
+      captionText.textContent = altText;
       document.body.style.overflow = 'hidden'; // Prevent scrolling
+      closeBtn?.focus();
     });
   });
 
@@ -104,24 +114,81 @@ function initFaqAccordion() {
 
     items.forEach((item) => {
       const trigger = item.querySelector('.faq-trigger');
+      const panel = trigger ? document.getElementById(trigger.getAttribute('aria-controls') || '') : null;
       if (!trigger) return;
+
+      const setOpenState = (open) => {
+        item.classList.toggle('is-open', open);
+        trigger.setAttribute('aria-expanded', String(open));
+        panel?.setAttribute('aria-hidden', String(!open));
+        panel?.toggleAttribute('inert', !open);
+      };
+
+      setOpenState(false);
 
       trigger.addEventListener('click', () => {
         const isOpen = item.classList.contains('is-open');
 
         items.forEach((entry) => {
-          entry.classList.remove('is-open');
           const entryTrigger = entry.querySelector('.faq-trigger');
+          const entryPanel = entryTrigger ? document.getElementById(entryTrigger.getAttribute('aria-controls') || '') : null;
+          entry.classList.remove('is-open');
           entryTrigger?.setAttribute('aria-expanded', 'false');
+          entryPanel?.setAttribute('aria-hidden', 'true');
+          entryPanel?.toggleAttribute('inert', true);
         });
 
         if (!isOpen) {
-          item.classList.add('is-open');
-          trigger.setAttribute('aria-expanded', 'true');
+          setOpenState(true);
         }
       });
     });
   });
+}
+
+function copyTextWithFallback(text) {
+  if (navigator.clipboard?.writeText) {
+    return navigator.clipboard.writeText(text).catch(() => fallbackCopyText(text));
+  }
+
+  return fallbackCopyText(text);
+}
+
+function fallbackCopyText(text) {
+  return new Promise((resolve, reject) => {
+    const textarea = document.createElement('textarea');
+    textarea.value = text;
+    textarea.setAttribute('readonly', 'true');
+    textarea.style.position = 'fixed';
+    textarea.style.opacity = '0';
+    textarea.style.left = '-9999px';
+    document.body.appendChild(textarea);
+    textarea.select();
+
+    let copied = false;
+    try {
+      copied = document.execCommand('copy');
+    } catch (error) {
+      copied = false;
+    }
+
+    textarea.remove();
+
+    if (copied) {
+      resolve();
+    } else {
+      reject(new Error('Clipboard copy failed'));
+    }
+  });
+}
+
+function getPanelCopyText(panel) {
+  const content = panel.querySelector('.use-case-tile-panel-inner');
+  if (!content) return '';
+
+  const clone = content.cloneNode(true);
+  clone.querySelectorAll('button').forEach((button) => button.remove());
+  return clone.innerText.trim().replace(/\n{3,}/g, '\n\n');
 }
 
 function initUseCaseCards() {
@@ -129,20 +196,57 @@ function initUseCaseCards() {
   if (!groups.length) return;
 
   groups.forEach((group) => {
-    const cards = group.querySelectorAll('.use-case-card');
+    const cards = group.querySelectorAll('.use-case-tile');
 
     cards.forEach((card) => {
-      const trigger = card.querySelector('.use-case-toggle');
+      const trigger = card.querySelector('.use-case-tile-toggle');
+      const panel = trigger ? document.getElementById(trigger.getAttribute('aria-controls') || '') : null;
       const label = trigger?.querySelector('.use-case-toggle-label');
       const icon = trigger?.querySelector('.use-case-toggle-icon');
+      const copyButton = card.querySelector('.use-case-copy-button');
       if (!trigger) return;
+
+      const setOpenState = (open) => {
+        card.classList.toggle('is-expanded', open);
+        trigger.setAttribute('aria-expanded', String(open));
+        panel?.setAttribute('aria-hidden', String(!open));
+        panel?.toggleAttribute('inert', !open);
+        if (label) label.textContent = open ? 'Close' : 'Read more';
+        if (icon) icon.textContent = open ? '-' : '+';
+      };
+
+      setOpenState(false);
 
       trigger.addEventListener('click', () => {
         const nextOpen = !card.classList.contains('is-expanded');
-        card.classList.toggle('is-expanded', nextOpen);
-        trigger.setAttribute('aria-expanded', String(nextOpen));
-        if (label) label.textContent = nextOpen ? 'Close' : 'Read more';
-        if (icon) icon.textContent = nextOpen ? '-' : '+';
+        setOpenState(nextOpen);
+      });
+
+      copyButton?.addEventListener('click', async () => {
+        if (!panel) return;
+
+        const text = getPanelCopyText(panel);
+        if (!text) return;
+
+        const originalLabel = copyButton.dataset.originalLabel || copyButton.textContent || 'Copy text';
+        copyButton.dataset.originalLabel = originalLabel;
+
+        try {
+          await copyTextWithFallback(text);
+          copyButton.textContent = 'Copied.';
+          copyButton.classList.add('is-copied');
+          window.clearTimeout(copyButton._copyResetTimer);
+          copyButton._copyResetTimer = window.setTimeout(() => {
+            copyButton.textContent = originalLabel;
+            copyButton.classList.remove('is-copied');
+          }, 1600);
+        } catch (error) {
+          copyButton.textContent = 'Copy failed';
+          window.clearTimeout(copyButton._copyResetTimer);
+          copyButton._copyResetTimer = window.setTimeout(() => {
+            copyButton.textContent = originalLabel;
+          }, 1600);
+        }
       });
     });
   });

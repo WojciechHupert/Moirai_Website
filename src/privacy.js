@@ -204,7 +204,7 @@ function renderBanner(mode = 'consent') {
 }
 
 function enhanceFooters() {
-  document.querySelectorAll('.site-footer .footer-column.right .footer-credits').forEach((credits) => {
+  document.querySelectorAll('.site-footer .footer-credits').forEach((credits) => {
     if (credits.querySelector('.footer-policy-links')) return;
 
     const links = document.createElement('div');

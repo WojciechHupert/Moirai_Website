@@ -134,12 +134,12 @@
           <div class="homepage-text-column">
             <div class="faq-accordion" data-accordion>
               <article class="faq-item">
-                <button class="faq-trigger" type="button" aria-expanded="false">
+                <button class="faq-trigger" id="faq-trigger-1" type="button" aria-expanded="false" aria-controls="faq-panel-1">
                   <span class="faq-index mono">01</span>
                   <span class="faq-question">What is CPS?</span>
                   <span class="faq-icon" aria-hidden="true"></span>
                 </button>
-                <div class="faq-panel">
+                <div class="faq-panel" id="faq-panel-1" aria-hidden="true" inert>
                   <div class="faq-answer">
                     <p>CPS tracks what happens to information after it enters a group: who knows it, where it came from, whether it can move, and how later versions remain traceable.</p>
                   </div>
@@ -147,12 +147,12 @@
               </article>
 
               <article class="faq-item">
-                <button class="faq-trigger" type="button" aria-expanded="false">
+                <button class="faq-trigger" id="faq-trigger-2" type="button" aria-expanded="false" aria-controls="faq-panel-2">
                   <span class="faq-index mono">02</span>
                   <span class="faq-question">Why does it matter?</span>
                   <span class="faq-icon" aria-hidden="true"></span>
                 </button>
-                <div class="faq-panel">
+                <div class="faq-panel" id="faq-panel-2" aria-hidden="true" inert>
                   <div class="faq-answer">
                     <p>Persistent AI systems need boundaries and provenance. CPS gives operators a way to inspect how shared information is retained, blocked, repeated, or changed.</p>
                   </div>
@@ -160,12 +160,12 @@
               </article>
 
               <article class="faq-item">
-                <button class="faq-trigger" type="button" aria-expanded="false">
+                <button class="faq-trigger" id="faq-trigger-3" type="button" aria-expanded="false" aria-controls="faq-panel-3">
                   <span class="faq-index mono">03</span>
                   <span class="faq-question">How does information move?</span>
                   <span class="faq-icon" aria-hidden="true"></span>
                 </button>
-                <div class="faq-panel">
+                <div class="faq-panel" id="faq-panel-3" aria-hidden="true" inert>
                   <div class="faq-answer">
                     <p>Information moves only when a memory becomes socially relevant, finds a viable relationship path, passes privacy and sensitivity checks, and writes a new memory with lineage.</p>
                   </div>
@@ -173,12 +173,12 @@
               </article>
 
               <article class="faq-item">
-                <button class="faq-trigger" type="button" aria-expanded="false">
+                <button class="faq-trigger" id="faq-trigger-4" type="button" aria-expanded="false" aria-controls="faq-panel-4">
                   <span class="faq-index mono">04</span>
                   <span class="faq-question">What does CPS Studio show?</span>
                   <span class="faq-icon" aria-hidden="true"></span>
                 </button>
-                <div class="faq-panel">
+                <div class="faq-panel" id="faq-panel-4" aria-hidden="true" inert>
                   <div class="faq-answer">
                     <p>Studio shows who knows what, where it came from, whether it is direct or hearsay, why a route was accepted or blocked, and what lineage was written.</p>
                   </div>
@@ -186,12 +186,12 @@
               </article>
 
               <article class="faq-item">
-                <button class="faq-trigger" type="button" aria-expanded="false">
+                <button class="faq-trigger" id="faq-trigger-5" type="button" aria-expanded="false" aria-controls="faq-panel-5">
                   <span class="faq-index mono">05</span>
                   <span class="faq-question">Is CPS mainly a game system?</span>
                   <span class="faq-icon" aria-hidden="true"></span>
                 </button>
-                <div class="faq-panel">
+                <div class="faq-panel" id="faq-panel-5" aria-hidden="true" inert>
                   <div class="faq-answer">
                     <p>No. CPS can be experienced through downstream client environments, including authored interactive worlds such as Lelit Distrikt, but the core system is the social-memory and propagation logic underneath.</p>
                   </div>
@@ -199,12 +199,12 @@
               </article>
 
               <article class="faq-item">
-                <button class="faq-trigger" type="button" aria-expanded="false">
+                <button class="faq-trigger" id="faq-trigger-6" type="button" aria-expanded="false" aria-controls="faq-panel-6">
                   <span class="faq-index mono">06</span>
                   <span class="faq-question">What kinds of environments can use it?</span>
                   <span class="faq-icon" aria-hidden="true"></span>
                 </button>
-                <div class="faq-panel">
+                <div class="faq-panel" id="faq-panel-6" aria-hidden="true" inert>
                   <div class="faq-answer">
                     <p>CPS can support research prototypes, organizational scenarios, interactive worlds, cultural installations, privacy tests, and future multi-agent assistant concepts.</p>
                   </div>
@@ -212,12 +212,12 @@
               </article>
 
               <article class="faq-item">
-                <button class="faq-trigger" type="button" aria-expanded="false">
+                <button class="faq-trigger" id="faq-trigger-7" type="button" aria-expanded="false" aria-controls="faq-panel-7">
                   <span class="faq-index mono">07</span>
                   <span class="faq-question">What is the current project status?</span>
                   <span class="faq-icon" aria-hidden="true"></span>
                 </button>
-                <div class="faq-panel">
+                <div class="faq-panel" id="faq-panel-7" aria-hidden="true" inert>
                   <div class="faq-answer">
                     <p>CPS is an exploratory prototype. It is not a full society simulator, a validated model of human behavior, or a production-ready platform.</p>
                   </div>
@@ -329,8 +329,8 @@
         </section>
 
         <!-- Lightbox Modal -->
-        <div id="lightbox" class="modal">
-          <span class="close-modal">&times;</span>
+        <div id="lightbox" class="modal" role="dialog" aria-modal="true" aria-label="Studio image viewer">
+          <button type="button" class="close-modal" aria-label="Close image viewer">&times;</button>
           <img class="modal-content" id="lightbox-img" alt="">
           <div id="caption"></div>
         </div>

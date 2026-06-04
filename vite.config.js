@@ -24,6 +24,7 @@ export default defineConfig({
       input: {
         main: resolve(__dirname, 'index.html'),
         howDoesItWork: resolve(__dirname, 'how-does-it-work.html'),
+        onepager: resolve(__dirname, 'onepager.html'),
         useCases: resolve(__dirname, 'use-cases.html'),
         blog: resolve(__dirname, 'blog.html'),
         blogBridgingTheNeuralGap: resolve(__dirname, 'blog-bridging-the-neural-gap.html'),

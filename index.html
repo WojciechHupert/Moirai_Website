@@ -229,56 +229,52 @@
 
         <section id="studio" class="homepage-text-section">
           <div class="homepage-text-column">
-            <div class="homepage-section-header">
-              <h2>CPS Studio is the proof surface</h2>
+            <div class="cps-interface-carousel" aria-label="CPS interface previews" data-carousel>
+              <div class="cps-interface-carousel-main">
+                <button class="carousel-control side prev" type="button" data-carousel-prev aria-label="Previous CPS Studio image">
+                  <span aria-hidden="true">&#8592;</span>
+                </button>
+                
+                <div class="cps-interface-carousel-track" data-carousel-track>
+                  <a href="#" class="cps-interface-slide" data-full="src/assets/studio/system-settings.png">
+                    <img src="src/assets/studio/system-settings.webp" alt="CPS Environment Parameters & Settings" loading="lazy" decoding="async">
+                  </a>
+                  <a href="#" class="cps-interface-slide" data-full="src/assets/studio/activity-graph.png">
+                    <img src="src/assets/studio/activity-graph.webp" alt="Activity Route Social Graph" loading="lazy" decoding="async">
+                  </a>
+                  <a href="#" class="cps-interface-slide" data-full="src/assets/studio/latency-throughput.png">
+                    <img src="src/assets/studio/latency-throughput.webp" alt="System Latency & Throughput Monitoring" loading="lazy" decoding="async">
+                  </a>
+                  <a href="#" class="cps-interface-slide" data-full="src/assets/studio/subjects-registry.png">
+                    <img src="src/assets/studio/subjects-registry.webp" alt="Subjects Identity Registry" loading="lazy" decoding="async">
+                  </a>
+                  <a href="#" class="cps-interface-slide" data-full="src/assets/studio/archives-summaries.png">
+                    <img src="src/assets/studio/archives-summaries.webp" alt="Archives: Narrative Summaries View" loading="lazy" decoding="async">
+                  </a>
+                </div>
+
+                <button class="carousel-control side next" type="button" data-carousel-next aria-label="Next CPS Studio image">
+                  <span aria-hidden="true">&#8594;</span>
+                </button>
+              </div>
             </div>
             <div class="homepage-section-body">
-              <p>CPS Studio shows how CPS becomes inspectable: who knows what, where it came from, which relationship could carry it, why an opportunity was accepted or blocked, and what lineage was written after propagation.</p>
-              <div class="cps-interface-carousel" aria-label="CPS interface previews" data-carousel>
-                <div class="cps-interface-carousel-main">
-                  <button class="carousel-control side prev" type="button" data-carousel-prev aria-label="Previous CPS Studio image">
-                    <span aria-hidden="true">&#8592;</span>
-                  </button>
-                  
-                  <div class="cps-interface-carousel-track" data-carousel-track>
-                    <a href="#" class="cps-interface-slide" data-full="src/assets/studio/system-settings.png">
-                      <img src="src/assets/studio/system-settings.webp" alt="CPS Environment Parameters & Settings" loading="lazy" decoding="async">
-                    </a>
-                    <a href="#" class="cps-interface-slide" data-full="src/assets/studio/activity-graph.png">
-                      <img src="src/assets/studio/activity-graph.webp" alt="Activity Route Social Graph" loading="lazy" decoding="async">
-                    </a>
-                    <a href="#" class="cps-interface-slide" data-full="src/assets/studio/latency-throughput.png">
-                      <img src="src/assets/studio/latency-throughput.webp" alt="System Latency & Throughput Monitoring" loading="lazy" decoding="async">
-                    </a>
-                    <a href="#" class="cps-interface-slide" data-full="src/assets/studio/subjects-registry.png">
-                      <img src="src/assets/studio/subjects-registry.webp" alt="Subjects Identity Registry" loading="lazy" decoding="async">
-                    </a>
-                    <a href="#" class="cps-interface-slide" data-full="src/assets/studio/archives-summaries.png">
-                      <img src="src/assets/studio/archives-summaries.webp" alt="Archives: Narrative Summaries View" loading="lazy" decoding="async">
-                    </a>
-                  </div>
-
-                  <button class="carousel-control side next" type="button" data-carousel-next aria-label="Next CPS Studio image">
-                    <span aria-hidden="true">&#8594;</span>
-                  </button>
-                </div>
-              </div>
               <div class="journal-card-list studio-card-grid">
                 <article class="journal-card">
-                  <h4>Subjects and relationships</h4>
-                  <p>Inspect actors, identities, memory counts, relationship topology, trust links, one-way bonds, and mutual connections.</p>
+                  <h4>Who knows what?</h4>
+                  <p>See which actors hold which memories, how they are connected, and whether knowledge is shared, isolated, one-way, or mutual.</p>
                 </article>
                 <article class="journal-card">
-                  <h4>Opportunities and blockers</h4>
-                  <p>See signals, intentions, candidate propagation routes, activation scores, privacy gates, sensitivity thresholds, cooldowns, and loop prevention.</p>
+                  <h4>Why can it move?</h4>
+                  <p>Inspect the route before propagation happens: relationship strength, trust, sensitivity, privacy gates, cooldowns, and blockers.</p>
                 </article>
                 <article class="journal-card">
-                  <h4>Lineage and provenance</h4>
-                  <p>Trace a memory back to its source and distinguish direct knowledge, hearsay, repeated rumor, and blocked private information.</p>
+                  <h4>Where did it come from?</h4>
+                  <p>Trace a memory back to its source. Distinguish direct knowledge, hearsay, repeated rumor, mutation, and blocked private information.</p>
                 </article>
                 <article class="journal-card">
-                  <h4>Demo validation</h4>
-                  <p>Run bounded demo profiles that show public propagation, private containment, observer isolation, and deterministic repeatability.</p>
+                  <h4>Did the system behave correctly?</h4>
+                  <p>Run bounded demo profiles to verify public propagation, private containment, observer isolation, repeatability, and loop prevention.</p>
                 </article>
               </div>
             </div>

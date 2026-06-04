@@ -79,17 +79,17 @@
               <p>A conversation does not end when the message is spoken. In CPS, information can become structured memory. That memory can create a signal, become socially relevant, find an opportunity to move, pass or fail privacy and relationship gates, and become a new memory in another actor.</p>
               <div class="use-case-flow-strip" aria-label="Core CPS flow">
                 <span>Moment</span>
-                <span aria-hidden="true">→</span>
+                <span aria-hidden="true">?</span>
                 <span>Memory</span>
-                <span aria-hidden="true">→</span>
+                <span aria-hidden="true">?</span>
                 <span>Signal</span>
-                <span aria-hidden="true">→</span>
+                <span aria-hidden="true">?</span>
                 <span>Opportunity</span>
-                <span aria-hidden="true">→</span>
+                <span aria-hidden="true">?</span>
                 <span>Exchange</span>
-                <span aria-hidden="true">→</span>
+                <span aria-hidden="true">?</span>
                 <span>Propagated Memory</span>
-                <span aria-hidden="true">→</span>
+                <span aria-hidden="true">?</span>
                 <span>Consequence</span>
               </div>
               <p class="use-case-core-note">CPS Studio makes the path inspectable: who knew it, where it came from, how it changed, and why it moved or stopped.</p>
@@ -572,7 +572,7 @@
                     <td class="neutral" data-tooltip="Not a primary focus / not a meaningful comparison dimension"></td>
                   </tr>
                   <tr>
-                    <td>Signal → Intention → Opportunity pipeline</td>
+                    <td>Signal ? Intention ? Opportunity pipeline</td>
                     <td class="good" data-tooltip="Strong fit / first-class purpose: first-class Social Opportunity Engine"></td>
                     <td class="neutral" data-tooltip="Not a primary focus / not a meaningful comparison dimension"></td>
                     <td class="neutral" data-tooltip="Not a primary focus / not a meaningful comparison dimension"></td>
@@ -675,25 +675,55 @@
       </main>
 
       <footer class="site-footer">
-        <div class="footer-grid">
-          <div class="footer-column">
-            <div class="footer-logo">CPS</div>
-            <p class="footer-summary">
-              Exploratory infrastructure for social memory in artificial worlds. Making propagation, containment, lineage, and consequence visible.
-            </p>
-          </div>
-          <div class="footer-column">
-            <span class="footer-label">Legal & Contact</span>
-            <div class="footer-credits">
-              <a href="mailto:whupert@gmail.com">whupert@gmail.com</a><br>
-              <a href="privacy-policy.html">Privacy Policy</a><br>
-              Created by Wojciech Hupert
+        <div class="footer-shell">
+          <div class="footer-top">
+            <div class="footer-brand">
+              <div class="footer-logo">CPS</div>
+              <p class="footer-statement">
+                Social-memory infrastructure for artificial worlds. CPS makes propagation, containment, lineage, and consequence inspectable across bounded artificial communities.
+              </p>
+              <div class="footer-cta-row" aria-label="Primary footer links">
+                <a href="how-does-it-work.html" class="footer-link footer-link-pill">How It Works</a>
+                <a href="use-cases.html" class="footer-link footer-link-pill">Use Cases</a>
+                <a href="blog.html" class="footer-link footer-link-pill">Development Journal</a>
+              </div>
+            </div>
+            <div class="footer-columns">
+              <div class="footer-group">
+                <span class="footer-label">Explore</span>
+                <nav class="footer-nav" aria-label="Footer explore">
+                  <a href="./" class="footer-link">Home</a>
+                  <a href="how-does-it-work.html" class="footer-link">How It Works</a>
+                  <a href="use-cases.html" class="footer-link">Use Cases</a>
+                  <a href="blog.html" class="footer-link">Journal</a>
+                  <a href="contact.html" class="footer-link">Contact</a>
+                </nav>
+              </div>
+              <div class="footer-group">
+                <span class="footer-label">Project surfaces</span>
+                <nav class="footer-nav" aria-label="Footer project surfaces">
+                  <a href="index.html#studio" class="footer-link">CPS Studio</a>
+                  <a href="onepager.html" class="footer-link">One-pager</a>
+                  <a href="blog.html" class="footer-link">Development Journal</a>
+                  <a href="privacy-policy.html" class="footer-link">Privacy Policy</a>
+                  <a href="cookie-policy.html" class="footer-link">Cookie Policy</a>
+                  <button type="button" class="footer-link footer-cookie-button" data-cookie-preferences>Cookie Preferences</button>
+                </nav>
+              </div>
+              <div class="footer-group">
+                <span class="footer-label">Contact</span>
+                <div class="footer-contact-list">
+                  <a href="mailto:whupert@gmail.com" class="footer-link">whupert@gmail.com</a>
+                  <a href="https://www.linkedin.com/in/wojciechhupert/" class="footer-link" target="_blank" rel="noreferrer">LinkedIn</a>
+                  <a href="https://shapeseeds.com" class="footer-link" target="_blank" rel="noreferrer">Shapeseeds</a>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="footer-bottom">
-          <div class="footer-copyright">&copy; 2026 Context Propagation System</div>
-          <div class="footer-copyright">Shapeseeds // Lelit Distrikt</div>
+          <div class="footer-bottom">
+            <div class="footer-bottom-copy">&copy; 2026 Context Propagation System. Created by Wojciech Hupert.</div>
+            <div class="footer-bottom-note">Exploratory prototype, not a production platform.</div>
+          </div>
         </div>
       </footer>
     </div>
@@ -702,5 +732,7 @@
     <script type="module" src="src/main.js"></script>
   </body>
 </html>
+
+
 
 

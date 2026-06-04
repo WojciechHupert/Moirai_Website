@@ -1,4 +1,4 @@
-import './privacy.css';
+﻿import './privacy.css';
 
 const GTAG_ID = 'G-X81LJ6XFMR';
 const CONSENT_KEY = 'cps-cookie-consent-v1';
@@ -203,21 +203,6 @@ function renderBanner(mode = 'consent') {
   banner.querySelector('[data-cookie-action="reject"]')?.focus();
 }
 
-function enhanceFooters() {
-  document.querySelectorAll('.site-footer .footer-credits').forEach((credits) => {
-    if (credits.querySelector('.footer-policy-links')) return;
-
-    const links = document.createElement('div');
-    links.className = 'footer-policy-links';
-    links.innerHTML = `
-      <a href="privacy-policy.html" class="footer-link">Privacy Policy</a>
-      <a href="cookie-policy.html" class="footer-link">Cookie Policy</a>
-      <button type="button" class="footer-link footer-link-button" data-cookie-preferences>Cookie Preferences</button>
-    `;
-    credits.appendChild(links);
-  });
-}
-
 function bindPreferenceTriggers() {
   document.querySelectorAll('[data-cookie-preferences]').forEach((button) => {
     button.addEventListener('click', () => {
@@ -227,7 +212,6 @@ function bindPreferenceTriggers() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  enhanceFooters();
   bindPreferenceTriggers();
 
   const consent = readConsent();
@@ -239,3 +223,4 @@ document.addEventListener('DOMContentLoaded', () => {
     renderBanner();
   }
 });
+

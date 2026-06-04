@@ -188,7 +188,13 @@ function getPanelCopyText(panel) {
 
   const clone = content.cloneNode(true);
   clone.querySelectorAll('button').forEach((button) => button.remove());
-  return clone.innerText.trim().replace(/\n{3,}/g, '\n\n');
+  return clone.innerText
+    .replace(/\r/g, '')
+    .split('\n')
+    .map((line) => line.trim())
+    .join('\n')
+    .replace(/\n{3,}/g, '\n\n')
+    .trim();
 }
 
 function initUseCaseCards() {

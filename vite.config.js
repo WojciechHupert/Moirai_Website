@@ -30,6 +30,7 @@ export default defineConfig({
         blogBridgingTheNeuralGap: resolve(__dirname, 'blog-bridging-the-neural-gap.html'),
         blogPrototypesNotSimulations: resolve(__dirname, 'blog-prototypes-not-simulations.html'),
         blogWhyCpsV1HadToEnd: resolve(__dirname, 'blog-why-cps-v1-had-to-end.html'),
+        blogCpsV2FeatureFreeze: resolve(__dirname, 'blog-cps-v2-feature-freeze.html'),
         contact: resolve(__dirname, 'contact.html'),
         privacyPolicy: resolve(__dirname, 'privacy-policy.html'),
         cookiePolicy: resolve(__dirname, 'cookie-policy.html'),

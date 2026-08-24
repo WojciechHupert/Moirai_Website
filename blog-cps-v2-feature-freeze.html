@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;600;700;900&family=IBM+Plex+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="moirai-logo.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="module" src="src/privacy.js"></script>
+    <title>CPS | CPS v2 Is Entering Feature Freeze</title>
+    <meta name="description" content="Why CPS v2 is entering feature freeze, and why the next test is whether its existing mechanisms can compose over time." />
+    <meta name="author" content="Wojciech Hupert" />
+    <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+    <link rel="canonical" href="https://contextpropagationsystem.com/blog-cps-v2-feature-freeze.html" />
+    <link rel="alternate" type="text/plain" href="https://contextpropagationsystem.com/ai.txt" title="AI crawl guidance" />
+    <link rel="alternate" type="text/plain" href="https://contextpropagationsystem.com/llms.txt" title="LLM index" />
+    <meta name="theme-color" content="#050505" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="CPS" />
+    <meta property="og:url" content="https://contextpropagationsystem.com/blog-cps-v2-feature-freeze.html" />
+    <meta property="og:title" content="CPS v2 Is Entering Feature Freeze" />
+    <meta property="og:description" content="Why CPS v2 is entering feature freeze, and why the next test is whether its existing mechanisms can compose over time." />
+    <meta property="og:image" content="https://contextpropagationsystem.com/og-share.png" />
+    <meta property="og:image:alt" content="Context Propagation System: Social memory infrastructure for artificial worlds." />
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://contextpropagationsystem.com/blog-cps-v2-feature-freeze.html" />
+    <meta property="twitter:title" content="CPS v2 Is Entering Feature Freeze" />
+    <meta property="twitter:description" content="Why CPS v2 is entering feature freeze, and why the next test is whether its existing mechanisms can compose over time." />
+    <meta property="twitter:image" content="https://contextpropagationsystem.com/og-share.png" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "CPS v2 Is Entering Feature Freeze",
+        "description": "Why CPS v2 is entering feature freeze, and why the next test is whether its existing mechanisms can compose over time.",
+        "datePublished": "2026-08-24",
+        "dateModified": "2026-08-24",
+        "author": {"@type": "Person", "name": "Wojciech Hupert"},
+        "publisher": {"@type": "Person", "name": "Wojciech Hupert"},
+        "mainEntityOfPage": {"@type": "WebPage", "@id": "https://contextpropagationsystem.com/blog-cps-v2-feature-freeze.html"}
+      }
+    </script>
+    <link rel="stylesheet" href="src/style.css" />
+    <style>
+      .blog-page-container { max-width: 840px; margin: 0 auto; padding: 120px 40px; }
+      .blog-post-traditional h1 { font-size: clamp(2.8rem, 7vw, 4.4rem); text-transform: none; margin-bottom: 22px; line-height: 1.04; }
+      .post-meta { border-bottom: 1px solid var(--border-color); padding-bottom: 24px; margin-bottom: 40px; }
+      .post-subtitle { color: #d0d0d0; max-width: 720px; font-size: 1.08rem; line-height: 1.8; margin-bottom: 32px; }
+      .blog-post-traditional .post-content { font-size: 1.18rem; line-height: 1.85; color: #e0e0e0; }
+      .blog-post-traditional .post-content p { margin-bottom: 28px; }
+      .back-link { display: inline-flex; align-items: center; gap: 8px; margin-bottom: 48px; color: var(--muted-color); font-family: var(--font-mono); font-size: .8rem; text-transform: uppercase; letter-spacing: .1em; }
+      .back-link:hover { color: var(--accent-color); }
+      .traditional-footer { margin-top: 96px; padding-top: 32px; border-top: 1px solid var(--border-color); text-align: center; color: var(--muted-color); font-family: var(--font-mono); font-size: .7rem; letter-spacing: .1em; }
+      @media (max-width: 768px) { .blog-page-container { padding: 88px 20px 72px; } .post-subtitle, .blog-post-traditional .post-content { font-size: 1rem; line-height: 1.7; } }
+    </style>
+  </head>
+  <body>
+    <div class="grid-overlay"></div>
+    <div class="main-container">
+      <header class="site-header">
+        <div class="header-inner">
+          <div class="logo"><a href="./">CPS</a></div>
+          <nav class="site-nav">
+            <a href="./" class="nav-link">Home</a>
+            <a href="how-does-it-work.html" class="nav-link">How Does It Work?</a>
+            <a href="use-cases.html" class="nav-link">Use Cases</a>
+            <a href="foundations.html" class="nav-link">Foundations</a>
+            <a href="blog.html" class="nav-link active">Blog</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+          </nav>
+          <div class="header-actions"><button class="mobile-menu-toggle" id="menuToggle" aria-label="Toggle Menu"><span></span><span></span><span></span></button></div>
+        </div>
+      </header>
+      <main class="blog-page-container">
+        <a href="blog.html" class="back-link"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg> Back to Journal</a>
+        <article class="blog-post-traditional">
+          <div class="post-meta mono"><span class="post-date">AUG 24, 2026</span><span style="margin: 0 16px;">|</span><span class="post-category">ESSAY</span></div>
+          <h1>CPS v2 Is Entering Feature Freeze</h1>
+          <p class="post-subtitle">Why the next phase is to live with the architecture instead of continuing to expand it.</p>
+          <div class="post-content">
+        <p>There is a point in building a system when adding another capability stops being progress.</p>
+        <p>For most of the development of CPS v2, almost every serious test exposed something that did not yet exist. An Actor could remember something, but memory had no reliable way to affect later behavior. Two Actors could occupy the same place, but there was no complete path from co-presence to noticing one another. A Player could ask an Actor to do something, and the request could be understood perfectly, yet nothing connected that understanding to a durable commitment, a schedule, an action in the world and an eventual result. One mechanism would begin a causal chain and, somewhere downstream, the architecture would simply run out.</p>
+        <p>For a long time, the correct response was to keep building.</p>
+        <p>That phase is now ending.</p>
+        <p>CPS v2 has reached feature freeze. I do not mean that the system is finished, and certainly not that every problem has been solved. I mean something more specific: the major mechanisms I currently believe CPS needs are present, connected and capable of producing the kind of continuity the architecture was designed to explore. From this point, adding another subsystem every time the simulation behaves imperfectly would make it harder, not easier, to understand whether CPS actually works.</p>
+        <p>The next stage is therefore deliberately different. Instead of continuing to expand the architecture, I want to live with it.</p>
+        <p>That may be the most important test CPS has faced so far.</p>
+        <p>V2 began because the first version had reached a conceptual limit. CPS v1 had become increasingly good at preserving information between interactions, but persistence alone could not establish a coherent history. The system needed clearer authority over time, state and causality. It needed to distinguish an intention from an action, an observation from something merely present in the environment, a stored memory from a memory that actually influenced behavior, and a plausible description of an event from evidence that the event occurred.</p>
+        <p>Rebuilding around those distinctions changed CPS much more deeply than I initially expected.</p>
+        <p>The system that emerged is no longer organized primarily around conversations. It is a runtime in which conversations are one kind of event among many. Time continues independently of the language model. Actors have canonical state that exists whether or not anyone is currently talking to them. Activities occupy time. Movement changes world state. Observations have sources. Attention determines that not everything available to an Actor necessarily becomes psychologically relevant. Memories, relationships, commitments and current circumstances can contribute to later behavior. Work can remain pending after the interaction that created it has ended.</p>
+        <p>The language model still plays an important role, but it no longer has permission to quietly fill in whatever reality the architecture happens to be missing. It can interpret, reason and propose within bounded situations. It can express an Actor's perspective and generate language. What it cannot do is make something true merely because saying it would produce a coherent continuation.</p>
+        <p>This sounds like a restriction on generative AI. In practice, it has been one of the things that made CPS more interesting.</p>
+        <p>Once the provider stopped being allowed to bridge every missing mechanism, the gaps became visible. An Actor saying that they would do something was no longer enough; CPS had to represent the resulting obligation. An obligation was not enough; something had to make it executable at a legitimate time. Execution was not enough; the system needed evidence of what actually happened. If another Actor was involved, being in the same place was not enough either. Presence had to become observable, observation had to become relevant, and relevance still had to be allowed to result in no action at all.</p>
+        <p>Much of the work on v2 has consisted of following these chains further and further until they stopped breaking.</p>
+        <p>That process changed my sense of what an AI feature actually is. In an ordinary product, a feature can often be considered complete when a user can invoke it and receive the expected result. In CPS, this is not sufficient. A capability is only interesting if it composes with the rest of the system.</p>
+        <p>Memory is a good example. It would have been relatively easy to declare memory complete once Actors could store and retrieve past information. But a memory system that is only capable of retrieving memories is still largely a retrieval system. CPS needed the remembered past to enter later causal processes. Something that happened yesterday might alter what becomes relevant today, contribute to a question, affect the interpretation of another Actor, or change a later decision. The important part is not that the memory can be displayed. It is that the system can behave differently because the memory exists.</p>
+        <p>The same test applies elsewhere. A relationship is not particularly meaningful because two Actors have a relationship record. It becomes meaningful when that history changes what happens when they encounter one another. Attention is not meaningful because CPS can list observations. It becomes meaningful when the difference between what was available and what was actually noticed changes the subsequent behavior of an Actor. A commitment is not meaningful because it appears in a data structure. It matters when it survives time, competes with other demands, becomes actionable and can eventually be completed or fail.</p>
+        <p>This is why v2 gradually became a problem of composition rather than a collection of individual capabilities.</p>
+        <p>It is also why feature freeze matters now.</p>
+        <p>There is always another mechanism that could be added. Human behavior provides an effectively infinite supply of inspiration. Actors could have richer emotional dynamics, more sophisticated planning, deeper models of one another, more nuanced social expectations, more elaborate goals, more types of reflection, more adaptive routines, more forms of attention and more ways of changing over time. Almost any disappointing moment in a simulation can be explained by inventing another missing cognitive faculty.</p>
+        <p>If I continue working that way, CPS will never reach the point where its existing assumptions are seriously tested.</p>
+        <p>There is a subtler danger as well. Every new mechanism makes the system easier to rationalize. If an Actor does not behave as expected, I can always add something that produces the desired behavior. Eventually the architecture becomes rich enough to explain almost any outcome after the fact. That may make the simulation more expressive, but it makes the experiment weaker.</p>
+        <p>The question I now care about is almost the opposite: how much can this architecture produce without being given anything else?</p>
+        <p>Can its existing mechanisms combine in ways that were not individually scripted? Can a piece of information acquired through one path become relevant much later through another? Can relationships gradually alter behavior rather than merely accumulate state? Can an Actor accept an obligation, carry it through a changing schedule, execute it legitimately and retain the consequence? Can something that was noticed lead to reflection, and can that reflection matter later without a special-purpose feature being added to connect the two? Can routine life, memory, attention, relationships and agency coexist for days without the system either becoming inert or generating endless cascades of activity?</p>
+        <p>These are no longer feature questions. They are system questions.</p>
+        <p>And system questions require time.</p>
+        <p>One of the lessons of v2 has been that short demonstrations are dangerously flattering. A simulation can look excellent for a few minutes because very little has had time to go wrong. State has not accumulated. Schedules have not drifted. Repeated interactions have not exposed feedback loops. Relationships have not had enough history to become contradictory. The same mechanism has not fired often enough to reveal whether it produces believable variation or simply repeats itself. Restarts, retries and long-running obligations have not yet had the opportunity to create inconsistencies.</p>
+        <p>A persistent system needs a different standard of evidence.</p>
+        <p>It needs to survive its own history.</p>
+        <p>That is what feature freeze is intended to make possible. Instead of continually interrupting long-running tests to introduce another capability, I want to observe what happens when the architecture is allowed to operate as it is. Failures discovered during this phase will still be fixed. Broken causal paths, incorrect authority, state corruption, runaway feedback, stranded work and performance problems are not features; they are defects. But the default response to an unconvincing behavior will no longer be to invent another subsystem.</p>
+        <p>First I want to know whether something already present should have handled it.</p>
+        <p>That distinction is important because CPS has accumulated enough machinery that the next problem may not be absence. It may be integration.</p>
+        <p>The system can remember, but perhaps memory is not reaching the right downstream decision. It can represent relationships, but perhaps relationship state does not carry enough behavioral weight. It can notice, but perhaps too few observations ever become relevant. It can generate autonomous opportunities, but perhaps several independent gates suppress them until almost nothing happens. Or the opposite may occur: several individually sensible mechanisms may reinforce one another and generate too much activity.</p>
+        <p>At this stage, adding more mechanisms could easily make all of those problems worse while appearing to solve the symptom directly in front of me.</p>
+        <p>Feature freeze creates a constraint: use what is already there.</p>
+        <p>I find that constraint useful because CPS has never been intended as an attempt to reproduce every mechanism of human cognition. It is an engineering experiment in whether a relatively small set of explicit mechanisms can produce persistent, inspectable artificial behavior when they are allowed to interact over time. If the answer requires an ever-expanding catalogue of handcrafted explanations for every situation, then that is an important result too.</p>
+        <p>There is another reason I want to stop adding features now. CPS has finally reached a point where observing the system may become more valuable than designing it.</p>
+        <p>During most of v2 development I knew, roughly, what a test was supposed to demonstrate. I would build or repair a causal path and then create the circumstances necessary to exercise it. The result answered a narrow question: can this mechanism work?</p>
+        <p>Feature freeze changes the question to: what does the system do when I stop telling it what I am testing?</p>
+        <p>That is much closer to the original ambition behind CPS.</p>
+        <p>I want to run it for long periods and inspect the histories afterwards. I want to see which state actually matters and which state merely accumulates. I want to see whether Actors develop patterns that are recognizable without becoming mechanical. I want to find causal chains that cross several mechanisms and were never tested as a single feature. I want to find parts of the architecture that looked important during development but turn out to have almost no effect on behavior. I expect some mechanisms that seemed independent to turn out to be duplicates. Others may turn out to amplify one another in ways I did not anticipate.</p>
+        <p>In other words, I want CPS to start surprising me for architectural reasons rather than because a language model generated an unexpected sentence.</p>
+        <p>That distinction is important.</p>
+        <p>Generative surprise is cheap now. Give a capable model enough context and it will regularly produce something I did not predict. That can be entertaining, useful and sometimes genuinely insightful, but it tells me very little about whether CPS itself is doing anything interesting.</p>
+        <p>The surprise I am looking for is different. I want to discover that an event occurred because several pieces of persistent state, created at different times by different mechanisms, happened to become relevant together. I want to be able to trace that event backwards and find that no individual part of the system explicitly planned the whole chain.</p>
+        <p>That would be a much stronger demonstration of emergence than simply asking a model to improvise.</p>
+        <p>It is also why inspectability remains central to the project. If something unexpected happens, CPS should allow me to investigate it. I should be able to distinguish an interesting composition of mechanisms from an accidental provider improvisation, a duplicated event, a scheduler bug or a runaway feedback loop. The purpose of observability is not merely to explain the system after it behaves well. It is what makes these categories distinguishable in the first place.</p>
+        <p>There is a temptation to describe feature freeze as the moment when the architecture becomes stable. I do not think I know that yet.</p>
+        <p>The freeze is how I intend to find out.</p>
+        <p>V2 now contains the major pieces that I believe are necessary to run the experiment properly. The question is no longer whether I can continue adding capabilities. Of course I can. There will always be another plausible feature.</p>
+        <p>The harder discipline is deciding not to.</p>
+        <p>For the next phase of CPS, progress should mean fewer architectural interventions, longer runs, more observation, stronger measurements and a much higher threshold for introducing anything new. I want to know whether the system can continue operating when the novelty of its individual mechanisms has worn off and all that remains is their interaction.</p>
+        <p>V1 taught me that persistent information was not enough. V2 was built to give that information a causal world in which it could matter.</p>
+        <p>Feature freeze is the point where I stop constructing that world long enough to find out what it actually does.</p>
+</div>
+          <div class="traditional-footer">CPS DEVELOPMENT JOURNAL // WOJCIECH HUPERT</div>
+        </article>
+      </main>
+      <footer class="site-footer">
+        <div class="footer-grid">
+          <div class="footer-column"><div class="logo">CPS</div><p class="footer-credits footer-summary">Context Propagation System. Exploratory infrastructure for social memory in artificial worlds.</p></div>
+          <div class="footer-column right"><span class="footer-label mono text-accent">LEGAL &amp; CREDITS</span><div class="footer-credits">all rights reserved 2026.<br><a href="mailto:whupert@gmail.com" style="color: inherit; text-decoration: none;">whupert@gmail.com</a><br>created by: Wojciech Hupert // <a href="https://shapeseeds.com" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline;">Shapeseeds</a></div></div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

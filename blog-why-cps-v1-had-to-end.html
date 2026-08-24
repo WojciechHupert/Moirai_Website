@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&family=IBM+Plex+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="moirai-logo.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-X81LJ6XFMR"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-X81LJ6XFMR');
+    </script>
+    <title>CPS | Why CPS v1 Had to End</title>
+    <meta name="description" content="Why CPS v1 had to end, and how the project shifted from preserving conversations to building a causal world in which artificial characters can carry a life." />
+    <meta name="author" content="Wojciech Hupert" />
+    <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+    <link rel="canonical" href="https://contextpropagationsystem.com/blog-why-cps-v1-had-to-end.html" />
+    <link rel="alternate" type="text/plain" href="https://contextpropagationsystem.com/ai.txt" title="AI crawl guidance" />
+    <link rel="alternate" type="text/plain" href="https://contextpropagationsystem.com/llms.txt" title="LLM index" />
+    <meta name="theme-color" content="#050505" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="CPS" />
+    <meta property="og:url" content="https://contextpropagationsystem.com/blog-why-cps-v1-had-to-end.html" />
+    <meta property="og:title" content="Why CPS v1 Had to End" />
+    <meta property="og:description" content="Why CPS v1 had to end, and how the project shifted from preserving conversations to building a causal world." />
+    <meta property="og:image" content="https://contextpropagationsystem.com/neural_propagation_dashboard.webp" />
+    <meta property="og:image:alt" content="CPS Studio dashboard showing memory propagation and continuity analysis." />
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://contextpropagationsystem.com/blog-why-cps-v1-had-to-end.html" />
+    <meta property="twitter:title" content="Why CPS v1 Had to End" />
+    <meta property="twitter:description" content="Why CPS v1 had to end, and how the project shifted from preserving conversations to building a causal world." />
+    <meta property="twitter:image" content="https://contextpropagationsystem.com/neural_propagation_dashboard.webp" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Why CPS v1 Had to End",
+        "description": "Why CPS v1 had to end, and how the project shifted from preserving conversations to building a causal world in which artificial characters can carry a life.",
+        "datePublished": "2026-08-24",
+        "dateModified": "2026-08-24",
+        "author": {"@type": "Person", "name": "Wojciech Hupert"},
+        "publisher": {"@type": "Person", "name": "Wojciech Hupert"},
+        "mainEntityOfPage": {"@type": "WebPage", "@id": "https://contextpropagationsystem.com/blog-why-cps-v1-had-to-end.html"}
+      }
+    </script>
+    <style>
+      .blog-page-container { max-width: 840px; margin: 0 auto; padding: 120px 40px; }
+      .blog-post-traditional h1 { font-size: clamp(2.8rem, 7vw, 4.4rem); text-transform: none; margin-bottom: 22px; line-height: 1.04; }
+      .post-meta { border-bottom: 1px solid var(--border-color); padding-bottom: 24px; margin-bottom: 40px; }
+      .post-subtitle { color: #d0d0d0; max-width: 720px; font-size: 1.08rem; line-height: 1.8; margin-bottom: 32px; }
+      .blog-post-traditional .post-content { font-size: 1.18rem; line-height: 1.85; color: #e0e0e0; }
+      .blog-post-traditional .post-content p { margin-bottom: 28px; }
+      .blog-post-traditional .post-content h2 { color: var(--text-color); text-transform: none; margin: 56px 0 20px; letter-spacing: -0.02em; font-size: 2rem; }
+      .blog-post-traditional .post-content em { color: #fff; }
+      .back-link { display: inline-flex; align-items: center; gap: 8px; margin-bottom: 48px; color: var(--muted-color); font-family: var(--font-mono); font-size: .8rem; text-transform: uppercase; letter-spacing: .1em; }
+      .back-link:hover { color: var(--accent-color); }
+      .traditional-footer { margin-top: 96px; padding-top: 32px; border-top: 1px solid var(--border-color); text-align: center; color: var(--muted-color); font-family: var(--font-mono); font-size: .7rem; letter-spacing: .1em; }
+      @media (max-width: 768px) { .blog-page-container { padding: 88px 20px 72px; } .post-subtitle, .blog-post-traditional .post-content { font-size: 1rem; line-height: 1.7; } }
+    </style>
+    <script type="module" crossorigin src="./assets/jsx-runtime-WxYYqfoB.js"></script>
+    <script type="module" crossorigin src="./assets/main-BRBjyIKp.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/style-D25Recf2.css">
+  </head>
+  <body>
+    <div class="grid-overlay"></div>
+    <div class="main-container">
+      <header class="site-header">
+        <div class="header-inner">
+          <div class="logo"><a href="./">CPS</a></div>
+          <nav class="site-nav">
+            <a href="./" class="nav-link">Home</a>
+            <a href="how-does-it-work.html" class="nav-link">How Does It Work?</a>
+            <a href="use-cases.html" class="nav-link">Use Cases</a>
+            <a href="foundations.html" class="nav-link">Foundations</a>
+            <a href="blog.html" class="nav-link active">Blog</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+          </nav>
+          <div class="header-actions"><button class="mobile-menu-toggle" id="menuToggle" aria-label="Toggle Menu"><span></span><span></span><span></span></button></div>
+        </div>
+      </header>
+      <main class="blog-page-container">
+        <a href="blog.html" class="back-link"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg> Back to Journal</a>
+        <article class="blog-post-traditional">
+          <div class="post-meta mono"><span class="post-date">AUG 24, 2026</span><span style="margin: 0 16px;">|</span><span class="post-category">ESSAY</span></div>
+          <h1>Why CPS v1 Had to End</h1>
+          <p class="post-subtitle">How the project shifted from preserving conversations to building a causal world in which artificial characters can carry a life.</p>
+          <div class="post-content">
+            <p>CPS v1 began with a relatively narrow question: what happens when information can persist between artificial characters instead of disappearing when a conversation ends?</p>
+            <p>At the time, that felt like the central problem. Most generative systems are remarkably good at producing convincing exchanges in the moment, but comparatively weak at carrying the consequences of those exchanges forward. A character may sound coherent, informed and emotionally consistent during a conversation, yet the underlying interaction often remains disposable. What happened is remembered only if somebody explicitly stores it, retrieves it and places it back into context later.</p>
+            <p>CPS v1 was an attempt to make that continuity structural rather than incidental.</p>
+            <p>Different characters could know different things. Information could have a source, an owner and a history. A belief could be acquired directly, heard from somebody else, or propagated further through the community. The system could preserve the difference between what one character knew and what another merely suspected. A conversation could leave behind structured consequences that were available to later interactions rather than surviving only as transcript.</p>
+            <p>Those ideas remain fundamental to CPS. In fact, v1 worked well enough that they became impossible to ignore.</p>
+            <p>The problem was that the more successful CPS became at preserving information, the more obvious another absence became. The characters were accumulating histories, but the world around those histories was still too thin.</p>
+            <p>That realization eventually made v1 impossible to continue.</p>
+            <p>It was not retired because the experiment had failed. It was retired because the experiment had exposed a larger problem than the architecture had been designed to solve.</p>
+
+            <h2>The question that changed the project</h2>
+            <p>The shift began with a deceptively simple question:</p>
+            <p><em>What is a character doing when nobody is talking to them?</em></p>
+            <p>Suppose Chris speaks to Auggie at ten in the morning. The conversation matters. Something is learned, perhaps a suspicion is formed, perhaps one of them remembers the exchange later.</p>
+            <p>But what happens at 10:20?</p>
+            <p>Where does Chris go? What is Auggie doing? Who else is nearby? Does Chris continue thinking about what was said, or does another concern take over? Does he encounter somebody else? Does the earlier conversation become relevant again because of something that happens hours later?</p>
+            <p>More importantly, what happens if the Player does nothing at all?</p>
+            <p>CPS v1 could generate autonomous activity. It could create opportunities for characters to talk, reflect, exchange information and propagate what they knew. From the outside, this could look increasingly like a living system.</p>
+            <p>Yet I started to feel that much of this activity still originated from the system's desire to produce something.</p>
+            <p>That distinction bothered me.</p>
+            <p>The architecture was very good at asking, in effect, <em>what interesting event should happen next?</em></p>
+            <p>I became more interested in another question:</p>
+            <p><em>Given everything that is already true, what can legitimately happen next?</em></p>
+            <p>Those two questions lead to very different systems.</p>
+            <p>CPS v2 began when I decided that causality mattered more.</p>
+
+            <h2>The danger of plausible fiction</h2>
+            <p>Generative models are extraordinarily good at crossing gaps that have not actually been solved.</p>
+            <p>This is one of the qualities that makes them useful. It is also one of the most dangerous qualities when they are placed inside a persistent world.</p>
+            <p>Imagine asking a character to go and speak to somebody.</p>
+            <p>“Find Auggie, ask him how he is feeling, then come back and tell me what he said.”</p>
+            <p>A language model has no difficulty understanding the request. It can respond naturally: <em>Of course. I'll go find him.</em></p>
+            <p>Later, if the Player asks how the conversation went, the model can produce an entirely plausible account. Perhaps Auggie was tired. Perhaps he mentioned that business had been slow. Perhaps he seemed distracted by something that had happened earlier.</p>
+            <p>The account might be beautifully written. It might fit both characters. It might be indistinguishable from the report of a real encounter.</p>
+            <p>But there is a more important question:</p>
+            <p><em>Did any of it happen?</em></p>
+            <p>Did the character actually accept the request, or did the model merely produce a sentence that sounded like acceptance?</p>
+            <p>Did that decision persist after the conversation ended?</p>
+            <p>Was Auggie somewhere the character could reach?</p>
+            <p>Was there time to go there?</p>
+            <p>Did the character have another commitment?</p>
+            <p>Did movement actually occur?</p>
+            <p>Were both characters in the same place?</p>
+            <p>Was the intended question asked?</p>
+            <p>Did Auggie answer?</p>
+            <p>And if any part of this failed, would the system know the difference?</p>
+            <p>A generative model can jump effortlessly from intention to outcome. It can fill in all the missing steps because those steps are linguistically predictable.</p>
+            <p>A persistent world cannot afford to do that.</p>
+            <p>If characters are allowed to create history simply by describing it, then eventually the distinction between reality, intention, imagination and retrospective invention collapses. The system may possess excellent memory while remembering events that never happened.</p>
+            <p>At that point, continuity becomes cosmetic.</p>
+            <p>This became one of the central lessons of v1.</p>
+
+            <h2>Reality before language</h2>
+            <p>CPS v2 therefore began with a stricter relationship between language and the world.</p>
+            <p>A statement is not an event.</p>
+            <p>If an Actor says that they are going somewhere, the world has not yet changed. If they claim to have spoken to somebody, the conversation is not automatically real. If a model decides that a character probably learned something, that information does not become canonical simply because the inference sounds reasonable.</p>
+            <p>The world needs its own authorities.</p>
+            <p>Time must continue whether or not anybody is speaking. Actors need actual locations. Activities need duration. Movement must alter where somebody is. Two people can only encounter one another if the world actually brings them together. An observation should depend on legitimate access to something observable. A commitment should survive beyond the dialogue in which it was made.</p>
+            <p>Only after these things have happened should language be allowed to describe them as history.</p>
+            <p>This is a reversal of a common approach to generative AI.</p>
+            <p>In many systems, the model sits close to the center. It decides what should happen, and the surrounding software turns the model's output into behavior.</p>
+            <p>CPS v2 increasingly works in the opposite direction.</p>
+            <p>The world creates conditions. Those conditions become available to an Actor. The Actor may or may not notice them. What is noticed may or may not become relevant. Relevance may result in thought, decision or action. An action may succeed, fail or produce some unexpected consequence.</p>
+            <p>Language exists inside that process.</p>
+            <p>It does not own it.</p>
+            <p>The distinction may sound technical, but for me it changed the entire meaning of the project. Conversation stopped being the primary evidence of intelligence. It became one visible consequence of a much larger process.</p>
+
+            <h2>Why v2 initially looked less alive</h2>
+            <p>There was an uncomfortable period during the transition when CPS appeared to become worse.</p>
+            <p>The stricter the rules became, the quieter the world became.</p>
+            <p>Characters sometimes stood beside each other and said nothing. Opportunities that v1 might have generated automatically disappeared. Requests that had previously resulted in confident responses began exposing gaps in the architecture instead.</p>
+            <p>At first, this looked like regression.</p>
+            <p>In retrospect, it was useful.</p>
+            <p>Consider two familiar characters arriving in the same place. A generative system can solve the situation immediately by asking a model to produce a greeting. They know one another, therefore one says hello.</p>
+            <p>It is convincing, efficient and probably what a human observer expects.</p>
+            <p>It also avoids several important questions.</p>
+            <p>Did one character actually notice the other? Was the other person important enough to interrupt what they were doing? Did their relationship make the encounter meaningful? Was either of them occupied? Could recognition legitimately lead to no action at all?</p>
+            <p>If the model is allowed to jump directly to the socially plausible outcome, none of these missing mechanisms ever have to exist.</p>
+            <p>CPS v2 increasingly treats such silence as diagnostic information.</p>
+            <p>If something should probably happen and does not, I want to understand which part of the causal chain is missing. If an Actor cannot legitimately carry out a request, I would rather have the system reveal that limitation than disguise it with convincing prose.</p>
+            <p>This makes the architecture less forgiving.</p>
+            <p>It also makes it more honest.</p>
+            <p>The system has to earn its behavior.</p>
+
+            <h2>Memory also had to become more demanding</h2>
+            <p>The transition from v1 to v2 changed my understanding of memory as well.</p>
+            <p>CPS v1 became increasingly capable of retaining information. But retention, I eventually realized, is a surprisingly weak definition of memory.</p>
+            <p>A database retains information. A transcript retains information. A well-designed retrieval system can bring old information back into context with impressive accuracy.</p>
+            <p>None of this necessarily means that the past matters.</p>
+            <p>If Chris remembers an encounter with Auggie but that memory never changes what Chris notices, believes, asks, avoids or decides later, then the memory is present technically while remaining almost irrelevant behaviorally.</p>
+            <p>That led to another question that has become central to v2:</p>
+            <p><em>What happens differently because this Actor remembers?</em></p>
+            <p>A previous meeting may cause someone to notice a person they would otherwise ignore. An unresolved question may become important when the right person appears. An old commitment may compete with a new opportunity. A relationship may alter how the same situation is interpreted.</p>
+            <p>Sometimes the consequence may be immediate. Sometimes it may emerge days later. Sometimes a memory may have no visible consequence at all.</p>
+            <p>The important point is that memory should participate in causality rather than merely decorate context.</p>
+            <p>The past matters because it changes the space of possible futures.</p>
+            <p>Once I started thinking about memory this way, the same test began applying to almost every other part of CPS.</p>
+            <p>A relationship that never affects later behavior is mostly stored data. A goal that never competes with another concern is little more than metadata. A schedule that disappears whenever the generator wants something more interesting to happen is not really a schedule. An observation delivered automatically to every character is not perception. A commitment that exists only for the duration of a conversation is not much of a commitment.</p>
+            <p>State becomes meaningful when it changes what the system can do next.</p>
+            <p>That idea now sits much closer to the center of CPS than propagation itself did in v1.</p>
+
+            <h2>The surprising difficulty of ordinary life</h2>
+            <p>One of the strangest lessons from building v2 has been how easy dramatic behavior is compared with ordinary behavior.</p>
+            <p>A modern language model can create an argument, a revelation, an emotional confession or a mysterious encounter almost immediately. Give it a few characters and enough context and it can produce scenes that feel rich and deliberate.</p>
+            <p>Ordinary life is much less cooperative.</p>
+            <p>Can a character simply have a Tuesday?</p>
+            <p>Can they wake up, go somewhere, work, leave, encounter somebody, fail to encounter somebody else, remember something from yesterday and continue with their day?</p>
+            <p>Can six Actors do this at the same time?</p>
+            <p>Can the system continue for hours, then days, without constantly needing to invent drama to justify its existence?</p>
+            <p>Can two people meet and have nothing particularly important happen?</p>
+            <p>Can somebody arrive at a café without that arrival automatically becoming a scene?</p>
+            <p>Can yesterday influence today without consuming it?</p>
+            <p>These questions turned out to be much more difficult than generating an impressive conversation.</p>
+            <p>They also became far more useful.</p>
+            <p>A persistent artificial world cannot survive on exceptional events alone. It requires mundane continuity: the unremarkable connective tissue through which meaningful events become meaningful in the first place.</p>
+            <p>A surprise only matters if the world usually behaves normally.</p>
+            <p>A relationship only develops if time exists between encounters.</p>
+            <p>A memory only matters if there is a later moment in which it could change something.</p>
+            <p>The ordinary world is not background decoration.</p>
+            <p>It is the substrate.</p>
+
+            <h2>What v1 actually taught me</h2>
+            <p>Looking back, I do not think of CPS v1 as the primitive version of the current system.</p>
+            <p>It was a different experiment.</p>
+            <p>It asked whether artificial characters could carry structured information through time and through a social environment. It forced me to think seriously about provenance, asymmetric knowledge, belief propagation, privacy, memory lineage and the difference between what happened and what somebody merely heard about.</p>
+            <p>Those ideas survived.</p>
+            <p>What changed was the scale of the question around them.</p>
+            <p>V1 treated memory and propagation as the central machinery through which continuity emerged.</p>
+            <p>V2 treats them as parts of a larger causal world.</p>
+            <p>Memory now sits alongside time, location, activity, perception, attention, relationships, commitments, movement and action. Propagation is no longer the mechanism that makes the world move. It is one of the things that can happen because the world moved.</p>
+            <p>That is a subtle change in description and a major change in architecture.</p>
+            <p>It is also why continuing to extend v1 no longer made sense.</p>
+            <p>At some point, preserving an architecture because it already works becomes more expensive than admitting that the question has changed.</p>
+
+            <h2>From remembering conversations to carrying a life</h2>
+            <p>The central lesson of the transition is one I did not fully understand when I started CPS:</p>
+            <p><em>Continuity cannot be manufactured retrospectively.</em></p>
+            <p>A convincing account of the past is not the same thing as a past.</p>
+            <p>A stored fact is not necessarily a memory.</p>
+            <p>An intention is not an action.</p>
+            <p>A relationship label is not a relationship.</p>
+            <p>Dialogue is not proof that anything occurred.</p>
+            <p>And constant activity is not the same thing as life.</p>
+            <p>If the past is going to matter, it has to participate in the causes of what happens next.</p>
+            <p>CPS v1 led me to that conclusion. CPS v2 is an attempt to build around it.</p>
+            <p>The original question—how can information persist between artificial characters?—has not disappeared. It has simply become part of something broader.</p>
+            <p>I now want to know what happens when artificial characters exist inside a world where time continues without the Player, where different people carry different histories, where actions have prerequisites and consequences, where remembering something can alter a later decision, and where language is required to respect what actually happened rather than quietly inventing what would have been convenient.</p>
+            <p>In other words, I am less interested in making characters who can convincingly describe having a life.</p>
+            <p>I want to find out what it takes to give them one.</p>
+          </div>
+          <div class="traditional-footer">CPS DEVELOPMENT JOURNAL // WOJCIECH HUPERT</div>
+        </article>
+      </main>
+      <footer class="site-footer">
+        <div class="footer-grid">
+          <div class="footer-column"><div class="logo">CPS</div><p class="footer-credits footer-summary">Context Propagation System. Exploratory infrastructure for social memory in artificial worlds.</p></div>
+          <div class="footer-column right"><span class="footer-label mono text-accent">LEGAL &amp; CREDITS</span><div class="footer-credits">all rights reserved 2026.<br><a href="mailto:whupert@gmail.com" style="color: inherit; text-decoration: none;">whupert@gmail.com</a><br>created by: Wojciech Hupert // <a href="https://shapeseeds.com" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline;">Shapeseeds</a></div></div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

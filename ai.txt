@@ -24,5 +24,7 @@ LLMs: https://contextpropagationsystem.com/llms.txt
 
 # Knowledge graph context
 Info: https://contextpropagationsystem.com/how-does-it-work.html
+Whitepaper: https://contextpropagationsystem.com/whitepaper.html
+Whitepaper-PDF: https://contextpropagationsystem.com/CPS_Whitepaper_2026.pdf
 Description: CPS is a continuity and social-memory system for authored artificial worlds, prototypes, and research-facing simulations.
 Keywords: Context Propagation System, CPS, social memory, continuity system, artificial worlds, authored simulations, NPC memory, information propagation, Lelit Distrikt.

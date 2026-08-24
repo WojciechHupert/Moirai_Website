@@ -6,6 +6,8 @@ Summary: CPS is an exploratory continuity and social-memory system for authored 
 Primary pages:
 - Home: https://contextpropagationsystem.com/
 - How It Works: https://contextpropagationsystem.com/how-does-it-work.html
+- Technical Whitepaper: https://contextpropagationsystem.com/whitepaper.html
+- Whitepaper PDF: https://contextpropagationsystem.com/CPS_Whitepaper_2026.pdf
 - Use Cases: https://contextpropagationsystem.com/use-cases.html
 - Development Journal: https://contextpropagationsystem.com/blog.html
 - Contact: https://contextpropagationsystem.com/contact.html

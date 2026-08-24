@@ -132,6 +132,34 @@
         line-height: 1.55;
       }
 
+      .onepager-whitepaper-cta {
+        position: relative;
+        z-index: 1;
+        display: inline-flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+        min-width: min(100%, 360px);
+        margin-top: 24px;
+        padding: 15px 18px;
+        border: 1px solid var(--accent-color);
+        background: var(--accent-color);
+        color: #fff;
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 0.76rem;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      .onepager-whitepaper-cta:hover,
+      .onepager-whitepaper-cta:focus-visible {
+        border-color: #1f1f1c;
+        background: #1f1f1c;
+        outline: none;
+      }
+
       .onepager-hero-facts {
         display: grid;
         gap: 18px;
@@ -409,6 +437,9 @@
               <p class="onepager-highlight">
                 CPS is not framed as a disposable chat feature, a full society simulator, or a foundation model effort. It is a bounded prototype for making memory, propagation, lineage, and inspectability operational.
               </p>
+              <a class="onepager-whitepaper-cta" href="whitepaper.html">
+                Read the CPS whitepaper <span aria-hidden="true">→</span>
+              </a>
             </article>
 
             <aside class="onepager-panel onepager-hero-facts">
@@ -601,6 +632,7 @@
                 <nav class="footer-nav" aria-label="Footer project surfaces">
                   <a href="index.html#studio" class="footer-link">CPS Studio</a>
                   <a href="onepager.html" class="footer-link">One-pager</a>
+                  <a href="whitepaper.html" class="footer-link">Whitepaper</a>
                   <a href="blog.html" class="footer-link">Development Journal</a>
                   <a href="privacy-policy.html" class="footer-link">Privacy Policy</a>
                   <a href="cookie-policy.html" class="footer-link">Cookie Policy</a>
@@ -627,5 +659,4 @@
     </div>
   </body>
 </html>
-
 

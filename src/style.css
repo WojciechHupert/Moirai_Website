@@ -2754,7 +2754,52 @@ code {
   border-top: 1px solid var(--border-color);
 }
 
-/* Responsive */
+/* Journal reading typography */
+.blog-post-traditional .post-content {
+  max-width: 72ch;
+  color: #3f3f3b !important;
+  font-family: var(--font-sans);
+  font-size: 1.1rem !important;
+  font-weight: 400;
+  line-height: 1.78 !important;
+  letter-spacing: 0.005em;
+}
+
+.blog-post-traditional .post-content p {
+  margin-bottom: 1.55em;
+}
+
+.blog-post-traditional .post-content h2,
+.blog-post-traditional .post-content h3 {
+  color: var(--text-color);
+  font-family: var(--font-display);
+  font-weight: 900;
+  text-transform: none;
+  line-height: 1.05;
+  margin: 2.8em 0 0.7em;
+}
+
+.blog-post-traditional .post-content h2 { font-size: 2rem; }
+.blog-post-traditional .post-content h3 { font-size: 1.55rem; }
+
+.blog-post-traditional .post-subtitle {
+  color: #61615c !important;
+  font-family: var(--font-sans);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+  .blog-post-traditional .post-content {
+    font-size: 1rem !important;
+    line-height: 1.72 !important;
+  }
+
+  .blog-post-traditional .post-content p {
+    margin-bottom: 1.4em;
+  }
+}
+
 @media (max-width: 1024px) {
   .hero { min-height: 70vh; }
   .hero::after { width: 70%; }

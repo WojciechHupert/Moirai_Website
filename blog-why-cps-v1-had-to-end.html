@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;600;700;900&family=IBM+Plex+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="moirai-logo.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="module" src="src/privacy.js"></script>
+    <title>CPS | Why CPS v1 Had to End</title>
+    <meta name="description" content="Why CPS v1 had to end, and how the project shifted from preserving conversations to maintaining a coherent artificial world." />
+    <meta name="author" content="Wojciech Hupert" />
+    <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+    <link rel="canonical" href="https://contextpropagationsystem.com/blog-why-cps-v1-had-to-end.html" />
+    <link rel="alternate" type="text/plain" href="https://contextpropagationsystem.com/ai.txt" title="AI crawl guidance" />
+    <link rel="alternate" type="text/plain" href="https://contextpropagationsystem.com/llms.txt" title="LLM index" />
+    <meta name="theme-color" content="#050505" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="CPS" />
+    <meta property="og:url" content="https://contextpropagationsystem.com/blog-why-cps-v1-had-to-end.html" />
+    <meta property="og:title" content="Why CPS v1 Had to End" />
+    <meta property="og:description" content="Why CPS v1 had to end, and how the project shifted from preserving conversations to maintaining a coherent artificial world." />
+    <meta property="og:image" content="https://contextpropagationsystem.com/og-share.png" />
+    <meta property="og:image:alt" content="Context Propagation System: Social memory infrastructure for artificial worlds." />
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://contextpropagationsystem.com/blog-why-cps-v1-had-to-end.html" />
+    <meta property="twitter:title" content="Why CPS v1 Had to End" />
+    <meta property="twitter:description" content="Why CPS v1 had to end, and how the project shifted from preserving conversations to maintaining a coherent artificial world." />
+    <meta property="twitter:image" content="https://contextpropagationsystem.com/og-share.png" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Why CPS v1 Had to End",
+        "description": "Why CPS v1 had to end, and how the project shifted from preserving conversations to maintaining a coherent artificial world.",
+        "datePublished": "2026-08-24",
+        "dateModified": "2026-08-24",
+        "author": {"@type": "Person", "name": "Wojciech Hupert"},
+        "publisher": {"@type": "Person", "name": "Wojciech Hupert"},
+        "mainEntityOfPage": {"@type": "WebPage", "@id": "https://contextpropagationsystem.com/blog-why-cps-v1-had-to-end.html"}
+      }
+    </script>
+    <link rel="stylesheet" href="src/style.css" />
+    <style>
+      .blog-page-container { max-width: 840px; margin: 0 auto; padding: 120px 40px; }
+      .blog-post-traditional h1 { font-size: clamp(2.8rem, 7vw, 4.4rem); text-transform: none; margin-bottom: 22px; line-height: 1.04; }
+      .post-meta { border-bottom: 1px solid var(--border-color); padding-bottom: 24px; margin-bottom: 40px; }
+      .post-subtitle { color: #d0d0d0; max-width: 720px; font-size: 1.08rem; line-height: 1.8; margin-bottom: 32px; }
+      .blog-post-traditional .post-content { font-size: 1.18rem; line-height: 1.85; color: #e0e0e0; }
+      .blog-post-traditional .post-content p { margin-bottom: 28px; }
+      .back-link { display: inline-flex; align-items: center; gap: 8px; margin-bottom: 48px; color: var(--muted-color); font-family: var(--font-mono); font-size: .8rem; text-transform: uppercase; letter-spacing: .1em; }
+      .back-link:hover { color: var(--accent-color); }
+      .traditional-footer { margin-top: 96px; padding-top: 32px; border-top: 1px solid var(--border-color); text-align: center; color: var(--muted-color); font-family: var(--font-mono); font-size: .7rem; letter-spacing: .1em; }
+      @media (max-width: 768px) { .blog-page-container { padding: 88px 20px 72px; } .post-subtitle, .blog-post-traditional .post-content { font-size: 1rem; line-height: 1.7; } }
+    </style>
+  </head>
+  <body>
+    <div class="grid-overlay"></div>
+    <div class="main-container">
+      <header class="site-header">
+        <div class="header-inner">
+          <div class="logo"><a href="./">CPS</a></div>
+          <nav class="site-nav">
+            <a href="./" class="nav-link">Home</a>
+            <a href="how-does-it-work.html" class="nav-link">How Does It Work?</a>
+            <a href="use-cases.html" class="nav-link">Use Cases</a>
+            <a href="foundations.html" class="nav-link">Foundations</a>
+            <a href="blog.html" class="nav-link active">Blog</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+          </nav>
+          <div class="header-actions"><button class="mobile-menu-toggle" id="menuToggle" aria-label="Toggle Menu"><span></span><span></span><span></span></button></div>
+        </div>
+      </header>
+      <main class="blog-page-container">
+        <a href="blog.html" class="back-link"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg> Back to Journal</a>
+        <article class="blog-post-traditional">
+          <div class="post-meta mono"><span class="post-date">AUG 24, 2026</span><span style="margin: 0 16px;">|</span><span class="post-category">ESSAY</span></div>
+          <h1>Why CPS v1 Had to End</h1>
+          <p class="post-subtitle">Why preserving context was only the beginning of building a coherent artificial world.</p>
+          <div class="post-content">
+            <p>When I started building CPS, I thought the difficult part would be memory. Generative AI was already remarkably good at producing convincing conversations, but those conversations tended to exist in isolation. A model could appear thoughtful, consistent and aware of its history for as long as the relevant information remained inside its context window, yet very little of that history existed independently of the conversation itself. Once the interaction ended, continuity had to be reconstructed the next time around. CPS began as an attempt to move that continuity out of the prompt and into the architecture.</p>
+            <p>The first version was built around a relatively simple idea: interactions should leave structured consequences behind. Information could belong to a particular Actor instead of becoming universally available. It could carry provenance, so the system knew whether something had been observed directly, heard from someone else, inferred, or merely suspected. Knowledge could move between Actors while retaining some record of where it came from. Instead of treating memory as a pile of text retrieved whenever the model needed context, CPS treated information as something with ownership and history.</p>
+            <p>That was an important step, and for a while it seemed like the right center for the system. A conversation could produce new state, that state could survive, and a later interaction could depend on something that happened much earlier. CPS was beginning to do what I had hoped: make artificial characters less dependent on the immediate prompt and more dependent on a history that existed outside the model. The name Context Propagation System reflected exactly that ambition. Context would not simply be loaded; it would move, accumulate and change.</p>
+            <p>The problem appeared only after this started working.</p>
+            <p>As the amount of persistent state grew, I began to notice that CPS was getting increasingly good at remembering events without becoming equally good at establishing how those events had happened. The system could preserve the outcome of an interaction in considerable detail, but there was often much less structure behind the path that had produced it. This was easy to overlook because the language model was exceptionally good at supplying whatever causal tissue the software had failed to represent. The result could look coherent from the outside even when the architecture underneath it was not.</p>
+            <p>That became the fault line between v1 and v2.</p>
+            <p>A generative model is extremely good at moving from one plausible state of affairs to another. If a character says, “I’ll take care of that,” the model understands the social meaning of the sentence immediately. If you return later and ask what happened, it can provide a reasonable account of the task being completed. It knows what usually follows an agreement, just as it knows what usually happens after someone leaves a room, promises to call, decides to investigate something or says they will speak to another person. From the perspective of language, all of these transitions are easy.</p>
+            <p>From the perspective of software, they are not transitions at all until something actually represents them.</p>
+            <p>That distinction gradually became impossible for me to ignore. When an Actor says they will do something, what has changed in the system? Has a decision been made, or has the model simply generated the socially appropriate response? Does a durable commitment now exist? Has work been scheduled? What happens if another commitment already occupies that time? What happens if the task cannot be completed? If the Actor later claims that it was completed, what evidence does CPS have that anything happened between the promise and the report?</p>
+            <p>In v1, too many of these questions could be answered implicitly. The model was able to make the missing steps feel natural enough that the architecture did not always have to represent them. That was useful during early development because it allowed the system to progress quickly. It was also becoming increasingly dangerous. The better the generative output became, the harder it was to distinguish a real state transition from a plausible description of one.</p>
+            <p>This is a strange problem specific to building software around generative models. Traditional software usually fails noisily when a mechanism does not exist. A function is missing, a state is invalid, an operation cannot complete. A language model can fail much more gracefully. It can tell you what probably happened. In doing so, it can hide the fact that nothing in the system actually made it happen.</p>
+            <p>Once CPS was expected to maintain a persistent history, that ambiguity became unacceptable. If language was allowed to create reality simply by describing it, the system could eventually contain a beautifully coherent record of events that had never occurred. An intention could quietly become an action. A prediction could become a memory. A conversational implication could become world state. CPS might remember more and more while becoming progressively less certain about what was actually true.</p>
+            <p>The transition to v2 began when I stopped thinking primarily about memory and started thinking about authority.</p>
+            <p>The question was no longer only where information should be stored, but which part of the system was allowed to say that something was true. If an Actor has a location, where does that fact come from? If an activity is complete, which mechanism completed it? If someone has learned something, what event gave them access to that information? If a commitment exists, what created it and what can close it? If two parts of the system disagree, which one is authoritative?</p>
+            <p>These questions sound less glamorous than questions about intelligence, but they turned out to be much more important. CPS needed a reality that existed independently of whatever the language model happened to say about it. The model could interpret that reality, reason about it and speak from within it, but it could no longer be allowed to silently redefine it.</p>
+            <p>That decision changed the architecture substantially. Time became something the runtime had to own rather than something inferred from the order of conversations. Activities needed beginnings and endings. Future work needed to remain pending even when no model was running. Movement could no longer be a sentence saying that someone went somewhere; it had to become a state transition that changed a canonical location. Commitments had to survive beyond the conversation that created them. Observations needed a legitimate source. An Actor could only know something if there was a path by which that information became available.</p>
+            <p>In other words, CPS stopped being primarily a system that processed interactions and started becoming a system that maintained a continuously evolving state.</p>
+            <p>That sounds like a subtle distinction, but it changes how almost everything else is designed. In v1, an interaction was often the natural unit of progress: something happened, the system interpreted it, new state was extracted, and that state influenced another interaction later. In v2, conversation became only one possible event inside a larger runtime. The world could progress without anyone speaking. An activity could finish. A scheduled obligation could become due. Something could become observable. A previously irrelevant piece of state could suddenly matter because the surrounding conditions had changed.</p>
+            <p>This also forced CPS to become much more explicit about causality. Early generative systems naturally gravitate toward opportunities: look at the current context, identify something interesting that could happen, ask the model to produce it, then incorporate the result. It is an efficient way to generate activity, but it quietly makes generation itself the cause of what happens. The system acts because it found something worth generating.</p>
+            <p>V2 began moving in the opposite direction. The interesting question was no longer what the system could generate from the current state, but what the current state actually made possible. Something exists in the world. An Actor has legitimate access to it. Perhaps it is noticed; perhaps it is not. Existing memory, disposition, relationships or commitments may make it relevant. That relevance can lead to evaluation, and evaluation may eventually lead to action. At every stage, doing nothing remains a valid outcome.</p>
+            <p>This made CPS look worse before it looked better.</p>
+            <p>Once the generative shortcuts were removed, the system became quieter. Events that had previously appeared naturally stopped appearing. Some chains of behavior simply ended because the mechanism needed to continue them had not yet been built. At first, this felt like regression. A more restrictive architecture seemed to produce less convincing behavior than the system it was replacing.</p>
+            <p>Over time I came to value those failures. When something did not happen, CPS was showing me exactly where its causal model ended. If information was stored but never influenced attention, then memory persistence was working while behavioral integration was not. If an Actor accepted a request but nothing converted that acceptance into executable work, then the missing mechanism was visible. If two subsystems both tried to produce the same outcome, it exposed an ownership problem. These were much more useful failures than a language model smoothly generating the expected result and concealing the gap.</p>
+            <p>That experience also changed the way I think about memory itself. In v1, the challenge was largely to preserve information accurately. In v2, preservation is only the beginning. A memory that sits correctly in storage for months but never changes anything downstream is not doing much more than a database record. The harder question is whether something happens differently because that memory exists.</p>
+            <p>This sounds obvious, but it has broad consequences for the architecture. Memory can no longer be a self-contained subsystem that retrieves relevant facts into prompts. It has to participate in other mechanisms. Something remembered may alter how an observation is interpreted, make another Actor more relevant, create an unresolved question, influence a decision or change which action is considered appropriate. The same standard applies to relationships, goals, commitments and other forms of persistent state. Their value is not simply that CPS can store and display them; their value lies in whether they can legitimately influence what happens later.</p>
+            <p>V2 therefore became less about accumulating increasingly rich representations of an Actor and more about connecting state to consequence. This introduced another problem: composition. Once several mechanisms can influence behavior, the temptation is to solve the complexity by introducing a central intelligence that looks at everything and decides what happens next. A language model seems like the obvious candidate. It can weigh memory, goals, relationships, current circumstances and competing possibilities in a single call.</p>
+            <p>But that would recreate the very problem v2 was intended to solve.</p>
+            <p>Instead, CPS has been moving toward bounded responsibilities. Different mechanisms own different kinds of state and different transitions. The provider—the language model underneath the system—remains important precisely where generative reasoning is useful. It can interpret ambiguity, evaluate a bounded situation, formulate a response or express an Actor’s perspective. What it should not do is become an invisible authority capable of creating whatever state is required to make its own output coherent.</p>
+            <p>This has been one of the more counterintuitive lessons of building CPS. Better models have not made architecture less important. They have made architectural boundaries more important. A weaker model exposes missing structure because its improvisations are easy to spot. A powerful model can hide missing structure behind excellent reasoning and fluent language. The output becomes so convincing that it is tempting to accept the story as evidence that the machinery underneath it must also be working.</p>
+            <p>For that reason, observability also changed meaning between the two versions. In v1, inspection was largely a way to understand and debug the system: which memory had been retrieved, how information had propagated, why a particular interaction had been produced. In v2, the ability to inspect a causal chain became part of how I determine whether a behavior is real at all.</p>
+            <p>When CPS performs an action, I increasingly want the system to be able to reconstruct the path that led there: what state existed beforehand, what became available, which mechanism considered it relevant, what decision was made, what durable work was created, what executed that work, and what canonical state changed as a result. This does not mean exposing every internal transition to the person using CPS. The product can still present a simple account of what happened. But underneath that account there needs to be evidence.</p>
+            <p>That distinction matters because a generated explanation is no safer than any other generated statement. A model can produce a very persuasive reason for why something occurred without that reason corresponding to the mechanism that actually caused it. V2 therefore has to preserve both the narrative of an event and its causal record. One is how the event can be understood. The other is how the system knows it happened.</p>
+            <p>As this architecture developed, CPS also became much more sensitive to time. A system built around conversations can be tested in short bursts, but a persistent runtime behaves differently. Problems that seem insignificant over ten minutes become structural over several days. A scheduler that handles a handful of events perfectly may accumulate drift after thousands of boundaries. Work can become stranded. Retries can create duplicates. State can grow without bound. Restarting a system can reveal assumptions that continuous execution had quietly hidden.</p>
+            <p>These are not particularly exotic engineering problems, but they become more consequential when generative behavior sits on top of them. If the runtime develops a small inconsistency and the model compensates with a plausible interpretation, the system can continue operating while its causal history becomes increasingly unreliable. Long-running CPS therefore had to care about durability, replay, idempotency, ownership and evidence in ways that the first version never needed to.</p>
+            <p>Looking back, this is why I no longer think of v2 as simply a better implementation of v1. The two versions are centered on different problems.</p>
+            <p>V1 asked how information produced by interactions could survive those interactions and propagate through a system. That question established many of the ideas that CPS still depends on: Actor-local knowledge, provenance, asymmetric information and durable history. None of those ideas were discarded.</p>
+            <p>What changed was the context around them.</p>
+            <p>V2 asks how persistent state can participate in a causal system that continues through time. Memory is one form of that state. So are commitments, activities, observations, relationships and world state. Conversation is one way these things become visible, but it is not the machinery holding them together. The system itself has to maintain the continuity.</p>
+            <p>There is a point in software projects where extending an existing architecture becomes a way of avoiding the fact that the underlying question has changed. CPS reached that point with v1. I could have continued adding schedulers, execution paths, world state and more sophisticated memory around the original interaction-centered architecture. Much of it would probably have worked. But the result would have become increasingly complicated while preserving an ambiguity at its center: was CPS a system for managing context around generative interactions, or was it the runtime responsible for maintaining a coherent artificial world?</p>
+            <p>V2 is my attempt to answer that question clearly.</p>
+            <p>The model still matters. Memory still matters. Propagation still matters. But none of them is allowed to substitute for the thing CPS now cares about most: a traceable sequence of state changes in which the past genuinely constrains the future.</p>
+            <p>V1 taught me how to make context persist.</p>
+            <p>V2 began when I realized that persistence was not enough. The harder problem was making sure there was a real chain of causes underneath the story the system was telling.</p>
+          </div>
+          <div class="traditional-footer">CPS DEVELOPMENT JOURNAL // WOJCIECH HUPERT</div>
+        </article>
+      </main>
+      <footer class="site-footer">
+        <div class="footer-grid">
+          <div class="footer-column"><div class="logo">CPS</div><p class="footer-credits footer-summary">Context Propagation System. Exploratory infrastructure for social memory in artificial worlds.</p></div>
+          <div class="footer-column right"><span class="footer-label mono text-accent">LEGAL &amp; CREDITS</span><div class="footer-credits">all rights reserved 2026.<br><a href="mailto:whupert@gmail.com" style="color: inherit; text-decoration: none;">whupert@gmail.com</a><br>created by: Wojciech Hupert // <a href="https://shapeseeds.com" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline;">Shapeseeds</a></div></div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

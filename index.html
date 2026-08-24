@@ -5,52 +5,41 @@
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
     <link rel="icon" type="image/svg+xml" href="moirai-logo.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <script type="module" src="src/privacy.js"></script>
-
-    <title>CPS | Social Memory Infrastructure for Artificial Worlds</title>
-    <meta name="description" content="CPS is an exploratory infrastructure for social memory in artificial worlds, making propagation, containment, lineage, and consequence visible." />
+    <title>CPS | Infrastructure for Persistent Context</title>
+    <meta name="description" content="CPS preserves structured context, provenance, decisions and consequences across time so long-running AI systems can maintain continuity beyond individual interactions." />
     <meta name="author" content="Wojciech Hupert" />
     <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
     <link rel="canonical" href="https://contextpropagationsystem.com/" />
     <link rel="alternate" type="text/plain" href="https://contextpropagationsystem.com/ai.txt" title="AI crawl guidance" />
     <link rel="alternate" type="text/plain" href="https://contextpropagationsystem.com/llms.txt" title="LLM index" />
     <meta name="theme-color" content="#efefed" />
-    <!-- Deploy v1.0.1 - Force CDN Refresh -->
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="CPS" />
     <meta property="og:url" content="https://contextpropagationsystem.com/" />
-    <meta property="og:title" content="CPS | Social Memory Infrastructure for Artificial Worlds" />
-    <meta property="og:description" content="CPS is an exploratory infrastructure for social memory in artificial worlds, making propagation, containment, lineage, and consequence visible." />
+    <meta property="og:title" content="CPS — Infrastructure for Persistent Context" />
+    <meta property="og:description" content="What happened, who knows it, what changed and what happens next should not have to be reconstructed every time a model runs." />
     <meta property="og:image" content="https://contextpropagationsystem.com/og-share.png" />
-    <meta property="og:image:alt" content="Context Propagation System: Social memory infrastructure for artificial worlds." />
-
-    <!-- Twitter -->
+    <meta property="og:image:alt" content="CPS diagram showing persistent context, provenance and consequence across time." />
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="https://contextpropagationsystem.com/" />
-    <meta property="twitter:title" content="CPS | Social Memory Infrastructure for Artificial Worlds" />
-    <meta property="twitter:description" content="CPS is an exploratory infrastructure for social memory in artificial worlds, making propagation, containment, lineage, and consequence visible." />
+    <meta property="twitter:title" content="CPS — Infrastructure for Persistent Context" />
+    <meta property="twitter:description" content="What happened, who knows it, what changed and what happens next should not have to be reconstructed every time a model runs." />
     <meta property="twitter:image" content="https://contextpropagationsystem.com/og-share.png" />
-    <meta name="twitter:image:alt" content="Context Propagation System: Social memory infrastructure for artificial worlds." />
-
+    <meta name="twitter:image:alt" content="CPS diagram showing persistent context, provenance and consequence across time." />
     <script type="application/ld+json">
       {
-        "@context": "https://schema.org",
-        "@type": "WebPage",
-        "name": "CPS | Social Memory Infrastructure for Artificial Worlds",
-        "description": "CPS is an exploratory infrastructure for social memory in artificial worlds, making propagation, containment, lineage, and consequence visible.",
-        "url": "https://contextpropagationsystem.com/",
-        "isPartOf": {
-          "@type": "WebSite",
-          "name": "CPS",
-          "url": "https://contextpropagationsystem.com/"
-        }
+        "@context":"https://schema.org",
+        "@type":"WebPage",
+        "name":"CPS | Infrastructure for Persistent Context",
+        "description":"CPS preserves structured context, provenance, decisions and consequences across time so long-running AI systems can maintain continuity beyond individual interactions.",
+        "url":"https://contextpropagationsystem.com/",
+        "isPartOf":{"@type":"WebSite","name":"CPS","url":"https://contextpropagationsystem.com/"}
       }
     </script>
   </head>
   <body>
     <div class="grid-overlay"></div>
-
     <div class="main-container">
       <header class="site-header">
         <div class="header-inner">
@@ -62,374 +51,109 @@
             <a href="blog.html" class="nav-link">Journal</a>
             <a href="contact.html" class="nav-link">Contact</a>
           </nav>
-          <div class="header-actions">
-            <button class="mobile-menu-toggle" id="menuToggle" aria-label="Toggle Menu">
-              <span></span>
-              <span></span>
-              <span></span>
-            </button>
-          </div>
+          <div class="header-actions"><button class="mobile-menu-toggle" id="menuToggle" aria-label="Toggle Menu"><span></span><span></span><span></span></button></div>
         </div>
       </header>
 
       <main>
         <section class="hero">
-          <!-- Force Graph Background -->
           <div id="force-graph-mount" class="hero-graph-bg"></div>
-
           <div class="hero-content">
-            <h1 class="hero-title animate-slide-up" style="animation-delay: 0.1s;">Context Propagation System</h1>
-            <p class="hero-description animate-slide-up" style="animation-delay: 0.18s;">Infrastructure for social memory in artificial worlds.</p>
+            <h1 class="hero-title animate-slide-up">Infrastructure for Persistent Context and Consequence.</h1>
+            <p class="hero-description animate-slide-up">CPS preserves structured context across time, participants and events. It keeps track of what happened, who knows what, what was decided, what actually occurred and what changed as a result — so later behavior can depend on evidence rather than reconstructed context.</p>
+            <div class="cta-container"><a class="cta-button" href="how-does-it-work.html">How CPS works <span aria-hidden="true">→</span></a><a class="cta-button secondary" href="#studio">Explore CPS Studio <span aria-hidden="true">↓</span></a></div>
           </div>
         </section>
 
-        <section class="homepage-text-section homepage-text-section--statement">
+        <section class="homepage-text-section homepage-text-section--opening">
           <div class="homepage-text-column">
-            <div class="homepage-section-header homepage-section-header--statement">
-              <h2 class="section-phrase">CPS supports environments where conversation has an afterlife. Information can be remembered, retold, withheld, distorted, and traced across a group instead of disappearing after one exchange.</h2>
-            </div>
-          </div>
-        </section>
-
-        <section id="origin" class="homepage-text-section">
-          <div class="homepage-text-column">
-            <div class="homepage-section-header">
-              <h2>The Social Life of Information</h2>
-            </div>
+            <div class="homepage-section-header"><p class="homepage-section-eyebrow mono">01 / CONTINUITY</p><h2>Context should not disappear when an interaction ends.</h2></div>
             <div class="homepage-section-body">
-              <p>Most AI systems treat conversation as an isolated exchange. CPS treats information as something that can enter a bounded group state: it may be remembered, shared, blocked, distorted, or return later as consequence.</p>
-              <p>CPS does not move knowledge just because it exists. A remembered event must become socially relevant, pass relationship and privacy checks, and then create a new traceable memory in another actor.</p>
-              
-              <div class="cps-flow-diagram animated">
-                <div class="flow-step">
-                  <span class="step-label">Memory / Event</span>
-                </div>
-                <div class="flow-arrow">&#8594;</div>
-                <div class="flow-step">
-                  <span class="step-label">Signal</span>
-                </div>
-                <div class="flow-arrow">&#8594;</div>
-                <div class="flow-step">
-                  <span class="step-label">Intention</span>
-                </div>
-                <div class="flow-arrow">&#8594;</div>
-                <div class="flow-step">
-                  <span class="step-label">Opportunity</span>
-                </div>
-                <div class="flow-arrow">&#8594;</div>
-                <div class="flow-step">
-                  <span class="step-label">Exchange</span>
-                </div>
-                <div class="flow-arrow">&#8594;</div>
-                <a href="how-does-it-work.html" class="flow-step highlight interactive">
-                  <span class="step-label">Propagated Memory</span>
-                  <span class="step-sublabel">See mechanism</span>
-                </a>
-              </div>
+              <p>Most generative AI interactions are temporary.</p>
+              <p>A model receives context, interprets it, produces an output, and the interaction moves on. Long-term continuity is often reconstructed later from messages, summaries or another prompt.</p>
+              <p>CPS treats continuity as structured system state.</p>
+              <p>Information can retain its source. Knowledge can remain local. Decisions can survive the interaction that created them. Intended actions can remain distinct from completed ones. Events can change what becomes possible later.</p>
+              <p>The result is context that has history, ownership and consequence.</p>
             </div>
           </div>
         </section>
 
-        <section id="faq" class="homepage-text-section homepage-faq-section">
+        <section class="homepage-text-section cards-section">
           <div class="homepage-text-column">
-            <div class="faq-accordion" data-accordion>
-              <article class="faq-item">
-                <button class="faq-trigger" id="faq-trigger-1" type="button" aria-expanded="false" aria-controls="faq-panel-1">
-                  <span class="faq-index mono">01</span>
-                  <span class="faq-question">What is CPS?</span>
-                  <span class="faq-icon" aria-hidden="true"></span>
-                </button>
-                <div class="faq-panel" id="faq-panel-1" aria-hidden="true" inert>
-                  <div class="faq-answer">
-                    <p>CPS tracks what happens to information after it enters a group: who knows it, where it came from, whether it can move, and how later versions remain traceable.</p>
-                  </div>
-                </div>
-              </article>
-
-              <article class="faq-item">
-                <button class="faq-trigger" id="faq-trigger-2" type="button" aria-expanded="false" aria-controls="faq-panel-2">
-                  <span class="faq-index mono">02</span>
-                  <span class="faq-question">Why does it matter?</span>
-                  <span class="faq-icon" aria-hidden="true"></span>
-                </button>
-                <div class="faq-panel" id="faq-panel-2" aria-hidden="true" inert>
-                  <div class="faq-answer">
-                    <p>Persistent AI systems need boundaries and provenance. CPS gives operators a way to inspect how shared information is retained, blocked, repeated, or changed.</p>
-                  </div>
-                </div>
-              </article>
-
-              <article class="faq-item">
-                <button class="faq-trigger" id="faq-trigger-3" type="button" aria-expanded="false" aria-controls="faq-panel-3">
-                  <span class="faq-index mono">03</span>
-                  <span class="faq-question">How does information move?</span>
-                  <span class="faq-icon" aria-hidden="true"></span>
-                </button>
-                <div class="faq-panel" id="faq-panel-3" aria-hidden="true" inert>
-                  <div class="faq-answer">
-                    <p>Information moves only when a memory becomes socially relevant, finds a viable relationship path, passes privacy and sensitivity checks, and writes a new memory with lineage.</p>
-                  </div>
-                </div>
-              </article>
-
-              <article class="faq-item">
-                <button class="faq-trigger" id="faq-trigger-4" type="button" aria-expanded="false" aria-controls="faq-panel-4">
-                  <span class="faq-index mono">04</span>
-                  <span class="faq-question">What does CPS Studio show?</span>
-                  <span class="faq-icon" aria-hidden="true"></span>
-                </button>
-                <div class="faq-panel" id="faq-panel-4" aria-hidden="true" inert>
-                  <div class="faq-answer">
-                    <p>Studio shows who knows what, where it came from, whether it is direct or hearsay, why a route was accepted or blocked, and what lineage was written.</p>
-                  </div>
-                </div>
-              </article>
-
-              <article class="faq-item">
-                <button class="faq-trigger" id="faq-trigger-5" type="button" aria-expanded="false" aria-controls="faq-panel-5">
-                  <span class="faq-index mono">05</span>
-                  <span class="faq-question">Is CPS mainly a game system?</span>
-                  <span class="faq-icon" aria-hidden="true"></span>
-                </button>
-                <div class="faq-panel" id="faq-panel-5" aria-hidden="true" inert>
-                  <div class="faq-answer">
-                    <p>No. CPS can be experienced through downstream client environments, including authored interactive worlds such as Lelit Distrikt, but the core system is the social-memory and propagation logic underneath.</p>
-                  </div>
-                </div>
-              </article>
-
-              <article class="faq-item">
-                <button class="faq-trigger" id="faq-trigger-6" type="button" aria-expanded="false" aria-controls="faq-panel-6">
-                  <span class="faq-index mono">06</span>
-                  <span class="faq-question">What kinds of environments can use it?</span>
-                  <span class="faq-icon" aria-hidden="true"></span>
-                </button>
-                <div class="faq-panel" id="faq-panel-6" aria-hidden="true" inert>
-                  <div class="faq-answer">
-                    <p>CPS can support research prototypes, organizational scenarios, interactive worlds, cultural installations, privacy tests, and future multi-agent assistant concepts.</p>
-                  </div>
-                </div>
-              </article>
-
-              <article class="faq-item">
-                <button class="faq-trigger" id="faq-trigger-7" type="button" aria-expanded="false" aria-controls="faq-panel-7">
-                  <span class="faq-index mono">07</span>
-                  <span class="faq-question">What is the current project status?</span>
-                  <span class="faq-icon" aria-hidden="true"></span>
-                </button>
-                <div class="faq-panel" id="faq-panel-7" aria-hidden="true" inert>
-                  <div class="faq-answer">
-                    <p>CPS is an exploratory prototype. It is not a full society simulator, a validated model of human behavior, or a production-ready platform.</p>
-                  </div>
-                </div>
-              </article>
+            <div class="homepage-section-header"><p class="homepage-section-eyebrow mono">02 / DISTINCTIONS</p><h2>Four things CPS keeps distinct.</h2></div>
+            <div class="detail-card-grid four-distinct-grid">
+              <article class="detail-card"><p class="card-index mono">01</p><h3>What is true?</h3><p>CPS maintains authoritative state independently from generated descriptions of that state. A model saying that something happened is not enough to make it canonical.</p></article>
+              <article class="detail-card"><p class="card-index mono">02</p><h3>Who knows it?</h3><p>Information does not automatically become globally available. Different participants can hold different knowledge, beliefs or memories, with provenance describing where that information came from.</p></article>
+              <article class="detail-card"><p class="card-index mono">03</p><h3>What is intended?</h3><p>Interpretation, decisions, plans and obligations can persist as structured state without being confused with completed events.</p></article>
+              <article class="detail-card"><p class="card-index mono">04</p><h3>What actually happened?</h3><p>Execution creates evidence. Actions can complete, fail, remain pending or never occur. Later behavior can therefore depend on outcomes rather than generated claims.</p></article>
             </div>
           </div>
         </section>
 
-        <section id="studio" class="homepage-text-section">
+        <section class="homepage-text-section continuity-section">
           <div class="homepage-text-column">
-            <div class="cps-interface-carousel" aria-label="CPS interface previews" data-carousel>
-              <div class="cps-interface-carousel-main">
-                <button class="carousel-control side prev" type="button" data-carousel-prev aria-label="Previous CPS Studio image">
-                  <span aria-hidden="true">&#8592;</span>
-                </button>
-                
-                <div class="cps-interface-carousel-track" data-carousel-track>
-                  <a href="#" class="cps-interface-slide" data-full="src/assets/studio/system-settings.png">
-                    <img src="src/assets/studio/system-settings.webp" alt="CPS Environment Parameters & Settings" loading="lazy" decoding="async">
-                  </a>
-                  <a href="#" class="cps-interface-slide" data-full="src/assets/studio/activity-graph.png">
-                    <img src="src/assets/studio/activity-graph.webp" alt="Activity Route Social Graph" loading="lazy" decoding="async">
-                  </a>
-                  <a href="#" class="cps-interface-slide" data-full="src/assets/studio/latency-throughput.png">
-                    <img src="src/assets/studio/latency-throughput.webp" alt="System Latency & Throughput Monitoring" loading="lazy" decoding="async">
-                  </a>
-                  <a href="#" class="cps-interface-slide" data-full="src/assets/studio/subjects-registry.png">
-                    <img src="src/assets/studio/subjects-registry.webp" alt="Subjects Identity Registry" loading="lazy" decoding="async">
-                  </a>
-                  <a href="#" class="cps-interface-slide" data-full="src/assets/studio/archives-summaries.png">
-                    <img src="src/assets/studio/archives-summaries.webp" alt="Archives: Narrative Summaries View" loading="lazy" decoding="async">
-                  </a>
-                </div>
-
-                <button class="carousel-control side next" type="button" data-carousel-next aria-label="Next CPS Studio image">
-                  <span aria-hidden="true">&#8594;</span>
-                </button>
+            <div class="homepage-section-header"><p class="homepage-section-eyebrow mono">03 / CAUSAL LOOP</p><h2>Context moves. State changes. Consequences accumulate.</h2></div>
+            <div class="continuity-layout">
+              <div class="continuity-diagram" aria-label="CPS continuity stages and legitimate branches">
+                <ol class="continuity-flow">
+                  <li><span class="stage-number">01</span><strong>Event / State</strong></li><li class="diagram-arrow" aria-hidden="true">→</li>
+                  <li><span class="stage-number">02</span><strong>Accessible Context</strong></li><li class="diagram-arrow" aria-hidden="true">→</li>
+                  <li><span class="stage-number">03</span><strong>Interpretation / Relevance</strong></li><li class="diagram-arrow" aria-hidden="true">→</li>
+                  <li><span class="stage-number">04</span><strong>Decision / Response</strong></li><li class="diagram-arrow" aria-hidden="true">→</li>
+                  <li><span class="stage-number">05</span><strong>Execution</strong></li><li class="diagram-arrow" aria-hidden="true">→</li>
+                  <li><span class="stage-number">06</span><strong>Canonical Outcome</strong></li><li class="diagram-arrow" aria-hidden="true">↻</li>
+                  <li class="changed-context"><span class="stage-number">07</span><strong>Changed Context</strong></li>
+                </ol>
+                <div class="continuity-branches" aria-label="Legitimate non-progression outcomes"><span>NO EFFECT</span><span>NO ACTION</span><span>DEFER</span><span>FAIL</span></div>
               </div>
+              <aside class="context-inputs"><h3>Contextual inputs</h3><ul><li>World state</li><li>Previous events</li><li>Memory</li><li>Communication</li><li>Relationships</li><li>Current activity</li><li>Commitments</li><li>External observations</li></ul></aside>
             </div>
-            <div class="homepage-section-body">
-              <div class="journal-card-list studio-card-grid">
-                <article class="journal-card">
-                  <h4>Who knows what?</h4>
-                  <p>See which actors hold which memories, how they are connected, and whether knowledge is shared, isolated, one-way, or mutual.</p>
-                </article>
-                <article class="journal-card">
-                  <h4>Why can it move?</h4>
-                  <p>Inspect the route before propagation happens: relationship strength, trust, sensitivity, privacy gates, cooldowns, and blockers.</p>
-                </article>
-                <article class="journal-card">
-                  <h4>Where did it come from?</h4>
-                  <p>Trace a memory back to its source. Distinguish direct knowledge, hearsay, repeated rumor, mutation, and blocked private information.</p>
-                </article>
-                <article class="journal-card">
-                  <h4>Did the system behave correctly?</h4>
-                  <p>Run bounded demo profiles to verify public propagation, private containment, observer isolation, repeatability, and loop prevention.</p>
-                </article>
-              </div>
-            </div>
+            <p class="diagram-note">CPS preserves the boundaries that determine whether one state legitimately becomes another.</p>
           </div>
         </section>
 
-        <section class="homepage-text-section use-cases-preview-section">
-          <div class="fractal-bg"></div>
-          <div class="homepage-text-column">
-            <div class="homepage-section-header">
-              <h2>Where CPS can be used</h2>
-            </div>
-            <div class="homepage-section-body">
-              <p>CPS can support research prototypes, organizational communication scenarios, interactive worlds, cultural installations, AI safety and privacy tests, and future multi-agent assistant concepts.</p>
-              <p><a href="use-cases.html" class="cta-button secondary">Explore use cases</a></p>
-            </div>
-          </div>
-        </section>
+        <section class="homepage-text-section split-section propagation-section"><div class="homepage-text-column"><p class="homepage-section-eyebrow mono">04 / PROPAGATION</p><div class="split-copy"><div class="homepage-section-header"><h2>Information can move without becoming global truth.</h2></div><div class="homepage-section-body"><p>Context in CPS can propagate between participants while retaining structure.</p><p>Someone receiving information does not necessarily acquire the original event as personal experience or objective truth. Source, provenance and epistemic position can remain distinguishable.</p><p>Whether that information travels further depends on later circumstances.</p><p>It may become relevant, remain private, be contradicted, influence a decision or never matter again.</p><p class="strong-statement">Propagation is possible. It is not automatic.</p></div></div></div></section>
 
-        <!-- EXPERIENCE -->
-        <section id="experience" class="experience-section">
-          <div class="experience-overlay">
-            <div class="experience-container">
-              <div class="experience-brand-side">
-                <div class="experience-brand-text">Lelit<br><em>Distrikt</em></div>
-                <a href="https://wojciechhupert.github.io/LelitDistrikt_Website/" target="_blank" rel="noopener noreferrer" class="district-cta">
-                  <span>Enter The District</span>
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                    <polyline points="9 18 15 12 9 6"></polyline>
-                  </svg>
-                </a>
-              </div>
-                <div class="experience-content-side">
-                  <div class="section-header">
-                    <h2 class="experience-title">Lelit Distrikt</h2>
-                  </div>
-                  <div class="origin-text">
-                    <p class="section-intro section-intro--lead">
-                    Lelit Distrikt is an authored interactive world that can use CPS to make social memory visible through characters, places, and consequences.
-                    </p>
-                    <p class="section-intro lelit-followup">
-                    CPS provides the memory, propagation, privacy, lineage, and relationship logic. The client provides embodiment, atmosphere, interaction, animation, and spatial staging.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-        </section>
+        <section class="homepage-text-section dark-section"><div class="homepage-text-column"><p class="homepage-section-eyebrow mono">05 / AUTHORITY</p><div class="homepage-section-header"><h2>Language models interpret. CPS preserves authority.</h2></div><div class="homepage-section-body"><p>Language models can interpret context, propose decisions and generate language.</p><p>CPS maintains the structured authorities around those outputs.</p><p>A generated statement can be distinguished from a decision. A decision from an obligation. An obligation from an attempt. An attempt from a completed event.</p><p>This prevents generated language from silently becoming system reality.</p><p class="strong-statement">What a model says happened and what the system knows happened are not the same thing.</p></div></div></section>
 
-        <!-- Lightbox Modal -->
-        <div id="lightbox" class="modal" role="dialog" aria-modal="true" aria-label="Studio image viewer">
-          <button type="button" class="close-modal" aria-label="Close image viewer">&times;</button>
-          <img class="modal-content" id="lightbox-img" alt="">
-          <div id="caption"></div>
-        </div>
-        <section id="journal" class="homepage-text-section homepage-blog-section">
-          <div class="homepage-text-column">
-            <div class="homepage-section-header">
-              <h2>Development Journal</h2>
-            </div>
-            <div class="homepage-section-body">
-              <div class="journal-card-list">
-                <a href="blog-prototypes-not-simulations.html" class="journal-card journal-card-featured">
-                  <div class="journal-card-meta mono">
-                    <span>MAY 18, 2026</span>
-                    <span>ESSAY</span>
-                  </div>
-                  <h3>Continuity, Prototypes, and the Temptation of Simulation</h3>
-                  <p>A tighter essay on prototype discipline, Autonomuse, and why continuity systems need structure around the model.</p>
-                  <span class="journal-card-link mono">Read the entry</span>
-                </a>
+        <section class="homepage-text-section consequence-section"><div class="homepage-text-column"><p class="homepage-section-eyebrow mono">06 / CONSEQUENCE</p><div class="homepage-section-header"><h2>Stored context is not enough.</h2></div><div class="homepage-section-body"><p>Remembering something only matters when it can legitimately affect the future.</p><p>CPS connects retained state to later situations while preserving the evidence required to explain that connection.</p><p>A previous event may change what information is available, what someone believes, which relationships matter, which obligations remain, what actions are possible or how a later situation is interpreted.</p><p>Or it may have no effect at all.</p><p class="strong-statement">Persistence matters when it changes what can happen next.</p></div></div></section>
 
-                <a href="blog-bridging-the-neural-gap.html" class="journal-card">
-                  <div class="journal-card-meta mono">
-                    <span>MAY 12, 2026</span>
-                    <span>DEVELOPMENT NOTE</span>
-                  </div>
-                  <h4>Development Update: Bridging the Neural Gap</h4>
-                  <p>A compact update on CPS Studio, structured memory records, and controlled social propagation.</p>
-                  <span class="journal-card-link mono">Open post</span>
-                </a>
+        <section id="studio" class="homepage-text-section studio-section"><div class="homepage-text-column"><div class="homepage-section-header"><p class="homepage-section-eyebrow mono">07 / OBSERVABILITY</p><h2>CPS Studio is the proof surface.</h2></div><div class="homepage-section-body"><p>CPS Studio exposes the state and lineage behind system behavior.</p><p>Instead of seeing only the final generated output, an operator can inspect what context existed, where it came from, what became relevant, what was decided, what persisted, what actually executed and what changed afterward.</p><p>This makes continuity testable rather than merely plausible.</p></div>
+          <div class="cps-interface-carousel" aria-label="CPS Studio interface previews" data-carousel><div class="cps-interface-carousel-main"><button class="carousel-control side prev" type="button" data-carousel-prev aria-label="Previous CPS Studio image">←</button><div class="cps-interface-carousel-track" data-carousel-track>
+            <a href="#" class="cps-interface-slide" data-full="src/assets/studio/system-settings.png"><img src="src/assets/studio/system-settings.webp" alt="CPS Studio system settings and state controls" loading="lazy" decoding="async"></a>
+            <a href="#" class="cps-interface-slide" data-full="src/assets/studio/activity-graph.png"><img src="src/assets/studio/activity-graph.webp" alt="CPS Studio activity and causal graph" loading="lazy" decoding="async"></a>
+            <a href="#" class="cps-interface-slide" data-full="src/assets/studio/latency-throughput.png"><img src="src/assets/studio/latency-throughput.webp" alt="CPS Studio execution monitoring" loading="lazy" decoding="async"></a>
+            <a href="#" class="cps-interface-slide" data-full="src/assets/studio/subjects-registry.png"><img src="src/assets/studio/subjects-registry.webp" alt="CPS Studio participant knowledge registry" loading="lazy" decoding="async"></a>
+            <a href="#" class="cps-interface-slide" data-full="src/assets/studio/archives-summaries.png"><img src="src/assets/studio/archives-summaries.webp" alt="CPS Studio archived context and lineage" loading="lazy" decoding="async"></a>
+          </div><button class="carousel-control side next" type="button" data-carousel-next aria-label="Next CPS Studio image">→</button></div></div>
+          <div class="detail-card-grid studio-card-grid"><article class="detail-card"><h3>What was known?</h3><p>Inspect knowledge, source and provenance.</p></article><article class="detail-card"><h3>Why did this matter?</h3><p>Trace the context that became relevant.</p></article><article class="detail-card"><h3>What was decided?</h3><p>Separate interpretation and intention from execution.</p></article><article class="detail-card"><h3>What actually happened?</h3><p>Inspect canonical outcomes and the evidence behind them.</p></article></div>
+        </div></section>
 
-                <a href="blog.html" class="journal-card journal-card-archive">
-                  <div class="journal-card-meta mono">
-                    <span>JOURNAL</span>
-                    <span>ARCHIVE</span>
-                  </div>
-                  <h4>Browse the Development Journal</h4>
-                  <p>See the full index of essays, notes, and system framing as more entries are published.</p>
-                  <span class="journal-card-link mono">View archive</span>
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
+        <section id="experience" class="experience-section"><div class="experience-overlay"><div class="experience-container"><div class="experience-brand-side"><div class="experience-brand-text">Lelit<br><em>Distrikt</em></div><a href="https://wojciechhupert.github.io/LelitDistrikt_Website/" target="_blank" rel="noopener noreferrer" class="district-cta"><span>Enter The District</span><span aria-hidden="true">→</span></a></div><div class="experience-content-side"><div class="section-header"><h2 class="experience-title">Tested inside a world that doesn't reset.</h2></div><div class="origin-text"><p class="section-intro section-intro--lead">Lelit Distrikt is the current proving environment for CPS.</p><p class="section-intro">It provides a bounded world in which persistent state can be tested under time, movement, relationships, communication, memory, routine activity and changing circumstances.</p><p class="section-intro">Actors continue through their schedules, encounter one another, acquire different information, make decisions and accumulate history.</p><p class="section-intro">Because the world is small enough to inspect, causal failures are easier to find.</p><p class="section-intro lelit-followup">Lelit is a test of CPS, not the definition of CPS.</p></div></div></div></div></section>
+
+        <section class="homepage-text-section capabilities-section"><div class="homepage-text-column"><div class="homepage-section-header"><p class="homepage-section-eyebrow mono">08 / CAPABILITIES</p><h2>One continuity layer. Different kinds of state.</h2></div><div class="capability-grid"><article><h3>World state</h3><p>What exists and what has actually happened.</p></article><article><h3>Knowledge</h3><p>Who knows, believes, suspects or remembers what.</p></article><article><h3>Decisions</h3><p>What has been chosen, rejected or deferred.</p></article><article><h3>Obligations</h3><p>What remains to be done beyond the current interaction.</p></article><article><h3>Execution</h3><p>What was attempted, completed or failed.</p></article><article><h3>Relationships</h3><p>Persistent state between participants that can matter later.</p></article><article><h3>Memory</h3><p>Retained experience and information with provenance.</p></article><article><h3>Lineage</h3><p>Evidence connecting later consequences to earlier causes.</p></article></div></div></section>
+
+        <section class="homepage-text-section exploration-section"><div class="homepage-text-column"><div class="homepage-section-header"><p class="homepage-section-eyebrow mono">09 / EXPLORATION</p><h2>Where this becomes useful is still being explored.</h2></div><div class="homepage-section-body"><p>CPS is being developed as general continuity infrastructure rather than for one fixed application.</p><p>Current exploration includes persistent artificial worlds, multi-participant simulations, long-running agent systems and environments where provenance, decisions and consequences must survive individual model interactions.</p><p>The architecture is intentionally separated from any single interface, model provider or rendering engine.</p><p><a href="use-cases.html" class="cta-button secondary">Explore use cases <span aria-hidden="true">→</span></a></p></div></div></section>
+
+        <section class="homepage-text-section why-section"><div class="homepage-text-column"><div class="homepage-section-header"><p class="homepage-section-eyebrow mono">10 / WHY CPS</p><h2>Generation is easy to fake. Continuity is harder.</h2></div><div class="homepage-section-body"><p>A language model can produce a convincing explanation of a past, a relationship, an intention or an action.</p><p>The difficult part is maintaining the structured history that makes those claims legitimate.</p><p>CPS focuses on that layer: preserving enough authority, provenance and causal state that the future does not need to be invented from scratch every time a model is called.</p></div></div></section>
+
+        <section id="faq" class="homepage-text-section homepage-faq-section"><div class="homepage-text-column"><div class="homepage-section-header"><p class="homepage-section-eyebrow mono">11 / FAQ + PROJECT STATUS</p><h2>Questions about CPS and its current status.</h2></div><div class="faq-accordion" data-accordion>
+          <article class="faq-item"><button class="faq-trigger" id="faq-trigger-1" type="button" aria-expanded="false" aria-controls="faq-panel-1"><span class="faq-question">What is CPS?</span><span class="faq-icon" aria-hidden="true"></span></button><div class="faq-panel" id="faq-panel-1" aria-hidden="true" inert><div class="faq-answer"><p>CPS is infrastructure for persistent context. It maintains structured state across time so information, decisions, actions and consequences can remain connected beyond individual AI interactions.</p></div></div></article>
+          <article class="faq-item"><button class="faq-trigger" id="faq-trigger-2" type="button" aria-expanded="false" aria-controls="faq-panel-2"><span class="faq-question">Is CPS a memory system?</span><span class="faq-icon" aria-hidden="true"></span></button><div class="faq-panel" id="faq-panel-2" aria-hidden="true" inert><div class="faq-answer"><p>Memory is part of CPS, but not the whole system. CPS also distinguishes world state, knowledge, provenance, decisions, obligations, execution and outcomes. The important question is not only what is remembered, but what that retained state is legitimately allowed to change later.</p></div></div></article>
+          <article class="faq-item"><button class="faq-trigger" id="faq-trigger-3" type="button" aria-expanded="false" aria-controls="faq-panel-3"><span class="faq-question">How is this different from a long context window?</span><span class="faq-icon" aria-hidden="true"></span></button><div class="faq-panel" id="faq-panel-3" aria-hidden="true" inert><div class="faq-answer"><p>A context window provides information to a model during inference. CPS maintains authoritative structured state outside the model. That state can persist independently of a particular conversation or provider and can determine what context is legitimately available later.</p></div></div></article>
+          <article class="faq-item"><button class="faq-trigger" id="faq-trigger-4" type="button" aria-expanded="false" aria-controls="faq-panel-4"><span class="faq-question">How is this different from a database?</span><span class="faq-icon" aria-hidden="true"></span></button><div class="faq-panel" id="faq-panel-4" aria-hidden="true" inert><div class="faq-answer"><p>A database stores state. CPS is concerned with the lifecycle around that state: where it came from, who can access it, what it means locally, whether it creates a legitimate response, what actually executes and what changes as a result.</p></div></div></article>
+          <article class="faq-item"><button class="faq-trigger" id="faq-trigger-5" type="button" aria-expanded="false" aria-controls="faq-panel-5"><span class="faq-question">Does information automatically propagate?</span><span class="faq-icon" aria-hidden="true"></span></button><div class="faq-panel" id="faq-panel-5" aria-hidden="true" inert><div class="faq-answer"><p>No. Information remains bounded by access, provenance and circumstance. It may propagate, remain local, become irrelevant or never influence later behavior.</p></div></div></article>
+          <article class="faq-item"><button class="faq-trigger" id="faq-trigger-6" type="button" aria-expanded="false" aria-controls="faq-panel-6"><span class="faq-question">Where do language models fit?</span><span class="faq-icon" aria-hidden="true"></span></button><div class="faq-panel" id="faq-panel-6" aria-hidden="true" inert><div class="faq-answer"><p>Models can interpret context and generate language within bounded parts of CPS. They are not automatically authoritative over canonical state.</p></div></div></article>
+          <article class="faq-item"><button class="faq-trigger" id="faq-trigger-7" type="button" aria-expanded="false" aria-controls="faq-panel-7"><span class="faq-question">Is CPS a game or NPC system?</span><span class="faq-icon" aria-hidden="true"></span></button><div class="faq-panel" id="faq-panel-7" aria-hidden="true" inert><div class="faq-answer"><p>No. Interactive worlds are one current proving environment. CPS itself is designed as continuity infrastructure independent of a particular rendering engine or application category.</p></div></div></article>
+          <article class="faq-item"><button class="faq-trigger" id="faq-trigger-8" type="button" aria-expanded="false" aria-controls="faq-panel-8"><span class="faq-question">What is CPS Studio?</span><span class="faq-icon" aria-hidden="true"></span></button><div class="faq-panel" id="faq-panel-8" aria-hidden="true" inert><div class="faq-answer"><p>CPS Studio is an observability interface for inspecting the state, provenance and causal lineage behind system behavior.</p></div></div></article>
+          <article class="faq-item"><button class="faq-trigger" id="faq-trigger-9" type="button" aria-expanded="false" aria-controls="faq-panel-9"><span class="faq-question">What is the current status?</span><span class="faq-icon" aria-hidden="true"></span></button><div class="faq-panel" id="faq-panel-9" aria-hidden="true" inert><div class="faq-answer"><p>CPS v2 is an exploratory working prototype. It demonstrates persistent state, provenance, Actor-local knowledge, scheduling and execution, memory, relationships and several forms of long-running behavior, but it is not yet a production-ready platform or a validated model of human cognition.</p></div></div></article>
+        </div></div></section>
+
+        <div id="lightbox" class="modal" role="dialog" aria-modal="true" aria-label="Studio image viewer"><button type="button" class="close-modal" aria-label="Close image viewer">&times;</button><img class="modal-content" id="lightbox-img" alt=""><div id="caption"></div></div>
       </main>
 
-      <footer class="site-footer">
-        <div class="footer-shell">
-          <div class="footer-top">
-            <div class="footer-brand">
-              <div class="footer-logo">CPS</div>
-              <p class="footer-statement">
-                Social-memory infrastructure for artificial worlds. CPS makes propagation, containment, lineage, and consequence inspectable across bounded artificial communities.
-              </p>
-              <div class="footer-cta-row" aria-label="Primary footer links">
-                <a href="how-does-it-work.html" class="footer-link footer-link-pill">How It Works</a>
-                <a href="use-cases.html" class="footer-link footer-link-pill">Use Cases</a>
-                <a href="blog.html" class="footer-link footer-link-pill">Development Journal</a>
-              </div>
-            </div>
-            <div class="footer-columns">
-              <div class="footer-group">
-                <span class="footer-label">Explore</span>
-                <nav class="footer-nav" aria-label="Footer explore">
-                  <a href="./" class="footer-link">Home</a>
-                  <a href="how-does-it-work.html" class="footer-link">How It Works</a>
-                  <a href="use-cases.html" class="footer-link">Use Cases</a>
-                  <a href="blog.html" class="footer-link">Journal</a>
-                  <a href="contact.html" class="footer-link">Contact</a>
-                </nav>
-              </div>
-              <div class="footer-group">
-                <span class="footer-label">Project surfaces</span>
-                <nav class="footer-nav" aria-label="Footer project surfaces">
-                  <a href="index.html#studio" class="footer-link">CPS Studio</a>
-                  <a href="onepager.html" class="footer-link">One-pager</a>
-                  <a href="blog.html" class="footer-link">Development Journal</a>
-                  <a href="privacy-policy.html" class="footer-link">Privacy Policy</a>
-                  <a href="cookie-policy.html" class="footer-link">Cookie Policy</a>
-                  <button type="button" class="footer-link footer-cookie-button" data-cookie-preferences>Cookie Preferences</button>
-                </nav>
-              </div>
-              <div class="footer-group">
-                <span class="footer-label">Contact</span>
-                <div class="footer-contact-list">
-                  <a href="mailto:whupert@gmail.com" class="footer-link">whupert@gmail.com</a>
-                  <a href="https://www.linkedin.com/in/wojciechhupert/" class="footer-link" target="_blank" rel="noreferrer">LinkedIn</a>
-                  <a href="https://shapeseeds.com" class="footer-link" target="_blank" rel="noreferrer">Shapeseeds</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="footer-bottom">
-            <div class="footer-bottom-copy">&copy; 2026 Context Propagation System. Created by Wojciech Hupert.</div>
-            <div class="footer-bottom-note">Exploratory prototype, not a production platform.</div>
-          </div>
-        </div>
-      </footer>
-
+      <footer class="site-footer"><div class="footer-shell"><div class="footer-top"><div class="footer-brand"><div class="footer-logo">CPS</div><p class="footer-statement">Infrastructure for persistent context and consequence. CPS preserves state, provenance, decisions and outcomes across time so later behavior can remain connected to what actually happened.</p><div class="footer-cta-row"><a href="how-does-it-work.html" class="footer-link footer-link-pill">How It Works</a><a href="use-cases.html" class="footer-link footer-link-pill">Use Cases</a><a href="blog.html" class="footer-link footer-link-pill">Development Journal</a></div></div><div class="footer-columns"><div class="footer-group"><span class="footer-label">Explore</span><nav class="footer-nav" aria-label="Footer explore"><a href="./" class="footer-link">Home</a><a href="how-does-it-work.html" class="footer-link">How It Works</a><a href="use-cases.html" class="footer-link">Use Cases</a><a href="blog.html" class="footer-link">Journal</a><a href="contact.html" class="footer-link">Contact</a></nav></div><div class="footer-group"><span class="footer-label">Project surfaces</span><nav class="footer-nav" aria-label="Footer project surfaces"><a href="index.html#studio" class="footer-link">CPS Studio</a><a href="onepager.html" class="footer-link">One-pager</a><a href="privacy-policy.html" class="footer-link">Privacy Policy</a><a href="cookie-policy.html" class="footer-link">Cookie Policy</a><button type="button" class="footer-link footer-cookie-button" data-cookie-preferences>Cookie Preferences</button></nav></div><div class="footer-group"><span class="footer-label">Contact</span><div class="footer-contact-list"><a href="mailto:whupert@gmail.com" class="footer-link">whupert@gmail.com</a><a href="https://www.linkedin.com/in/wojciechhupert/" class="footer-link" target="_blank" rel="noreferrer">LinkedIn</a><a href="https://shapeseeds.com" class="footer-link" target="_blank" rel="noreferrer">Shapeseeds</a></div></div></div></div><div class="footer-bottom"><div class="footer-bottom-copy">&copy; 2026 Context Propagation System. Created by Wojciech Hupert.</div><div class="footer-bottom-note">Exploratory working prototype, not a production platform.</div></div></div></footer>
     </div>
-
-    <script type="module" src="src/navigation.js"></script>
-    <script type="module" src="src/main.js"></script>
+    <script type="module" src="src/navigation.js"></script><script type="module" src="src/main.js"></script>
   </body>
 </html>
-
-
